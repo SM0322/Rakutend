@@ -10,7 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_03_17_024556) do
+ActiveRecord::Schema.define(version: 2023_03_17_025106) do
+
+  create_table "bookcases", id: false, force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.integer "book_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["book_id"], name: "index_bookcases_on_book_id"
+    t.index ["user_id"], name: "index_bookcases_on_user_id"
+  end
 
   create_table "books", primary_key: "isbn", force: :cascade do |t|
     t.string "title"
@@ -33,4 +42,6 @@ ActiveRecord::Schema.define(version: 2023_03_17_024556) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "bookcases", "books", primary_key: "isbn"
+  add_foreign_key "bookcases", "users"
 end
