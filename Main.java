@@ -7,5 +7,7 @@ public class Main {
     System.out.println(m + min);
     int r = new java.util.Random().nextInt(10);
     System.out.println(r);
+    String s = new java.util.Scanner(System.in).nextLine();
+    int i = new java.util.Scanner(System.in).nextInt();
   }
 }
