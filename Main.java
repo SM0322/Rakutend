@@ -5,5 +5,7 @@ public class Main {
     int m = Math.max(a, b);
     int min = Math.min(a,b);
     System.out.println(m + min);
+    int r = new java.util.Random().nextInt(10);
+    System.out.println(r);
   }
 }
