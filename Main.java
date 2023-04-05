@@ -126,13 +126,32 @@ public class Main {
     //   }
     // }
     // System.out.println("ゲームを終了します");
-    int[] scores = {20,30,40,50,60};
-    int sum = 0;
-    for (int i = 0; i < scores.length; i++) {
-      System.out.println(scores[i]);
-      sum += scores[i];
-      System.out.println(sum);
+    // int[] scores = {20,30,40,50,60};
+    // int sum = 0;
+    // for (int i = 0; i < scores.length; i++) {
+    //   System.out.println(scores[i]);
+    //   sum += scores[i];
+    //   System.out.println(sum);
+    // }
+    int[] seq = new int[10];
+    for (int i = 0; i < seq.length; i++) {
+      seq[i] = new java.util.Random().nextInt(4);
     }
-    
+    for (int i = 0; i < seq.length; i++) {
+      switch(seq[i]) {
+        case 0:
+          System.out.println("A");
+          break;
+        case 1:
+          System.out.println("C");
+          break;
+        case 2:
+          System.out.println("T");
+          break;
+        case 3:
+          System.out.println("G");
+          break;
+      }
+    }
   }
 }
