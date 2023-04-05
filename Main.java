@@ -20,20 +20,65 @@ public class Main {
     // System.out.println("占いの結果が出ました");
     // System.out.println(age + "歳の" + name + "さん、あなたの運記番号は" + fortune +"です");
     // System.out.println("1:2:3:4");
-    int fortune = new java.util.Random().nextInt(3);
-    fortune++;
-    switch (fortune) {
-      case 1:
-          System.out.println(fortune);
-          break;
-      case 2:
-          System.out.println(fortune);
-          break;
-      case 3:
-          System.out.println(fortune);
-          break;
-      default:
-          System.out.println(fortune);
+    // int fortune = new java.util.Random().nextInt(3);
+    // fortune++;
+    // switch (fortune) {
+    //   case 1:
+    //       System.out.println(fortune);
+    //       break;
+    //   case 2:
+    //       System.out.println(fortune);
+    //       break;
+    //   case 3:
+    //       System.out.println(fortune);
+    //       break;
+    //   default:
+    //       System.out.println(fortune);
+    // }
+    // for (int i = 0; i < 10; i++) {
+    //   System.out.println(i);
+    // }
+    int num = new java.util.Random().nextInt(100);
+    num++;
+    if ((num % 3 == 0) && (num % 5 == 0)) {
+      System.out.println("FizzBazz");
+      System.out.println(num);
+    } else if (num % 3 == 0) {
+      System.out.println("Fizz");
+      System.out.println(num);
+    } else if (num % 5 == 0) {
+      System.out.println("Bazz");
+      System.out.println(num);
+    } else {
+      System.out.println(num);
     }
+    for (int i = 1; i <= 100; i++) {
+      if ((i % 3 == 0) && (i % 5 == 0)) {
+        System.out.println("FizzBazz");
+        // System.out.println(i);
+      } else if (i % 3 == 0) {
+        System.out.println("Fizz");
+        // System.out.println(i);
+      } else if (i % 5 == 0) {
+        System.out.println("Bazz");
+        // System.out.println(i);
+      } else {
+        System.out.println(i);
+      }
     }
+    for (int i = 1;i <= 100; i++) {
+      if ((i % 3 == 0) && (i % 5 == 0)) {
+        System.out.println("FizzBazz");
+        // System.out.println(i);
+      } else if ((i % 3 == 0) | (Integer.toString(i).contains("3"))) {
+        System.out.println("Fizz");
+        // System.out.println(i);
+      } else if ((i % 5 == 0) | (Integer.toString(i).contains("5"))) {
+        System.out.println("Bazz");
+        // System.out.println(i);
+      } else {
+        System.out.println(i);
+      }
+    }
+  }
 }
