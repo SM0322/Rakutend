@@ -38,47 +38,80 @@ public class Main {
     // for (int i = 0; i < 10; i++) {
     //   System.out.println(i);
     // }
-    int num = new java.util.Random().nextInt(100);
-    num++;
-    if ((num % 3 == 0) && (num % 5 == 0)) {
-      System.out.println("FizzBazz");
-      System.out.println(num);
-    } else if (num % 3 == 0) {
-      System.out.println("Fizz");
-      System.out.println(num);
-    } else if (num % 5 == 0) {
-      System.out.println("Bazz");
-      System.out.println(num);
-    } else {
-      System.out.println(num);
-    }
-    for (int i = 1; i <= 100; i++) {
-      if ((i % 3 == 0) && (i % 5 == 0)) {
-        System.out.println("FizzBazz");
-        // System.out.println(i);
-      } else if (i % 3 == 0) {
-        System.out.println("Fizz");
-        // System.out.println(i);
-      } else if (i % 5 == 0) {
-        System.out.println("Bazz");
-        // System.out.println(i);
-      } else {
-        System.out.println(i);
-      }
-    }
-    for (int i = 1;i <= 100; i++) {
-      if ((i % 3 == 0) && (i % 5 == 0)) {
-        System.out.println("FizzBazz");
-        // System.out.println(i);
-      } else if ((i % 3 == 0) | (Integer.toString(i).contains("3"))) {
-        System.out.println("Fizz");
-        // System.out.println(i);
-      } else if ((i % 5 == 0) | (Integer.toString(i).contains("5"))) {
-        System.out.println("Bazz");
-        // System.out.println(i);
-      } else {
-        System.out.println(i);
-      }
+    // int num = new java.util.Random().nextInt(100);
+    // num++;
+    // if ((num % 3 == 0) && (num % 5 == 0)) {
+    //   System.out.println("FizzBazz");
+    //   System.out.println(num);
+    // } else if (num % 3 == 0) {
+    //   System.out.println("Fizz");
+    //   System.out.println(num);
+    // } else if (num % 5 == 0) {
+    //   System.out.println("Bazz");
+    //   System.out.println(num);
+    // } else {
+    //   System.out.println(num);
+    // }
+    // for (int i = 1; i <= 100; i++) {
+    //   if ((i % 3 == 0) && (i % 5 == 0)) {
+    //     System.out.println("FizzBazz");
+    //     // System.out.println(i);
+    //   } else if (i % 3 == 0) {
+    //     System.out.println("Fizz");
+    //     // System.out.println(i);
+    //   } else if (i % 5 == 0) {
+    //     System.out.println("Bazz");
+    //     // System.out.println(i);
+    //   } else {
+    //     System.out.println(i);
+    //   }
+    // }
+    // for (int i = 1;i <= 100; i++) {
+    //   if ((i % 3 == 0) && (i % 5 == 0)) {
+    //     System.out.println("FizzBazz");
+    //     // System.out.println(i);
+    //   } else if ((i % 3 == 0) | (Integer.toString(i).contains("3"))) {
+    //     System.out.println("Fizz");
+    //     // System.out.println(i);
+    //   } else if ((i % 5 == 0) | (Integer.toString(i).contains("5"))) {
+    //     System.out.println("Bazz");
+    //     // System.out.println(i);
+    //   } else {
+    //     System.out.println(i);
+    //   }
+    // }
+    // public static void main(String[] args)
+    // String name = new java.util.Scanner(System.in).nextLine();
+    // if (name.equals("湊")) {
+    //   System.out.println(name);
+    // } else {
+    //   System.out.println("違います");
+    // }
+    // int isHungry = 1;
+    // String food = "カレー";
+    // System.out.println("こんにちは");
+    // if (isHungry == 0) {
+    //   System.out.println("おなかがいっぱいです");
+    // } else {
+    //   System.out.println("腹ペコです");
+    //   System.out.println(food + "をいただきます");
+    //   System.out.println("ごちそうさまでした");
+    // }
+    System.out.println("[メニュー] 1:検索 2:登録 3:削除 4:変更");
+    int selected = new java.util.Scanner(System.in).nextInt();
+    switch (selected) {
+      case 1:
+        System.out.println("検索します");
+        break;
+      case 2:
+        System.out.println("登録します");
+        break;
+      case 3:
+        System.out.println("削除します");
+        break;
+      case 4:
+        System.out.println("変更します");
+        break;
     }
   }
 }
