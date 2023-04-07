@@ -175,5 +175,10 @@ public class Main {
     System.out.println(scoresA.length);
     System.out.println(scoresA[0] [0]);
     System.out.println(scoresA[0].length);
+    int [] points = new int[4];
+    double [] weights = new double[5];
+    boolean [] answers = new boolean[3];
+    String [] names = new String[3];
+    
   }
 }
