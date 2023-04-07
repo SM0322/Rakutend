@@ -165,5 +165,15 @@ public class Main {
     arrayB = arrayA;
     arrayB[0] = 100;
     System.out.println(arrayA[0]);
+    // boolean judge = true;
+    // if (judge == true) {
+    //   int[] array = {1,2,3};
+    //   array = null;
+    //   array[0] =10;
+    // }
+    int[] [] scoresA = {{20,30,40}, {50,60,70}};
+    System.out.println(scoresA.length);
+    System.out.println(scoresA[0] [0]);
+    System.out.println(scoresA[0].length);
   }
 }
