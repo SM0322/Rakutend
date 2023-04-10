@@ -190,7 +190,7 @@ public class Main {
     // float[] heights = {171.3F, 175.0F};
     // // System.out.println(counts[1]);
     // System.out.println(heights[2]);
-    int[] numbers = {3,4,9};
+    int[] numbers = {1,4,9,16};
     System.out.println("1桁の数値を入力してください");
     int input = new java.util.Scanner(System.in).nextInt();
     for (int i = 0; i < numbers.length; i++) {
