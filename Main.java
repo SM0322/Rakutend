@@ -198,5 +198,9 @@ public class Main {
         System.out.println("アタリ");
       }
     }
+    int r2 = new java.util.Random().nextInt(4);
+    System.out.println(r2);
+    r2++;
+    System.out.println(r2);
   }
 }
