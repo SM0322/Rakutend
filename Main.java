@@ -211,6 +211,12 @@ public class Main {
     int[] array = {1,2,3};
     printArray(array);
     introduceOneself();
+    email("kaizer", "kenmei", "honbun");
+  }
+  public static void email(String address, String title, String text) {
+    System.out.println(address + "にメールを送信しました");
+    System.out.println("件名:" +title);
+    System.out.println("本文:" + text);
   }
   public static void mainA(String name) {
     hello(name);
