@@ -203,9 +203,14 @@ public class Main {
   //   r2++;
   //   System.out.println(r2);
   public static void main(String[] args){
+    // hello();
+    mainA();
+  }
+  public static void mainA() {
     hello();
   }
   public static void hello() {
-      System.out.println("湊さんこんにちは");
-    }
+    System.out.println("湊さんこんにちは");
+  }
+  
 }
