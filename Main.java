@@ -203,10 +203,11 @@ public class Main {
   //   r2++;
   //   System.out.println(r2);
   public static void main(String[] args){
-    hello("湊1");
-    mainA("湊2");
-    int ans = add(100, 20);
-    System.out.println(ans);
+    // hello("湊1");
+    // mainA("湊2");
+    // int ans = add(100, 20);
+    System.out.println(add(10, 20));
+    System.out.println(add(10, 20, 30));
   }
   public static void mainA(String name) {
     hello(name);
@@ -216,6 +217,10 @@ public class Main {
   }
   public static int add(int x, int y) {
     int ans = x + y;
+    return ans;
+  }
+  public static int add(int x, int y, int z) {
+    int ans = x + y + z;
     return ans;
   }
 }
