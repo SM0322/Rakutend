@@ -213,6 +213,16 @@ public class Main {
     introduceOneself();
     email("kaizer", "kenmei", "honbun");
     email("kaizer", "honbun");
+    System.out.println(calcTriangleArea(10.0, 10.0));
+    System.out.println(calcCircleArea(10.0));
+  }
+  public static double calcTriangleArea(double bottom, double height) {
+    double area = bottom * height / 2;
+    return area;
+  }
+  public static double calcCircleArea(double radius) {
+    double area = radius * radius * 3.14;
+    return area;
   }
   public static void email(String address, String title, String text) {
     System.out.println(address + "にメールを送信しました");
