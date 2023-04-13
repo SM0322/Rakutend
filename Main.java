@@ -208,6 +208,8 @@ public class Main {
     // int ans = add(100, 20);
     System.out.println(add(10, 20));
     System.out.println(add(10, 20, 30));
+    int[] array = {1,2,3};
+    printArray(array);
   }
   public static void mainA(String name) {
     hello(name);
@@ -222,5 +224,10 @@ public class Main {
   public static int add(int x, int y, int z) {
     int ans = x + y + z;
     return ans;
+  }
+  public static void printArray(int[] array) {
+    for (int element : array) {
+      System.out.println(element);
+    }
   }
 }
