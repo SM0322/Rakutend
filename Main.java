@@ -212,10 +212,16 @@ public class Main {
     printArray(array);
     introduceOneself();
     email("kaizer", "kenmei", "honbun");
+    email("kaizer", "honbun");
   }
   public static void email(String address, String title, String text) {
     System.out.println(address + "にメールを送信しました");
     System.out.println("件名:" +title);
+    System.out.println("本文:" + text);
+  }
+  public static void email(String address, String text) {
+    System.out.println(address + "にメールを送信しました");
+    System.out.println("件名:無題");
     System.out.println("本文:" + text);
   }
   public static void mainA(String name) {
