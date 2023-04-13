@@ -205,7 +205,8 @@ public class Main {
   public static void main(String[] args){
     hello("湊1");
     mainA("湊2");
-    add(100, 20);
+    int ans = add(100, 20);
+    System.out.println(ans);
   }
   public static void mainA(String name) {
     hello(name);
@@ -213,8 +214,8 @@ public class Main {
   public static void hello(String name) {
     System.out.println(name + "さんこんにちは");
   }
-  public static void add(int x, int y) {
+  public static int add(int x, int y) {
     int ans = x + y;
-    System.out.println(ans);
+    return ans;
   }
 }
