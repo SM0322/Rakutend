@@ -210,6 +210,7 @@ public class Main {
     System.out.println(add(10, 20, 30));
     int[] array = {1,2,3};
     printArray(array);
+    introduceOneself();
   }
   public static void mainA(String name) {
     hello(name);
@@ -229,5 +230,12 @@ public class Main {
     for (int element : array) {
       System.out.println(element);
     }
+  }
+  public static void introduceOneself() {
+    String name = "湊";
+    int age = 25;
+    double height = 180.0;
+    char zodiac = '辰';
+    System.out.println("私の名前は" + name + "で、年齢は" + age +",身長は" + height + ",干支は" + zodiac +"です");
   }
 }
