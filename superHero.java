@@ -12,4 +12,10 @@ public class superHero extends Hero {
     this.hp = 100;
     System.out.println(this.name + "は深く眠って回復した");
   }
+  public void attack(Matango m) {
+    super.attack(m);
+    if (this.flying) {
+      super.attack(m);
+    }
+  }
 }

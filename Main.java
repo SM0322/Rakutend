@@ -14,6 +14,7 @@ public class Main {
     System.out.println(baseHp + ";" + t.hp);
     Matango m = new Matango('A');
     superHero sh = new superHero();
+    sh.fly();
     sh.attack(m);
     sh.sleep();
     // Hero h = new Hero();
