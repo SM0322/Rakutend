@@ -1,3 +1,5 @@
+package calcapp.main;
+import calcapp.comment.Zenhan;
 public class Main {
   // public static void main(String[] args) {
   //   // int a=5;
@@ -202,67 +204,73 @@ public class Main {
   //   System.out.println(r2);
   //   r2++;
   //   System.out.println(r2);
-  public static void main(String[] args){
-    // hello("湊1");
-    // mainA("湊2");
-    // int ans = add(100, 20);
-    System.out.println(add(10, 20));
-    System.out.println(add(10, 20, 30));
-    int[] array = {1,2,3};
-    printArray(array);
-    introduceOneself();
-    email("kaizer", "kenmei", "honbun");
-    email("kaizer", "honbun");
-    System.out.println(calcTriangleArea(10.0, 10.0));
-    System.out.println(calcCircleArea(10.0));
-    int[] heights = {172, 149, 152, 191, 155};
-    java.util.Arrays.sort(heights);
-    for (int i = 0; i < heights.length; i++) {
-      System.out.println(heights[i]);
-    }
-  }
-  public static double calcTriangleArea(double bottom, double height) {
-    double area = bottom * height / 2;
-    return area;
-  }
-  public static double calcCircleArea(double radius) {
-    double area = radius * radius * 3.14;
-    return area;
-  }
-  public static void email(String address, String title, String text) {
-    System.out.println(address + "にメールを送信しました");
-    System.out.println("件名:" +title);
-    System.out.println("本文:" + text);
-  }
-  public static void email(String address, String text) {
-    System.out.println(address + "にメールを送信しました");
-    System.out.println("件名:無題");
-    System.out.println("本文:" + text);
-  }
-  public static void mainA(String name) {
-    hello(name);
-  }
-  public static void hello(String name) {
-    System.out.println(name + "さんこんにちは");
-  }
-  public static int add(int x, int y) {
-    int ans = x + y;
-    return ans;
-  }
-  public static int add(int x, int y, int z) {
-    int ans = x + y + z;
-    return ans;
-  }
-  public static void printArray(int[] array) {
-    for (int element : array) {
-      System.out.println(element);
-    }
-  }
-  public static void introduceOneself() {
-    String name = "湊";
-    int age = 25;
-    double height = 180.0;
-    char zodiac = '辰';
-    System.out.println("私の名前は" + name + "で、年齢は" + age +",身長は" + height + ",干支は" + zodiac +"です");
+  // public static void main(String[] args){
+  //   // hello("湊1");
+  //   // mainA("湊2");
+  //   // int ans = add(100, 20);
+  //   System.out.println(add(10, 20));
+  //   System.out.println(add(10, 20, 30));
+  //   int[] array = {1,2,3};
+  //   printArray(array);
+  //   introduceOneself();
+  //   email("kaizer", "kenmei", "honbun");
+  //   email("kaizer", "honbun");
+  //   System.out.println(calcTriangleArea(10.0, 10.0));
+  //   System.out.println(calcCircleArea(10.0));
+  //   int[] heights = {172, 149, 152, 191, 155};
+  //   java.util.Arrays.sort(heights);
+  //   for (int i = 0; i < heights.length; i++) {
+  //     System.out.println(heights[i]);
+  //   }
+  // }
+  // public static double calcTriangleArea(double bottom, double height) {
+  //   double area = bottom * height / 2;
+  //   return area;
+  // }
+  // public static double calcCircleArea(double radius) {
+  //   double area = radius * radius * 3.14;
+  //   return area;
+  // }
+  // public static void email(String address, String title, String text) {
+  //   System.out.println(address + "にメールを送信しました");
+  //   System.out.println("件名:" +title);
+  //   System.out.println("本文:" + text);
+  // }
+  // public static void email(String address, String text) {
+  //   System.out.println(address + "にメールを送信しました");
+  //   System.out.println("件名:無題");
+  //   System.out.println("本文:" + text);
+  // }
+  // public static void mainA(String name) {
+  //   hello(name);
+  // }
+  // public static void hello(String name) {
+  //   System.out.println(name + "さんこんにちは");
+  // }
+  // public static int add(int x, int y) {
+  //   int ans = x + y;
+  //   return ans;
+  // }
+  // public static int add(int x, int y, int z) {
+  //   int ans = x + y + z;
+  //   return ans;
+  // }
+  // public static void printArray(int[] array) {
+  //   for (int element : array) {
+  //     System.out.println(element);
+  //   }
+  // }
+  // public static void introduceOneself() {
+  //   String name = "湊";
+  //   int age = 25;
+  //   double height = 180.0;
+  //   char zodiac = '辰';
+  //   System.out.println("私の名前は" + name + "で、年齢は" + age +",身長は" + height + ",干支は" + zodiac +"です");
+  // }
+  public static void main(String[] args) throws Exception {
+    Zenhan.doWarusa();
+    Zenhan.doTogame();
+    calcapp.comment.Kouhan.callDeae();
+    calcapp.comment.Kouhan.showMondokoro();
   }
 }
