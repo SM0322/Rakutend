@@ -23,6 +23,7 @@ public class Hero {
   }
   public Hero() {
     this("ダミー");
+    System.out.println("Hero");
     // this.hp = 100;
     // this.name = "義彦";
   }
