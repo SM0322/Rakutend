@@ -215,6 +215,11 @@ public class Main {
     email("kaizer", "honbun");
     System.out.println(calcTriangleArea(10.0, 10.0));
     System.out.println(calcCircleArea(10.0));
+    int[] heights = {172, 149, 152, 191, 155};
+    java.util.Arrays.sort(heights);
+    for (int i = 0; i < heights.length; i++) {
+      System.out.println(heights[i]);
+    }
   }
   public static double calcTriangleArea(double bottom, double height) {
     double area = bottom * height / 2;
