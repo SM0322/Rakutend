@@ -18,7 +18,9 @@ public class Main {
     sh.attack(m);
     sh.sleep();
     poisonMatango pm = new poisonMatango('B');
-    pm.attack(sh);
+    // pm.attack(sh);
+    Hero h = new Hero();
+    pm.attack(h);
     // Hero h = new Hero();
     // h.sleep();
     // Hero h1 = new Hero("湊");

@@ -6,8 +6,8 @@ public class poisonMatango extends Matango {
       System.out.println("さらに毒の胞子をばらまいた!");
       int damage = h.hp / 5;
       h.hp -= damage;
-      this.poisonCount--;
       System.out.println(damage + "ポイントのダメージ!");
+      this.poisonCount--;
     }
   }
   public poisonMatango(char suffix) {
