@@ -6,24 +6,37 @@ public class Main {
     t.hp += 10;
   }
   public static void main(String[] args) {
-    int baseHp = 25;
-    Theif t = new Theif("アサカ", baseHp);
-    heal(baseHp);
-    System.out.println(baseHp + ":" + t.hp);
-    heal(t);
-    System.out.println(baseHp + ";" + t.hp);
-    Matango m = new Matango('A');
-    superHero sh = new superHero();
-    sh.fly();
-    sh.attack(m);
-    sh.sleep();
-    poisonMatango pm = new poisonMatango('B');
-    // pm.attack(sh);
-    Hero h = new Hero();
-    h.attack(m);
-    Character c = new Hero();
-    System.out.println(c.name);
-    c.sleep();
+    X obj = new A();
+    obj.a();
+    // obj.b(); Xという箱ではaのアクションしかないから
+    Y y1 = new A();
+    Y y2 = new B();
+    y1.a();
+    y2.a();
+    Y[] array = new Y[2];
+    array[0] = new A();
+    array[1] = new B();
+    for (int i = 0; i < array.length; i++) {
+      System.out.println(array[i]);
+    }
+    // int baseHp = 25;
+    // Theif t = new Theif("アサカ", baseHp);
+    // heal(baseHp);
+    // System.out.println(baseHp + ":" + t.hp);
+    // heal(t);
+    // System.out.println(baseHp + ";" + t.hp);
+    // Matango m = new Matango('A');
+    // superHero sh = new superHero();
+    // sh.fly();
+    // sh.attack(m);
+    // sh.sleep();
+    // poisonMatango pm = new poisonMatango('B');
+    // // pm.attack(sh);
+    // Hero h = new Hero();
+    // h.attack(m);
+    // Character c = new Hero();
+    // System.out.println(c.name);
+    // c.sleep();
     // Character c = new Character();
     // pm.attack(h);
     // Hero h = new Hero();
