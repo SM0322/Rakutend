@@ -23,6 +23,7 @@ public class Main {
     h.attack(m);
     Character c = new Hero();
     System.out.println(c.name);
+    c.sleep();
     // Character c = new Character();
     // pm.attack(h);
     // Hero h = new Hero();
