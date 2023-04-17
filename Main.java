@@ -9,5 +9,10 @@ public class Main {
     m.hp = 50;
     m.suffix = 'A';
     m.run();
+    Cleric c = new Cleric();
+    c.name = "A";
+    c.hp = 50;
+    c.mp = 5;
+    c.pray(1);
   }
 }
