@@ -3,7 +3,7 @@ public class Hero {
   int hp;
   Sword sword;
   final int LEVEL = 10;
-  public void sleep() {
+  public final void sleep() {
     this.hp = 100;
     System.out.println(this.name + "は眠って回復した");
   }
