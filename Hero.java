@@ -17,7 +17,8 @@ public class Hero {
     this.hp = 100;
   }
   public Hero() {
-    this.hp = 100;
-    this.name = "義彦";
+    this("ダミー");
+    // this.hp = 100;
+    // this.name = "義彦";
   }
 }
