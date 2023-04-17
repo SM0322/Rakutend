@@ -1,6 +1,7 @@
 public class Hero {
   String name;
   int hp;
+  Sword sword;
   final int LEVEL = 10;
   public void sleep() {
     this.hp = 100;
