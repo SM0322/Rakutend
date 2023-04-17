@@ -12,6 +12,10 @@ public class Hero {
     System.out.println(this.name + sec + "は座った");
     System.out.println("HPが" + sec + "回復した");
   }
+  public Hero(String name) {
+    this.name = name;
+    this.hp = 100;
+  }
   public Hero() {
     this.hp = 100;
     this.name = "義彦";

@@ -2,6 +2,8 @@ public class Main {
   public static void main(String[] args) {
     Hero h = new Hero();
     h.sleep();
+    Hero h1 = new Hero("湊");
+    h1.sleep();
     // h.name = "minato";
     // h.hp = 100;
     // System.out.println(h.name + "を呼びだした");
