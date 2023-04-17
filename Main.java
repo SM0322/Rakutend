@@ -1,9 +1,21 @@
 public class Main {
+  public static void heal(int hp) {
+    hp += 10;
+  }
+  public static void heal(Theif t) {
+    t.hp += 10;
+  }
   public static void main(String[] args) {
-    Hero h = new Hero();
-    h.sleep();
-    Hero h1 = new Hero("湊");
-    h1.sleep();
+    int baseHp = 25;
+    Theif t = new Theif("アサカ", baseHp);
+    heal(baseHp);
+    System.out.println(baseHp + ":" + t.hp);
+    heal(t);
+    System.out.println(baseHp + ";" + t.hp);
+    // Hero h = new Hero();
+    // h.sleep();
+    // Hero h1 = new Hero("湊");
+    // h1.sleep();
     // h.name = "minato";
     // h.hp = 100;
     // System.out.println(h.name + "を呼びだした");
