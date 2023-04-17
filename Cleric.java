@@ -17,4 +17,8 @@ public class Cleric {
     System.out.println(recoverActual + "回復した！");
     return recoverActual;
   }
+  public void heal(Hero h) {
+    h.hp += 10;
+    System.out.println(this.name + "は" + h.name + "のHPを回復した");
+  }
 }
