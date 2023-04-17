@@ -12,6 +12,10 @@ public class Main {
     System.out.println(baseHp + ":" + t.hp);
     heal(t);
     System.out.println(baseHp + ";" + t.hp);
+    Matango m = new Matango('A');
+    superHero sh = new superHero();
+    sh.attack(m);
+    sh.sleep();
     // Hero h = new Hero();
     // h.sleep();
     // Hero h1 = new Hero("湊");

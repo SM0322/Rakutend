@@ -8,4 +8,8 @@ public class superHero extends Hero {
       this.flying = false;
       System.out.println("着地した");
   }
+  public void sleep() {
+    this.hp = 100;
+    System.out.println(this.name + "は深く眠って回復した");
+  }
 }
