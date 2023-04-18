@@ -3,7 +3,7 @@ public class Hero extends Character {
   private int hp;
   Sword sword;
   final int LEVEL = 10;
-  private void die() {
+  void die() {
     System.out.println(this.name + "は死んでしまった");
     System.out.println("GAME OVER");
   }

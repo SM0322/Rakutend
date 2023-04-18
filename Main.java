@@ -19,6 +19,8 @@ public class Main {
     for (int i = 0; i < array.length; i++) {
       System.out.println(array[i]);
     }
+    Hero h = new Hero();
+    h.die();
     // int baseHp = 25;
     // Theif t = new Theif("アサカ", baseHp);
     // heal(baseHp);
