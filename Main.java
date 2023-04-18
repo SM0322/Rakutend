@@ -21,6 +21,8 @@ public class Main {
     }
     Hero h = new Hero();
     h.die();
+    King k = new King();
+    k.talk(h);
     // int baseHp = 25;
     // Theif t = new Theif("アサカ", baseHp);
     // heal(baseHp);
