@@ -1,8 +1,12 @@
 public class Hero extends Character {
   String name;
-  int hp;
+  private int hp;
   Sword sword;
   final int LEVEL = 10;
+  private void die() {
+    System.out.println(this.name + "は死んでしまった");
+    System.out.println("GAME OVER");
+  }
   public void sleep() {
     this.hp = 100;
     System.out.println(this.name + "は眠って回復した");
