@@ -30,6 +30,9 @@ public class Hero extends Character {
     m.hp -= 5;
     System.out.println("5ポイントのダメージ！");
   }
+  public String toString() {
+    return "名前：" + this.name + "/HP:" + this.hp;
+  }
   public Hero(String name) {
     this.name = name;
     this.hp = 100;

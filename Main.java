@@ -9,6 +9,8 @@ public class Main {
     Empty e = new Empty();
     String s = e.toString();
     System.out.println(s);
+    Hero h = new Hero("湊");
+    System.out.println(h.toString());
     // X obj = new A();
     // obj.a();
     // // obj.b(); Xという箱ではaのアクションしかないから
