@@ -1,28 +1,31 @@
 public class Main {
-  public static void heal(int hp) {
-    hp += 10;
-  }
-  public static void heal(Theif t) {
-    t.hp += 10;
-  }
+  // public static void heal(int hp) {
+  //   hp += 10;
+  // }
+  // public static void heal(Theif t) {
+  //   t.hp += 10;
+  // }
   public static void main(String[] args) {
-    X obj = new A();
-    obj.a();
-    // obj.b(); Xという箱ではaのアクションしかないから
-    Y y1 = new A();
-    Y y2 = new B();
-    y1.a();
-    y2.a();
-    Y[] array = new Y[2];
-    array[0] = new A();
-    array[1] = new B();
-    for (int i = 0; i < array.length; i++) {
-      System.out.println(array[i]);
-    }
-    Hero h = new Hero();
-    h.die();
-    King k = new King();
-    k.talk(h);
+    Empty e = new Empty();
+    String s = e.toString();
+    System.out.println(s);
+    // X obj = new A();
+    // obj.a();
+    // // obj.b(); Xという箱ではaのアクションしかないから
+    // Y y1 = new A();
+    // Y y2 = new B();
+    // y1.a();
+    // y2.a();
+    // Y[] array = new Y[2];
+    // array[0] = new A();
+    // array[1] = new B();
+    // for (int i = 0; i < array.length; i++) {
+    //   System.out.println(array[i]);
+    // }
+    // Hero h = new Hero();
+    // h.die();
+    // King k = new King();
+    // k.talk(h);
     // int baseHp = 25;
     // Theif t = new Theif("アサカ", baseHp);
     // heal(baseHp);
