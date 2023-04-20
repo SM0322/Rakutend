@@ -2,6 +2,9 @@ public class Hero extends Character {
   String name;
   private int hp;
   Sword sword;
+  static int money;
+  // staticをつけることでそのクラスに対して1つのみ存在し共有したいときに使う"
+  
   final int LEVEL = 10;
   public String getName() {
     return this.name;
