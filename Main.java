@@ -2,6 +2,7 @@ import java.util.Date;
 import java.util.Calendar;
 import java.text.SimpleDateFormat;
 import java.time.*;
+import java.time.format.DateTimeFormatter;
 public class Main {
   // public static void heal(int hp) {
   //   hp += 10;
@@ -27,15 +28,20 @@ public class Main {
     return name.matches("[A-Z][A-Z0-9]{7}");
   }
   public static void main(String[] args) throws Exception {
-    Date now = new Date();
-    Calendar c = Calendar.getInstance();
-    c.setTime(now);
-    int day = c.get(Calendar.DAY_OF_MONTH);
-    day += 100;
-    c.set(Calendar.DAY_OF_MONTH, day);
-    Date future = c.getTime();
-    SimpleDateFormat f = new SimpleDateFormat("西暦yyyy年MM月dd日");
-    System.out.println(f.format(future));
+    // Date now = new Date();
+    // Calendar c = Calendar.getInstance();
+    // c.setTime(now);
+    // int day = c.get(Calendar.DAY_OF_MONTH);
+    // day += 100;
+    // c.set(Calendar.DAY_OF_MONTH, day);
+    // Date future = c.getTime();
+    // SimpleDateFormat f = new SimpleDateFormat("西暦yyyy年MM月dd日");
+    // System.out.println(f.format(future));
+    
+    LocalDate now = LocalDate.now();
+    LocalDate future = now.plusDays(100);
+    DateTimeFormatter fmt = DateTimeFormatter.ofPattern("西暦yyyy年MM月dd日");
+    System.out.println(future.format(fmt));
     // isValidPlayerName("宮迫信之介");
     // Bank a1 = new Bank("4649", 1592);
     // Bank a2 = new Bank("4649", 2000);
