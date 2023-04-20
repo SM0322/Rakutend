@@ -1,5 +1,7 @@
 import java.util.Date;
 import java.util.Calendar;
+import java.text.SimpleDateFormat;
+import java.time.*;
 public class Main {
   // public static void heal(int hp) {
   //   hp += 10;
@@ -24,7 +26,7 @@ public class Main {
     // return true;
     return name.matches("[A-Z][A-Z0-9]{7}");
   }
-  public static void main(String[] args) {
+  public static void main(String[] args) throws Exception {
     // isValidPlayerName("宮迫信之介");
     // Bank a1 = new Bank("4649", 1592);
     // Bank a2 = new Bank("4649", 2000);
@@ -33,35 +35,53 @@ public class Main {
     // String s = e.toString();
     // System.out.println(s);
     // System.out.println(Hero.money);
-    Hero h1 = new Hero("湊1");
-    Hero h2 = new Hero("湊2tehbsrthnsrty");
-    System.out.println(isValidPlayerName(h1.name));
-    String s = "abc,def:ghi";
-    String[] words = s.split("[,:]");
-    for (String w : words) {
-      System.out.println(w + "->");
+    // Hero h1 = new Hero("湊1");
+    // Hero h2 = new Hero("湊2tehbsrthnsrty");
+    // System.out.println(isValidPlayerName(h1.name));
+    // String s = "abc,def:ghi";
+    // String[] words = s.split("[,:]");
+    // for (String w : words) {
+    //   System.out.println(w + "->");
+    // }
+    // final String FORMAT = "%-9s %-13s 所持金%,6d";
+    // String s1 = String.format(FORMAT, h1.getName(), h1.getHp(), h1.getGold());
+    // System.out.println(s1);
+    // String s2 = String.format(FORMAT, h2.getName(), h2.getHp(), h2.getGold());
+    // System.out.println(s2);
+    // long start = System.currentTimeMillis();
+    // long end = System.currentTimeMillis();
+    // System.out.println("処理にかかった時間は" + (end - start) + "ミリ秒でした");
+    // Date now = new Date();
+    // System.out.println(now);
+    // System.out.println(now.getTime());
+    // Date past = new Date(1600705425827L);
+    // System.out.println(past);
+    // Calendar c = Calendar.getInstance();
+    // c.set(2023,4,20,16,8,30);
+    // c.set(Calendar.MONTH, 9);
+    // Date d = c.getTime();
+    // System.out.println(d);
+    // c.setTime(now);
+    // int y = c.get(Calendar.YEAR);
+    // System.out.println("今年は" + y + "年です");
+    // SimpleDateFormat f = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
+    // Date d = f.parse("2020/09/22 01:23:45");
+    // System.out.println(d);
+    // Date now = new Date();
+    // String s = f.format(now);
+    // System.out.println("現在は" + s + "です");
+    Instant i1 = Instant.now();
+    Instant i2 = Instant.ofEpochMilli(1600705425827L);
+    long l = i2.toEpochMilli();
+    ZonedDateTime z1 = ZonedDateTime.now();
+    ZonedDateTime z2 = ZonedDateTime.of(2020, 1,2,3,4,5,6,ZoneId.of("Asia/Tokyo"));
+    Instant i3 = z2.toInstant();
+    ZonedDateTime z3 = i3.atZone(ZoneId.of("Europe/London"));
+    System.out.println("東京" + z2.getYear() + z2.getDayOfMonth());
+    System.out.println("ロンドン" + z3.getMonth() + z3.getDayOfMonth());
+    if (z2.isEqual(z3)) {
+      System.out.println("これらは同じ時間を指しています");
     }
-    final String FORMAT = "%-9s %-13s 所持金%,6d";
-    String s1 = String.format(FORMAT, h1.getName(), h1.getHp(), h1.getGold());
-    System.out.println(s1);
-    String s2 = String.format(FORMAT, h2.getName(), h2.getHp(), h2.getGold());
-    System.out.println(s2);
-    long start = System.currentTimeMillis();
-    long end = System.currentTimeMillis();
-    System.out.println("処理にかかった時間は" + (end - start) + "ミリ秒でした");
-    Date now = new Date();
-    System.out.println(now);
-    System.out.println(now.getTime());
-    Date past = new Date(1600705425827L);
-    System.out.println(past);
-    Calendar c = Calendar.getInstance();
-    c.set(2023,4,20,16,8,30);
-    c.set(Calendar.MONTH, 9);
-    Date d = c.getTime();
-    System.out.println(d);
-    c.setTime(now);
-    int y = c.get(Calendar.YEAR);
-    System.out.println("今年は" + y + "年です");
     // // Hero h2 = new Hero("湊");
     // if (a1.equals(a2) == true) {
     //   System.out.println("同じ内容です");
