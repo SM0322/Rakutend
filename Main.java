@@ -20,6 +20,19 @@ public class Main {
     } else {
       System.out.println("違う内容です");
     }
+    String s1 = "スッキリJava";
+    String s2 = "Java";
+    String s3 = "java";
+    if (s2.equals(s3)) {
+      System.out.println("s2とs3は等しい");
+    }
+    if (s2.equalsIgnoreCase(s3)) {
+      System.out.println("ケースを区別しなければs2とs3は等しい");
+    }
+    System.out.println("s1の長さは" + s1.length() + "です");
+    if (s1.isEmpty()) {
+      System.out.println("s1は空文字です");
+    }   
     // h2.money += 5000;
     // System.out.println(Hero.money);
     // X obj = new A();
