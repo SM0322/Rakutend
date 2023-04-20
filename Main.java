@@ -32,7 +32,12 @@ public class Main {
     // System.out.println(s);
     // System.out.println(Hero.money);
     Hero h1 = new Hero("湊");
-    isValidPlayerName(h1.name);
+    System.out.println(isValidPlayerName(h1.name));
+    String s = "abc,def:ghi";
+    String[] words = s.split("[,:]");
+    for (String w : words) {
+      System.out.println(w + "->");
+    }
     // // Hero h2 = new Hero("湊");
     // if (a1.equals(a2) == true) {
     //   System.out.println("同じ内容です");
