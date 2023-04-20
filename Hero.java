@@ -2,7 +2,7 @@ public class Hero extends Character {
   String name;
   private int hp;
   Sword sword;
-  static int money = 10000;
+  static int money;
   // staticをつけることでそのクラスに対して1つのみ存在し共有したいときに使う"
   
   final int LEVEL = 10;
@@ -45,6 +45,11 @@ public class Hero extends Character {
       }
     }
     return false;
+  }
+  public static void setRandomMoney() {
+    int a = new java.util.Random().nextInt(10);
+    a ++;
+    Hero.money = (int)(a * 1000);
   }
   public Hero(String name) {
     this.name = name;

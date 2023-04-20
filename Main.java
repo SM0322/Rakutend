@@ -9,6 +9,7 @@ public class Main {
     Empty e = new Empty();
     String s = e.toString();
     System.out.println(s);
+    System.out.println(Hero.money);
     Hero h1 = new Hero("湊");
     Hero h2 = new Hero("湊");
     System.out.println(h1.toString());
@@ -17,7 +18,6 @@ public class Main {
     } else {
       System.out.println("違う内容です");
     }
-    System.out.println(Hero.money);
     h2.money += 5000;
     System.out.println(Hero.money);
     // X obj = new A();
