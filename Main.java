@@ -44,6 +44,9 @@ public class Main {
     System.out.println(s1);
     String s2 = String.format(FORMAT, h2.getName(), h2.getHp(), h2.getGold());
     System.out.println(s2);
+    long start = System.currentTimeMillis();
+    long end = System.currentTimeMillis();
+    System.out.println("処理にかかった時間は" + (end - start) + "ミリ秒でした");
     // // Hero h2 = new Hero("湊");
     // if (a1.equals(a2) == true) {
     //   System.out.println("同じ内容です");
