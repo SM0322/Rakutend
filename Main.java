@@ -5,45 +5,69 @@ public class Main {
   // public static void heal(Theif t) {
   //   t.hp += 10;
   // }
+  public static boolean isValidPlayerName(String name) {
+    // if (name.length() != 8) {
+    //   return false;
+    // }
+    // char first = name.charAt(0);
+    // if (!(first >= 'A' && first <= 'Z')) {
+    //   return false;
+    // }
+    // for (int i = 1;i < 8; i++) {
+    //   char c = name.charAt(i);
+    //   if (!((c >= 'A' && c <= 'Z') || (c >= '0' && c <= '9'))) {
+    //     return false;
+    //   }
+    // }
+    // return true;
+    return name.matches("[A-Z][A-Z0-9]{7}");
+  }
   public static void main(String[] args) {
-    Bank a1 = new Bank("4649", 1592);
-    Bank a2 = new Bank("4649", 2000);
-    System.out.println(a1.toString());
+    // isValidPlayerName("宮迫信之介");
+    // Bank a1 = new Bank("4649", 1592);
+    // Bank a2 = new Bank("4649", 2000);
+    // System.out.println(a1.toString());
     // Empty e = new Empty();
     // String s = e.toString();
     // System.out.println(s);
     // System.out.println(Hero.money);
-    // Hero h1 = new Hero("湊");
-    // Hero h2 = new Hero("湊");
-    if (a1.equals(a2) == true) {
-      System.out.println("同じ内容です");
-    } else {
-      System.out.println("違う内容です");
-    }
-    String s1 = "スッキリJava";
-    String s2 = "Java";
-    String s3 = "java";
-    if (s2.equals(s3)) {
-      System.out.println("s2とs3は等しい");
-    }
-    if (s2.equalsIgnoreCase(s3)) {
-      System.out.println("ケースを区別しなければs2とs3は等しい");
-    }
-    System.out.println("s1の長さは" + s1.length() + "です");
-    if (s1.isEmpty()) {
-      System.out.println("s1は空文字です");
-    }
-    if (s1.contains("Java")) {
-      System.out.println("文字列はJavaを含んでいます");
-    }
-    if (s1.endsWith("Java")) {
-      System.out.println("文字列はJavaが末尾にあります");
-    }
-    System.out.println("文字列で最初にJavaが搭乗する位置は" + s1.indexOf("Java"));
-    System.out.println("文字列で最後にJavaが搭乗する位置は" + s1.lastIndexOf("Java"));
-    String s4 = "Java programing";
-    System.out.println("文字列の4文字目以降は" + s4.substring(3));
-    System.out.println("文字列の４＝８文字目は" + s4.substring(3, 8));
+    Hero h1 = new Hero("湊");
+    isValidPlayerName(h1.name);
+    // // Hero h2 = new Hero("湊");
+    // if (a1.equals(a2) == true) {
+    //   System.out.println("同じ内容です");
+    // } else {
+    //   System.out.println("違う内容です");
+    // }
+    // String s1 = "スッキリJava";
+    // String s2 = "Java";
+    // String s3 = "java";
+    // if (s2.equals(s3)) {
+    //   System.out.println("s2とs3は等しい");
+    // }
+    // if (s2.equalsIgnoreCase(s3)) {
+    //   System.out.println("ケースを区別しなければs2とs3は等しい");
+    // }
+    // System.out.println("s1の長さは" + s1.length() + "です");
+    // if (s1.isEmpty()) {
+    //   System.out.println("s1は空文字です");
+    // }
+    // if (s1.contains("Java")) {
+    //   System.out.println("文字列はJavaを含んでいます");
+    // }
+    // if (s1.endsWith("Java")) {
+    //   System.out.println("文字列はJavaが末尾にあります");
+    // }
+    // System.out.println("文字列で最初にJavaが搭乗する位置は" + s1.indexOf("Java"));
+    // System.out.println("文字列で最後にJavaが搭乗する位置は" + s1.lastIndexOf("Java"));
+    // String s4 = "Java programing";
+    // System.out.println("文字列の4文字目以降は" + s4.substring(3));
+    // System.out.println("文字列の４＝８文字目は" + s4.substring(3, 8));
+    // StringBuilder sb = new StringBuilder();
+    // for (int i = 0; i < 1000; i++) {
+    //   sb.append("Java");
+    // }
+    // String s = sb.toString();
     // h2.money += 5000;
     // System.out.println(Hero.money);
     // X obj = new A();
