@@ -6,20 +6,22 @@ public class Main {
   //   t.hp += 10;
   // }
   public static void main(String[] args) {
-    Empty e = new Empty();
-    String s = e.toString();
-    System.out.println(s);
-    System.out.println(Hero.money);
-    Hero h1 = new Hero("湊");
-    Hero h2 = new Hero("湊");
-    System.out.println(h1.toString());
-    if (h1.equals(h2) == true) {
+    Bank a1 = new Bank("4649", 1592);
+    Bank a2 = new Bank("4649", 2000);
+    System.out.println(a1.toString());
+    // Empty e = new Empty();
+    // String s = e.toString();
+    // System.out.println(s);
+    // System.out.println(Hero.money);
+    // Hero h1 = new Hero("湊");
+    // Hero h2 = new Hero("湊");
+    if (a1.equals(a2) == true) {
       System.out.println("同じ内容です");
     } else {
       System.out.println("違う内容です");
     }
-    h2.money += 5000;
-    System.out.println(Hero.money);
+    // h2.money += 5000;
+    // System.out.println(Hero.money);
     // X obj = new A();
     // obj.a();
     // // obj.b(); Xという箱ではaのアクションしかないから
