@@ -41,6 +41,9 @@ public class Main {
     }
     System.out.println("文字列で最初にJavaが搭乗する位置は" + s1.indexOf("Java"));
     System.out.println("文字列で最後にJavaが搭乗する位置は" + s1.lastIndexOf("Java"));
+    String s4 = "Java programing";
+    System.out.println("文字列の4文字目以降は" + s4.substring(3));
+    System.out.println("文字列の４＝８文字目は" + s4.substring(3, 8));
     // h2.money += 5000;
     // System.out.println(Hero.money);
     // X obj = new A();
