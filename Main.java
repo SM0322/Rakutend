@@ -1,3 +1,5 @@
+import java.util.Date;
+import java.util.Calendar;
 public class Main {
   // public static void heal(int hp) {
   //   hp += 10;
@@ -47,6 +49,19 @@ public class Main {
     long start = System.currentTimeMillis();
     long end = System.currentTimeMillis();
     System.out.println("処理にかかった時間は" + (end - start) + "ミリ秒でした");
+    Date now = new Date();
+    System.out.println(now);
+    System.out.println(now.getTime());
+    Date past = new Date(1600705425827L);
+    System.out.println(past);
+    Calendar c = Calendar.getInstance();
+    c.set(2023,4,20,16,8,30);
+    c.set(Calendar.MONTH, 9);
+    Date d = c.getTime();
+    System.out.println(d);
+    c.setTime(now);
+    int y = c.get(Calendar.YEAR);
+    System.out.println("今年は" + y + "年です");
     // // Hero h2 = new Hero("湊");
     // if (a1.equals(a2) == true) {
     //   System.out.println("同じ内容です");
