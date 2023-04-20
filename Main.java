@@ -17,6 +17,9 @@ public class Main {
     } else {
       System.out.println("違う内容です");
     }
+    System.out.println(Hero.money);
+    h2.money += 5000;
+    System.out.println(Hero.money);
     // X obj = new A();
     // obj.a();
     // // obj.b(); Xという箱ではaのアクションしかないから
