@@ -9,8 +9,14 @@ public class Main {
     Empty e = new Empty();
     String s = e.toString();
     System.out.println(s);
-    Hero h = new Hero("湊");
-    System.out.println(h.toString());
+    Hero h1 = new Hero("湊");
+    Hero h2 = new Hero("湊");
+    System.out.println(h1.toString());
+    if (h1.equals(h2) == true) {
+      System.out.println("同じ内容です");
+    } else {
+      System.out.println("違う内容です");
+    }
     // X obj = new A();
     // obj.a();
     // // obj.b(); Xという箱ではaのアクションしかないから
