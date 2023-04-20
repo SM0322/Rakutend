@@ -31,13 +31,19 @@ public class Main {
     // String s = e.toString();
     // System.out.println(s);
     // System.out.println(Hero.money);
-    Hero h1 = new Hero("湊");
+    Hero h1 = new Hero("湊1");
+    Hero h2 = new Hero("湊2tehbsrthnsrty");
     System.out.println(isValidPlayerName(h1.name));
     String s = "abc,def:ghi";
     String[] words = s.split("[,:]");
     for (String w : words) {
       System.out.println(w + "->");
     }
+    final String FORMAT = "%-9s %-13s 所持金%,6d";
+    String s1 = String.format(FORMAT, h1.getName(), h1.getHp(), h1.getGold());
+    System.out.println(s1);
+    String s2 = String.format(FORMAT, h2.getName(), h2.getHp(), h2.getGold());
+    System.out.println(s2);
     // // Hero h2 = new Hero("湊");
     // if (a1.equals(a2) == true) {
     //   System.out.println("同じ内容です");

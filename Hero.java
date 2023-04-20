@@ -12,6 +12,9 @@ public class Hero extends Character {
   public int getHp() {
     return this.hp;
   }
+  public int getGold() {
+    return this.money;
+  }
   public void setHp(int hp) {
     this. hp = hp;
   }
