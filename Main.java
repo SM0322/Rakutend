@@ -27,6 +27,15 @@ public class Main {
     return name.matches("[A-Z][A-Z0-9]{7}");
   }
   public static void main(String[] args) throws Exception {
+    Date now = new Date();
+    Calendar c = Calendar.getInstance();
+    c.setTime(now);
+    int day = c.get(Calendar.DAY_OF_MONTH);
+    day += 100;
+    c.set(Calendar.DAY_OF_MONTH, day);
+    Date future = c.getTime();
+    SimpleDateFormat f = new SimpleDateFormat("西暦yyyy年MM月dd日");
+    System.out.println(f.format(future));
     // isValidPlayerName("宮迫信之介");
     // Bank a1 = new Bank("4649", 1592);
     // Bank a2 = new Bank("4649", 2000);
@@ -70,18 +79,18 @@ public class Main {
     // Date now = new Date();
     // String s = f.format(now);
     // System.out.println("現在は" + s + "です");
-    Instant i1 = Instant.now();
-    Instant i2 = Instant.ofEpochMilli(1600705425827L);
-    long l = i2.toEpochMilli();
-    ZonedDateTime z1 = ZonedDateTime.now();
-    ZonedDateTime z2 = ZonedDateTime.of(2020, 1,2,3,4,5,6,ZoneId.of("Asia/Tokyo"));
-    Instant i3 = z2.toInstant();
-    ZonedDateTime z3 = i3.atZone(ZoneId.of("Europe/London"));
-    System.out.println("東京" + z2.getYear() + z2.getDayOfMonth());
-    System.out.println("ロンドン" + z3.getMonth() + z3.getDayOfMonth());
-    if (z2.isEqual(z3)) {
-      System.out.println("これらは同じ時間を指しています");
-    }
+    // Instant i1 = Instant.now();
+    // Instant i2 = Instant.ofEpochMilli(1600705425827L);
+    // long l = i2.toEpochMilli();
+    // ZonedDateTime z1 = ZonedDateTime.now();
+    // ZonedDateTime z2 = ZonedDateTime.of(2020, 1,2,3,4,5,6,ZoneId.of("Asia/Tokyo"));
+    // Instant i3 = z2.toInstant();
+    // ZonedDateTime z3 = i3.atZone(ZoneId.of("Europe/London"));
+    // System.out.println("東京" + z2.getYear() + z2.getDayOfMonth());
+    // System.out.println("ロンドン" + z3.getMonth() + z3.getDayOfMonth());
+    // if (z2.isEqual(z3)) {
+    //   System.out.println("これらは同じ時間を指しています");
+    // }
     // // Hero h2 = new Hero("湊");
     // if (a1.equals(a2) == true) {
     //   System.out.println("同じ内容です");
@@ -112,10 +121,14 @@ public class Main {
     // String s4 = "Java programing";
     // System.out.println("文字列の4文字目以降は" + s4.substring(3));
     // System.out.println("文字列の４＝８文字目は" + s4.substring(3, 8));
-    // StringBuilder sb = new StringBuilder();
-    // for (int i = 0; i < 1000; i++) {
-    //   sb.append("Java");
-    // }
+    StringBuilder sb = new StringBuilder();
+    for (int i = 0; i < 100; i++) {
+      sb.append(i+1).append(",");
+    }
+    String s = sb.toString();
+    String[] a = s.split(",");
+    System.out.println(s);
+    System.out.println(a);
     // String s = sb.toString();
     // h2.money += 5000;
     // System.out.println(Hero.money);
