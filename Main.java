@@ -32,7 +32,15 @@ public class Main {
     System.out.println("s1の長さは" + s1.length() + "です");
     if (s1.isEmpty()) {
       System.out.println("s1は空文字です");
-    }   
+    }
+    if (s1.contains("Java")) {
+      System.out.println("文字列はJavaを含んでいます");
+    }
+    if (s1.endsWith("Java")) {
+      System.out.println("文字列はJavaが末尾にあります");
+    }
+    System.out.println("文字列で最初にJavaが搭乗する位置は" + s1.indexOf("Java"));
+    System.out.println("文字列で最後にJavaが搭乗する位置は" + s1.lastIndexOf("Java"));
     // h2.money += 5000;
     // System.out.println(Hero.money);
     // X obj = new A();
