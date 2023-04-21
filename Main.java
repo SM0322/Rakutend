@@ -10,49 +10,56 @@ import java.util.Set;
 import java.util.TreeSet;
 public class Main {
   public static void main(String[] args) throws Exception {
-    Set<String> colors = new HashSet<String>();
-    colors.add("赤");
-    colors.add("黄");
-    colors.add("青");
-    colors.add("赤");
-    System.out.println("色は" + colors.size() + "種類");
-    for (String s : colors) {
-      System.out.print(s + "→");
-    }
-    Set<String> words = new TreeSet<String>();
-    words.add("赤");
-    words.add("黄");
-    words.add("青");
-    System.out.println("色は" + words.size() + "種類");
-    for (String s : words) {
-      System.out.print(s + "→");
-    }
-    Map<String, Integer> prefs = new HashMap<String, Integer>();
-    prefs.put("京都府", 255);
-    prefs.put("東京都", 1261);
-    prefs.put("熊本県", 181);
-    int tokyo = prefs.get("東京都");
-    System.out.println("東京都の人口は" + tokyo);
-    // prefs.remove("京都府");
-    prefs.put("熊本県", 182);
-    System.out.println("熊本県の人口は" + prefs.get("熊本県"));
-    for (String key : prefs.keySet()) {
-      int value = prefs.get(key);
-      System.out.println(key + "の人口は" + value);
-    }
-    // Hero h = new Hero("ミナト");
-    List<Hero> list = new ArrayList<Hero>();
+    // Set<String> colors = new HashSet<String>();
+    // colors.add("赤");
+    // colors.add("黄");
+    // colors.add("青");
+    // colors.add("赤");
+    // System.out.println("色は" + colors.size() + "種類");
+    // for (String s : colors) {
+    //   System.out.print(s + "→");
+    // }
+    // Set<String> words = new TreeSet<String>();
+    // words.add("赤");
+    // words.add("黄");
+    // words.add("青");
+    // System.out.println("色は" + words.size() + "種類");
+    // for (String s : words) {
+    //   System.out.print(s + "→");
+    // }
+    // Map<String, Integer> prefs = new HashMap<String, Integer>();
+    // prefs.put("京都府", 255);
+    // prefs.put("東京都", 1261);
+    // prefs.put("熊本県", 181);
+    // int tokyo = prefs.get("東京都");
+    // System.out.println("東京都の人口は" + tokyo);
+    // // prefs.remove("京都府");
+    // prefs.put("熊本県", 182);
+    // System.out.println("熊本県の人口は" + prefs.get("熊本県"));
+    // for (String key : prefs.keySet()) {
+    //   int value = prefs.get(key);
+    //   System.out.println(key + "の人口は" + value);
+    // }
+    // // Hero h = new Hero("ミナト");
+    // List<Hero> list = new ArrayList<Hero>();
     // list.add(h);
     // System.out.println(list.get(0).name);
     // h.name = "菅原";
     // System.out.println(list.get(0).name);
     Hero h1 = new Hero("斎藤");
     Hero h2 = new Hero("鈴木");
-    List<Hero> heros = new ArrayList<Hero>();
-    heros.add(h1);
-    heros.add(h2);
-    for (Hero h : heros) {
-      System.out.println(h.getName());
+    // List<Hero> heros = new ArrayList<Hero>();
+    // heros.add(h1);
+    // heros.add(h2);
+    // for (Hero h : heros) {
+    //   System.out.println(h.getName());
+    // }
+    Map<Hero, Integer> heros = new HashMap<Hero, Integer>();
+    heros.put(h1, 3);
+    heros.put(h2, 7);
+    for (Hero key : heros.keySet()) {
+      int value = heros.get(key);
+      System.out.println(key.getName() + "が倒した敵=" + value);
     }
   }
   //   ArrayList<String> names = new ArrayList<String>();
