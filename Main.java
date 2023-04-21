@@ -5,40 +5,26 @@ import java.time.*;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.*;
+import java.util.HashSet;
+import java.util.Set;
 public class Main {
-  // public static void heal(int hp) {
-  //   hp += 10;
-  // }
-  // public static void heal(Theif t) {
-  //   t.hp += 10;
-  // }
-  public static boolean isValidPlayerName(String name) {
-    // if (name.length() != 8) {
-    //   return false;
-    // }
-    // char first = name.charAt(0);
-    // if (!(first >= 'A' && first <= 'Z')) {
-    //   return false;
-    // }
-    // for (int i = 1;i < 8; i++) {
-    //   char c = name.charAt(i);
-    //   if (!((c >= 'A' && c <= 'Z') || (c >= '0' && c <= '9'))) {
-    //     return false;
-    //   }
-    // }
-    // return true;
-    return name.matches("[A-Z][A-Z0-9]{7}");
-  }
   public static void main(String[] args) throws Exception {
-    ArrayList<String> names = new ArrayList<String>();
-    names.add("たなか");
-    names.add("すずき");
-    names.add("さいとう");
-    Iterator<String> it = names.iterator();
-    while (it.hasNext()) {
-      String e = it.next();
-      System.out.println(e);
-    }
+    Set<String> colors = new HashSet<String>();
+    colors.add("赤");
+    colors.add("黄");
+    colors.add("青");
+    colors.add("赤");
+    System.out.println("色は" + colors.size() + "種類");
+  }
+  //   ArrayList<String> names = new ArrayList<String>();
+  //   names.add("たなか");
+  //   names.add("すずき");
+  //   names.add("さいとう");
+  //   Iterator<String> it = names.iterator();
+  //   while (it.hasNext()) {
+  //     String e = it.next();
+  //     System.out.println(e);
+  //   }
     // System.out.println(names.get(1));
     // for (int i = 0; i < names.size(); i++) {
     //   System.out.println(names.get(i));
@@ -46,21 +32,21 @@ public class Main {
     // for (String s : names) {
     //   System.out.println(s);
     // }
-    ArrayList<Integer> points = new ArrayList<Integer>();
-    points.add(10);
-    points.add(80);
-    points.add(75);
-    for (int i : points) {
-      System.out.println(i);
-    }
-    points.add(1,20);
-    for (int i : points) {
-      System.out.println(i);
-    }
-    points.set(1,30);
-    for (int i : points) {
-      System.out.println(i);
-    }
+    // ArrayList<Integer> points = new ArrayList<Integer>();
+    // points.add(10);
+    // points.add(80);
+    // points.add(75);
+    // for (int i : points) {
+    //   System.out.println(i);
+    // }
+    // points.add(1,20);
+    // for (int i : points) {
+    //   System.out.println(i);
+    // }
+    // points.set(1,30);
+    // for (int i : points) {
+    //   System.out.println(i);
+    // }
     // Date now = new Date();
     // Calendar c = Calendar.getInstance();
     // c.setTime(now);
@@ -234,5 +220,4 @@ public class Main {
     // h1.sword = s;
     // System.out.println("現在装備している武器は" + h1.sword.name + "です");
     // c.heal(h1);
-  }
 }
