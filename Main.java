@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import java.util.*;
 import java.util.HashSet;
 import java.util.Set;
+import java.util.TreeSet;
 public class Main {
   public static void main(String[] args) throws Exception {
     Set<String> colors = new HashSet<String>();
@@ -16,6 +17,14 @@ public class Main {
     colors.add("赤");
     System.out.println("色は" + colors.size() + "種類");
     for (String s : colors) {
+      System.out.print(s + "→");
+    }
+    Set<String> words = new TreeSet<String>();
+    words.add("赤");
+    words.add("黄");
+    words.add("青");
+    System.out.println("色は" + words.size() + "種類");
+    for (String s : words) {
       System.out.print(s + "→");
     }
   }
