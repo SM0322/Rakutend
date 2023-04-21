@@ -40,6 +40,12 @@ public class Main {
       int value = prefs.get(key);
       System.out.println(key + "の人口は" + value);
     }
+    Hero h = new Hero("ミナト");
+    List<Hero> list = new ArrayList<Hero>();
+    list.add(h);
+    System.out.println(list.get(0).name);
+    h.name = "菅原";
+    System.out.println(list.get(0).name);
   }
   //   ArrayList<String> names = new ArrayList<String>();
   //   names.add("たなか");
