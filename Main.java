@@ -39,6 +39,13 @@ public class Main {
     name1s.add("すずき");
     name1s.add("さいとう");
     System.out.println(name1s.get(1));
+    ArrayList<Integer> points = new ArrayList<Integer>();
+    points.add(10);
+    points.add(80);
+    points.add(75);
+    for (int i : points) {
+      System.out.println(i);
+    }
     // Date now = new Date();
     // Calendar c = Calendar.getInstance();
     // c.setTime(now);
