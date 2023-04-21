@@ -4,6 +4,7 @@ import java.text.SimpleDateFormat;
 import java.time.*;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
+import java.util.*;
 public class Main {
   // public static void heal(int hp) {
   //   hp += 10;
@@ -33,10 +34,18 @@ public class Main {
     names.add("たなか");
     names.add("すずき");
     names.add("さいとう");
-    System.out.println(names.get(1));
-    for (int i = 0; i < names.size(); i++) {
-      System.out.println(names.get(i));
+    Iterator<String> it = names.iterator();
+    while (it.hasNext()) {
+      String e = it.next();
+      System.out.println(e);
     }
+    // System.out.println(names.get(1));
+    // for (int i = 0; i < names.size(); i++) {
+    //   System.out.println(names.get(i));
+    // }
+    // for (String s : names) {
+    //   System.out.println(s);
+    // }
     ArrayList<Integer> points = new ArrayList<Integer>();
     points.add(10);
     points.add(80);
