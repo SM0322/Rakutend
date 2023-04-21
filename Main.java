@@ -28,6 +28,11 @@ public class Main {
     return name.matches("[A-Z][A-Z0-9]{7}");
   }
   public static void main(String[] args) throws Exception {
+    String[] names = new String[3];
+    names[0] = "たなか";
+    names[1] = "すずき";
+    names[2] = "さいとう";
+    System.out.println(names[1]);
     // Date now = new Date();
     // Calendar c = Calendar.getInstance();
     // c.setTime(now);
@@ -38,10 +43,10 @@ public class Main {
     // SimpleDateFormat f = new SimpleDateFormat("西暦yyyy年MM月dd日");
     // System.out.println(f.format(future));
     
-    LocalDate now = LocalDate.now();
-    LocalDate future = now.plusDays(100);
-    DateTimeFormatter fmt = DateTimeFormatter.ofPattern("西暦yyyy年MM月dd日");
-    System.out.println(future.format(fmt));
+    // LocalDate now = LocalDate.now();
+    // LocalDate future = now.plusDays(100);
+    // DateTimeFormatter fmt = DateTimeFormatter.ofPattern("西暦yyyy年MM月dd日");
+    // System.out.println(future.format(fmt));
     // isValidPlayerName("宮迫信之介");
     // Bank a1 = new Bank("4649", 1592);
     // Bank a2 = new Bank("4649", 2000);
@@ -127,14 +132,14 @@ public class Main {
     // String s4 = "Java programing";
     // System.out.println("文字列の4文字目以降は" + s4.substring(3));
     // System.out.println("文字列の４＝８文字目は" + s4.substring(3, 8));
-    StringBuilder sb = new StringBuilder();
-    for (int i = 0; i < 100; i++) {
-      sb.append(i+1).append(",");
-    }
-    String s = sb.toString();
-    String[] a = s.split(",");
-    System.out.println(s);
-    System.out.println(a);
+    // StringBuilder sb = new StringBuilder();
+    // for (int i = 0; i < 100; i++) {
+    //   sb.append(i+1).append(",");
+    // }
+    // String s = sb.toString();
+    // String[] a = s.split(",");
+    // System.out.println(s);
+    // System.out.println(a);
     // String s = sb.toString();
     // h2.money += 5000;
     // System.out.println(Hero.money);
