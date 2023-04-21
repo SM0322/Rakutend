@@ -33,9 +33,13 @@ public class Main {
     prefs.put("熊本県", 181);
     int tokyo = prefs.get("東京都");
     System.out.println("東京都の人口は" + tokyo);
-    prefs.remove("京都府");
+    // prefs.remove("京都府");
     prefs.put("熊本県", 182);
     System.out.println("熊本県の人口は" + prefs.get("熊本県"));
+    for (String key : prefs.keySet()) {
+      int value = prefs.get(key);
+      System.out.println(key + "の人口は" + value);
+    }
   }
   //   ArrayList<String> names = new ArrayList<String>();
   //   names.add("たなか");
