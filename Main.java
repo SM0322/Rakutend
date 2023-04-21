@@ -40,12 +40,20 @@ public class Main {
       int value = prefs.get(key);
       System.out.println(key + "の人口は" + value);
     }
-    Hero h = new Hero("ミナト");
+    // Hero h = new Hero("ミナト");
     List<Hero> list = new ArrayList<Hero>();
-    list.add(h);
-    System.out.println(list.get(0).name);
-    h.name = "菅原";
-    System.out.println(list.get(0).name);
+    // list.add(h);
+    // System.out.println(list.get(0).name);
+    // h.name = "菅原";
+    // System.out.println(list.get(0).name);
+    Hero h1 = new Hero("斎藤");
+    Hero h2 = new Hero("鈴木");
+    List<Hero> heros = new ArrayList<Hero>();
+    heros.add(h1);
+    heros.add(h2);
+    for (Hero h : heros) {
+      System.out.println(h.getName());
+    }
   }
   //   ArrayList<String> names = new ArrayList<String>();
   //   names.add("たなか");

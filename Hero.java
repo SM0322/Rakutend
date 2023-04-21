@@ -1,5 +1,5 @@
 public class Hero extends Character {
-  String name;
+  private String name;
   private int hp;
   Sword sword;
   static int money;
