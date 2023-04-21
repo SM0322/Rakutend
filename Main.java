@@ -29,16 +29,14 @@ public class Main {
     return name.matches("[A-Z][A-Z0-9]{7}");
   }
   public static void main(String[] args) throws Exception {
-    String[] names = new String[3];
-    names[0] = "たなか";
-    names[1] = "すずき";
-    names[2] = "さいとう";
-    System.out.println(names[1]);
-    ArrayList<String> name1s = new ArrayList<String>();
-    name1s.add("たなか");
-    name1s.add("すずき");
-    name1s.add("さいとう");
-    System.out.println(name1s.get(1));
+    ArrayList<String> names = new ArrayList<String>();
+    names.add("たなか");
+    names.add("すずき");
+    names.add("さいとう");
+    System.out.println(names.get(1));
+    for (int i = 0; i < names.size(); i++) {
+      System.out.println(names.get(i));
+    }
     ArrayList<Integer> points = new ArrayList<Integer>();
     points.add(10);
     points.add(80);
