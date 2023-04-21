@@ -15,6 +15,9 @@ public class Main {
     colors.add("青");
     colors.add("赤");
     System.out.println("色は" + colors.size() + "種類");
+    for (String s : colors) {
+      System.out.print(s + "→");
+    }
   }
   //   ArrayList<String> names = new ArrayList<String>();
   //   names.add("たなか");
