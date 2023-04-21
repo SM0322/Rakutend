@@ -46,6 +46,14 @@ public class Main {
     for (int i : points) {
       System.out.println(i);
     }
+    points.add(1,20);
+    for (int i : points) {
+      System.out.println(i);
+    }
+    points.set(1,30);
+    for (int i : points) {
+      System.out.println(i);
+    }
     // Date now = new Date();
     // Calendar c = Calendar.getInstance();
     // c.setTime(now);
