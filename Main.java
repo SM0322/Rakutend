@@ -3,6 +3,7 @@ import java.util.Calendar;
 import java.text.SimpleDateFormat;
 import java.time.*;
 import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
 public class Main {
   // public static void heal(int hp) {
   //   hp += 10;
@@ -33,6 +34,11 @@ public class Main {
     names[1] = "すずき";
     names[2] = "さいとう";
     System.out.println(names[1]);
+    ArrayList<String> name1s = new ArrayList<String>();
+    name1s.add("たなか");
+    name1s.add("すずき");
+    name1s.add("さいとう");
+    System.out.println(name1s.get(1));
     // Date now = new Date();
     // Calendar c = Calendar.getInstance();
     // c.setTime(now);
