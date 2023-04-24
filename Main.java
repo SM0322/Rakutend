@@ -11,8 +11,14 @@ import java.util.TreeSet;
 import java.io.*;
 public class Main {
   public static void main(String[] args) throws Exception {
-    Person p = new Person();
-    p.setAge(-128);
+    // Person p = new Person();
+    // p.setAge(-128);
+    try {
+      throw new UnsupportedMusicFileException
+        ("未対応のファイルです");
+    } catch (Exception e) {
+      e.printStackTrace();
+    }
     // try (FileWriter fw = new FileWriter("deta.txt");){
       
     //   System.out.println(fw.name);
