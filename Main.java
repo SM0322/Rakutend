@@ -8,12 +8,15 @@ import java.util.*;
 import java.util.HashSet;
 import java.util.Set;
 import java.util.TreeSet;
+import java.io.*;
 public class Main {
   public static void main(String[] args) throws Exception {
     try {
       FileWriter fw = new FileWriter("deta.txt");
       System.out.println(fw.name);
-    } catch (IOException e) {
+    } catch (NullPointerException e) {
+      System.out.println("エラー:" + e.getMessage());
+    } catch(Exception e) {
       System.out.println("エラー:" + e.getMessage());
     }
     // Set<String> colors = new HashSet<String>();
