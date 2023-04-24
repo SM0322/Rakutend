@@ -10,6 +10,12 @@ import java.util.Set;
 import java.util.TreeSet;
 public class Main {
   public static void main(String[] args) throws Exception {
+    try {
+      FileWriter fw = new FileWriter("deta.txt");
+      System.out.println(fw.name);
+    } catch (IOException e) {
+      System.out.println("エラーが発生しました");
+    }
     // Set<String> colors = new HashSet<String>();
     // colors.add("赤");
     // colors.add("黄");
@@ -46,22 +52,22 @@ public class Main {
     // System.out.println(list.get(0).name);
     // h.name = "菅原";
     // System.out.println(list.get(0).name);
-    Hero h1 = new Hero("斎藤");
-    Hero h2 = new Hero("鈴木");
+    // Hero h1 = new Hero("斎藤");
+    // Hero h2 = new Hero("鈴木");
     // List<Hero> heros = new ArrayList<Hero>();
     // heros.add(h1);
     // heros.add(h2);
     // for (Hero h : heros) {
     //   System.out.println(h.getName());
     // }
-    System.out.println(h1.money);
-    Map<Hero, Integer> heros = new HashMap<Hero, Integer>();
-    heros.put(h1, 3);
-    heros.put(h2, 7);
-    for (Hero key : heros.keySet()) {
-      int value = heros.get(key);
-      System.out.println(key.getName() + "が倒した敵=" + value);
-    }
+    // System.out.println(h1.money);
+    // Map<Hero, Integer> heros = new HashMap<Hero, Integer>();
+    // heros.put(h1, 3);
+    // heros.put(h2, 7);
+    // for (Hero key : heros.keySet()) {
+    //   int value = heros.get(key);
+    //   System.out.println(key.getName() + "が倒した敵=" + value);
+    // }
   }
   //   ArrayList<String> names = new ArrayList<String>();
   //   names.add("たなか");
