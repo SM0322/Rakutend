@@ -14,10 +14,13 @@ public class Main {
     try {
       FileWriter fw = new FileWriter("deta.txt");
       System.out.println(fw.name);
+      fw.write("エラー");
     } catch (NullPointerException e) {
       System.out.println("エラー:" + e.getMessage());
-    } catch(Exception e) {
+    } catch(IOException e) {
       System.out.println("エラー:" + e.getMessage());
+    } finally {
+      System.out.println(fw.name);
     }
     // Set<String> colors = new HashSet<String>();
     // colors.add("赤");
