@@ -338,5 +338,19 @@ public class Main {
     // frame.setVisible(true);
     Hero a = new Hero("ミナト");
     System.out.println(a);
+    Hero h1 = new Hero("ミナト");
+    if (a.equals(h1)) {
+      System.out.println("等価である");
+    } else if (a == h1) {
+      System.out.println("等値である");
+    } else {
+      System.out.println("どちらでもない");
+    }
+    Hero h2 = h1;
+    if (h1 == h2) {
+      System.out.println("等値である");
+    } else {
+      System.out.println("どちらでもない");
+    }
   }
 }
