@@ -54,6 +54,7 @@ public class Main {
     // for (Hero h : heros) {
     //   System.out.println(h.getName());
     // }
+    System.out.println(h1.money);
     Map<Hero, Integer> heros = new HashMap<Hero, Integer>();
     heros.put(h1, 3);
     heros.put(h2, 7);
