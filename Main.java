@@ -14,7 +14,7 @@ public class Main {
       FileWriter fw = new FileWriter("deta.txt");
       System.out.println(fw.name);
     } catch (IOException e) {
-      System.out.println("エラーが発生しました");
+      System.out.println("エラー:" + e.getMessage());
     }
     // Set<String> colors = new HashSet<String>();
     // colors.add("赤");
