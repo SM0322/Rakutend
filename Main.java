@@ -11,16 +11,22 @@ import java.util.TreeSet;
 import java.io.*;
 public class Main {
   public static void main(String[] args) throws Exception {
+    FileWriter fw = null;
     try {
-      FileWriter fw = new FileWriter("deta.txt");
+      fw = new FileWriter("deta.txt");
       System.out.println(fw.name);
-      fw.write("エラー");
+      // fw.write("エラー");
     } catch (NullPointerException e) {
       System.out.println("エラー:" + e.getMessage());
     } catch(IOException e) {
       System.out.println("エラー:" + e.getMessage());
     } finally {
-      System.out.println(fw.name);
+      try {
+        System.out.println(fw.name);
+      } catch(IOException e) {
+        ;
+      }
+      // fw.close();
     }
     // Set<String> colors = new HashSet<String>();
     // colors.add("赤");
