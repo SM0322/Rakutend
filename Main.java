@@ -11,24 +11,25 @@ import java.util.TreeSet;
 import java.io.*;
 public class Main {
   public static void main(String[] args) throws Exception {
-    
-    try (FileWriter fw = new FileWriter("deta.txt");){
+    Person p = new Person();
+    p.setAge(-128);
+    // try (FileWriter fw = new FileWriter("deta.txt");){
       
-      System.out.println(fw.name);
-      fw.write("hello");
-    } 
-    // catch (NullPointerException e) {
+    //   System.out.println(fw.name);
+    //   fw.write("hello");
+    // } 
+    // // catch (NullPointerException e) {
+    // //   System.out.println("エラー:" + e.getMessage());
+    //   catch(Exception e) {
     //   System.out.println("エラー:" + e.getMessage());
-      catch(Exception e) {
-      System.out.println("エラー:" + e.getMessage());
-    // } finally {
-    //   try {
-    //     System.out.println(fw.name);
-    //   } catch(IOException e) {
-    //     ;
-    //   }
-    //   // fw.close();
-    }
+    // // } finally {
+    // //   try {
+    // //     System.out.println(fw.name);
+    // //   } catch(IOException e) {
+    // //     ;
+    // //   }
+    // //   // fw.close();
+    // }
     // Set<String> colors = new HashSet<String>();
     // colors.add("赤");
     // colors.add("黄");
@@ -82,6 +83,9 @@ public class Main {
     //   System.out.println(key.getName() + "が倒した敵=" + value);
     // }
   }
+  // public static void subsub() throws IOException {
+  //   FileWriter fw = new FileWriter("deta.txt");
+  // }
   //   ArrayList<String> names = new ArrayList<String>();
   //   names.add("たなか");
   //   names.add("すずき");
