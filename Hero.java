@@ -1,5 +1,5 @@
 public class Hero extends Character {
-  private String name;
+  public String name;
   private int hp;
   Sword sword;
   private static int money;
@@ -36,9 +36,9 @@ public class Hero extends Character {
     m.hp -= 5;
     System.out.println("5ポイントのダメージ！");
   }
-  // public String toString() {
-  //   return "名前：" + this.name + "/HP:" + this.hp;
-  // }
+  public String toString() {
+    return "名前：" + this.name + "/HP:" + this.hp;
+  }
   public boolean equals(Object o) {
     if (this == o) {return true;}
     if (o instanceof Hero) {

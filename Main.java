@@ -325,6 +325,7 @@
 // }
 import java.awt.FlowLayout;
 import javax.swing.*;
+import java.util.*;
 public class Main {
   public static void main(String[] args) {
     // JFrame frame = new JFrame("初めてのGUI");
@@ -336,21 +337,30 @@ public class Main {
     // frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     // frame.setSize(300, 100);
     // frame.setVisible(true);
-    Hero a = new Hero("ミナト");
-    System.out.println(a);
-    Hero h1 = new Hero("ミナト");
-    if (a.equals(h1)) {
-      System.out.println("等価である");
-    } else if (a == h1) {
-      System.out.println("等値である");
-    } else {
-      System.out.println("どちらでもない");
-    }
-    Hero h2 = h1;
-    if (h1 == h2) {
-      System.out.println("等値である");
-    } else {
-      System.out.println("どちらでもない");
-    }
+    // Hero a = new Hero("ミナト");
+    // System.out.println(a);
+    // Hero h1 = new Hero("ミナト");
+    // if (a.equals(h1)) {
+    //   System.out.println("等価である");
+    // } else if (a == h1) {
+    //   System.out.println("等値である");
+    // } else {
+    //   System.out.println("どちらでもない");
+    // }
+    // Hero h2 = h1;
+    // if (h1 == h2) {
+    //   System.out.println("等値である");
+    // } else {
+    //   System.out.println("どちらでもない");
+    // }
+    List<Hero> list = new ArrayList<>();
+    Hero h1 = new Hero();
+    h1.name = "ミナト";
+    list.add(h1);
+    System.out.println("要素数" + list.size());
+    h1 = new Hero("ミナト");
+    h1.name = "ミナト";
+    list.remove(h1);
+    System.out.println("要素数" + list.size());
   }
 }
