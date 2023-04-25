@@ -1,5 +1,6 @@
 import java.util.Objects;
-public class Hero extends Character {
+// public class Hero extends Character implements Cloneable
+public class Hero implements Cloneable {
   public String name;
   private int hp;
   Sword sword;
@@ -7,6 +8,13 @@ public class Hero extends Character {
   // staticをつけることでそのクラスに対して1つのみ存在し共有したいときに使う"
   
   final int LEVEL = 10;
+  public Hero Clone() {
+    Hero result = new Hero();
+    result.name = this.name;
+    result.hp = this.hp;
+    result.sword = this.sword;
+    return result;
+  }
   public String getName() {
     return this.name;
   }

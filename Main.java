@@ -387,5 +387,9 @@ public class Main {
     System.out.println(lists);
     Collections.sort(lists, new ZandakaComparator());
     System.out.println(lists);
+    Hero h1 = new Hero("ミナト");
+    Hero h2 = h1.clone();
+    System.out.println(h1);
+    System.out.println(h2);
   }
 }
