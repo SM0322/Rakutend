@@ -1,3 +1,4 @@
+import java.util.Objects;
 public class Hero extends Character {
   public String name;
   private int hp;
@@ -48,6 +49,9 @@ public class Hero extends Character {
       }
     }
     return false;
+  }
+  public int hashCode() {
+    return Objects.hash(this.name, this.hp);
   }
   public static void setRandomMoney() {
     int a = new java.util.Random().nextInt(10);
