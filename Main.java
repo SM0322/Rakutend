@@ -354,18 +354,38 @@ public class Main {
     // } else {
     //   System.out.println("どちらでもない");
     // }
-    Set<Hero> list = new HashSet<>();
-    Hero h1 = new Hero();
-    h1.name = "ミナト";
-    list.add(h1);
-    System.out.println("要素数" + list.size());
-    h1 = new Hero();
-    h1.name = "ミナト";
-    list.remove(h1);
-    System.out.println("要素数" + list.size());
-    int a[] = {1,2,3,4,5};
-    int[] b = {1,2,3,4,5};
-    System.out.println("誤った判定" + a.equals(b));
-    System.out.println("正しい判定" + Arrays.equals(a, b));
+    // Set<Hero> list = new HashSet<>();
+    // Hero h1 = new Hero();
+    // h1.name = "ミナト";
+    // list.add(h1);
+    // System.out.println("要素数" + list.size());
+    // h1 = new Hero();
+    // h1.name = "ミナト";
+    // list.remove(h1);
+    // System.out.println("要素数" + list.size());
+    // int a[] = {1,2,3,4,5};
+    // int[] b = {1,2,3,4,5};
+    // System.out.println("誤った判定" + a.equals(b));
+    // System.out.println("正しい判定" + Arrays.equals(a, b));
+    List<Account> lists = new ArrayList<>();
+    Account a1 = new Account();
+    a1.number = 10;
+    Account a2 = new Account();
+    a2.number = 13;
+    Account a3 = new Account();
+    a3.number = 9;
+    Account a4 = new Account();
+    a4.number = 12;
+    Account a5 = new Account();
+    a5.number = 11;
+    lists.add(a1);
+    lists.add(a2);
+    lists.add(a3);
+    lists.add(a4);
+    lists.add(a5);
+    Collections.sort(lists);
+    System.out.println(lists);
+    Collections.sort(lists, new ZandakaComparator());
+    System.out.println(lists);
   }
 }
