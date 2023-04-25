@@ -354,12 +354,12 @@ public class Main {
     // } else {
     //   System.out.println("どちらでもない");
     // }
-    List<Hero> list = new ArrayList<>();
+    Set<Hero> list = new HashSet<>();
     Hero h1 = new Hero();
     h1.name = "ミナト";
     list.add(h1);
     System.out.println("要素数" + list.size());
-    h1 = new Hero("ミナト");
+    h1 = new Hero();
     h1.name = "ミナト";
     list.remove(h1);
     System.out.println("要素数" + list.size());
