@@ -326,6 +326,7 @@
 import java.awt.FlowLayout;
 import javax.swing.*;
 import java.util.*;
+import java.util.Arrays;
 public class Main {
   public static void main(String[] args) {
     // JFrame frame = new JFrame("初めてのGUI");
@@ -362,5 +363,9 @@ public class Main {
     h1.name = "ミナト";
     list.remove(h1);
     System.out.println("要素数" + list.size());
+    int a[] = {1,2,3,4,5};
+    int[] b = {1,2,3,4,5};
+    System.out.println("誤った判定" + a.equals(b));
+    System.out.println("正しい判定" + Arrays.equals(a, b));
   }
 }
