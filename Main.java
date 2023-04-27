@@ -400,5 +400,8 @@ public class Main {
     lists.add(b3);
     Collections.sort(lists, new TitleComparator());
     System.out.println(lists);
+    int r = new java.util.Random().nextInt(9);
+    r++;
+    System.out.println(r);
   }
 }
