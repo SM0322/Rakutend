@@ -425,5 +425,12 @@ public class Main {
     Outer o = new Outer();
     // Outer.Inner oi = o.new Inner();
     o.OuterMethod();
+    Pocket<Object> pocket = new Pocket<>();
+    System.out.println("使い捨てのインスタンスを作りPocketに格納");
+    pocket.put(new Object() {
+      String innerField;
+      void innerMethod(){
+      }
+    });
   }
 }
