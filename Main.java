@@ -447,7 +447,7 @@ public class Main {
     StrongBox<String> op3 = new StrongBox<String>(KeyType.DIAL);
     op3.put("ミナト");
     System.out.println(op3.get());
-    
+    System.out.println(twice(4));
   }
   public static Optional<String> decorate(String s, char c) {
     String r;
@@ -457,5 +457,8 @@ public class Main {
       r = c + s + c;
     }
     return Optional.ofNullable(r);
+  }
+  public static int twice(int x) {
+    return x *2;
   }
 }
