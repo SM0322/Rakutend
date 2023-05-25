@@ -456,7 +456,8 @@ public class Main {
     System.out.println("文字列[Java]は" + a2 + "文字です");
     Consumer<String> func2 = System.out::println;
     func2.accept("Hello, World");
-    
+    Supplier<String> func3 = System::lineSeparator;
+    System.out.println("開業します" + func3.get());
   }
   public static Optional<String> decorate(String s, char c) {
     String r;
