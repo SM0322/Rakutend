@@ -423,6 +423,7 @@ public class Main {
     out.println(a.getaccountType());
     // Outer.Inner ic = new Outer.Inner();
     Outer o = new Outer();
-    Outer.Inner oi = o.new Inner();
+    // Outer.Inner oi = o.new Inner();
+    o.OuterMethod();
   }
 }
