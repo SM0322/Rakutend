@@ -421,6 +421,8 @@ public class Main {
     Account a = new Account("1234567", AccountType.FUTSU);
     out.println(a.getaccountNo());
     out.println(a.getaccountType());
-    Outer.Inner ic = new Outer.Inner();
+    // Outer.Inner ic = new Outer.Inner();
+    Outer o = new Outer();
+    Outer.Inner oi = o.new Inner();
   }
 }
