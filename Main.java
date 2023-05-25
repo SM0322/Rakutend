@@ -328,7 +328,7 @@ import javax.swing.*;
 import java.util.*;
 import java.util.Arrays;
 public class Main {
-  public static void main(String[] args) {
+  
     // JFrame frame = new JFrame("初めてのGUI");
     // JLabel label = new JLabel("Hello! World!");
     // JButton button = new JButton("押してね");
@@ -391,17 +391,27 @@ public class Main {
     // Hero h2 = h1.clone();
     // System.out.println(h1);
     // System.out.println(h2);
-    List<Book> lists = new ArrayList<>();
-    Book b1 = new Book("Java入門", "2011/10/07", "スッキリわかる");
-    Book b2 = new Book("Python入門", "2019/06/11", "カレーが食べたくなる");
-    Book b3 = new Book("C言語入門", "2018/06/21", "ポインタも自由自在");
-    lists.add(b1);
-    lists.add(b2);
-    lists.add(b3);
-    Collections.sort(lists, new TitleComparator());
-    System.out.println(lists);
-    int r = new java.util.Random().nextInt(9);
-    r++;
-    System.out.println(r);
+    // List<Book> lists = new ArrayList<>();
+    // Book b1 = new Book("Java入門", "2011/10/07", "スッキリわかる");
+    // Book b2 = new Book("Python入門", "2019/06/11", "カレーが食べたくなる");
+    // Book b3 = new Book("C言語入門", "2018/06/21", "ポインタも自由自在");
+    // lists.add(b1);
+    // lists.add(b2);
+    // lists.add(b3);
+    // Collections.sort(lists, new TitleComparator());
+    // System.out.println(lists);
+    // int r = new java.util.Random().nextInt(9);
+    // r++;
+    // System.out.println(r);
+  public static void prints(Object a,Object b) {
+    for (int i = 0; i < (Integer)b; i++) {
+      System.out.println(a);
+    }
+  }
+  public static void main(String[] args) {
+    Object s = "こんにちは";
+    s = new Hero();
+    Object n = 1;
+    prints(s, n);
   }
 }
