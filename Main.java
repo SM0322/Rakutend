@@ -568,5 +568,13 @@ public class Main {
     for (int value : scores) {
       System.out.println(value);
     }
+    // int[] [] scores2 = {{20,30,40}, {100,120,200}};
+    // for (int value : scores2) {
+    //   System.out.println(value);
+    // }
+    int[] points = new int[4];
+    double[] weights = new double[5];
+    boolean[] answer = new boolean[3];
+    String[] names = new String[3];
   }
 }
