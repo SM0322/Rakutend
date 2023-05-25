@@ -454,6 +454,9 @@ public class Main {
     int a2 = func.apply("Java");
     // Javaという引数でfuncを起動
     System.out.println("文字列[Java]は" + a2 + "文字です");
+    Consumer<String> func2 = System.out::println;
+    func2.accept("Hello, World");
+    
   }
   public static Optional<String> decorate(String s, char c) {
     String r;
