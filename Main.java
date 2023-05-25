@@ -329,6 +329,8 @@ import java.util.*;
 import java.util.Arrays;
 import java.util.function.*;
 import static java.lang.System.*;
+import java.util.stream.*;
+import java.util.*;
 public class Main {
   
     // JFrame frame = new JFrame("初めてのGUI");
@@ -496,12 +498,19 @@ public class Main {
     // Func2 f2 = funclist::passCheck;
     // System.out.println(f1.call(15));
     // System.out.println(f2.call(66, "Smith"));
-    Func1 f1 = x -> x % 2 == 1;
-    Func2 f2 = (point, name) -> {
-      return name + "さんは" + ( point >65 ? "合格" : "不合格");
-    };
-    System.out.println(f1.call(15));
-    System.out.println(f2.call(66, "Smith"));
+    // Func1 f1 = x -> x % 2 == 1;
+    // Func2 f2 = (point, name) -> {
+    //   return name + "さんは" + ( point >65 ? "合格" : "不合格");
+    // };
+    // System.out.println(f1.call(15));
+    // System.out.println(f2.call(66, "Smith"));
+    IntPredicate f1 = x -> x % 2 == 1;
+    System.out.println(f1.test(15));
+    List<String> names = List.of("湊雄介", "浅香あゆみ", "菅原琢磨", "大江武人");
+    names.stream()
+    .filter( n -> n.length() <= 4)
+    .map(n -> n +"さん")
+    .forEach(System.out::println);
   }
   public static Optional<String> decorate(String s, char c) {
     String r;
