@@ -432,5 +432,7 @@ public class Main {
       void innerMethod(){
       }
     });
+    Optional<String> op1 = Optional.ofNullable("ミナト");
+    System.out.println(op1);
   }
 }
