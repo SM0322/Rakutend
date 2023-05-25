@@ -462,6 +462,8 @@ public class Main {
     System.out.println(func4.apply("java.version", "不明"));
     Function<String, Integer> func5 = 
     (String s2) -> { return s2.length(); };
+    s3 -> s3.length();
+    // 上の行を省略しようとするとここまで省略可能
     int n = func5.apply("Java");
     System.out.println("文字列JAヴぁは" + n + "文字です");
   }
