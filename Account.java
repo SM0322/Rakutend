@@ -28,7 +28,7 @@ public class Account {
   public void setaccountNo(String accountNo) {
     this.accountNo = accountNo;
   }
-  public int getaccountType() {
+  public AccountType getaccountType() {
     return this.accountType;
   }
   public void setaccountType(AccountType accountType) {

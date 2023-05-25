@@ -327,6 +327,7 @@ import java.awt.FlowLayout;
 import javax.swing.*;
 import java.util.*;
 import java.util.Arrays;
+import static java.lang.System.*;
 public class Main {
   
     // JFrame frame = new JFrame("初めてのGUI");
@@ -417,8 +418,8 @@ public class Main {
     // // p.put("1192");
     // // String s1 = p.get();
     // // System.out.println(s1);
-    Account a = new Account("1234567", "FUTSU");
-    System.out.println(a.getaccountNo());
-    System.out.println(a.getaccountType());
+    Account a = new Account("1234567", AccountType.FUTSU);
+    out.println(a.getaccountNo());
+    out.println(a.getaccountType());
   }
 }
