@@ -458,6 +458,8 @@ public class Main {
     func2.accept("Hello, World");
     Supplier<String> func3 = System::lineSeparator;
     System.out.println("開業します" + func3.get());
+    BiFunction<String, String, String> func4 = System::getProperty;
+    System.out.println(func4.apply("java.version", "不明"));
   }
   public static Optional<String> decorate(String s, char c) {
     String r;
