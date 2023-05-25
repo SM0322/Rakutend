@@ -460,6 +460,10 @@ public class Main {
     System.out.println("開業します" + func3.get());
     BiFunction<String, String, String> func4 = System::getProperty;
     System.out.println(func4.apply("java.version", "不明"));
+    Function<String, Integer> func5 = 
+    (String s2) -> { return s2.length(); };
+    int n = func5.apply("Java");
+    System.out.println("文字列JAヴぁは" + n + "文字です");
   }
   public static Optional<String> decorate(String s, char c) {
     String r;
