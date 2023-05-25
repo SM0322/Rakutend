@@ -533,5 +533,8 @@ public class Main {
     int[] scores = {20, 30, 40, 50, 60};
     System.out.println(scores.length);
     System.out.println(scores[0]);
+    for (int i =0; i < scores.length; i++) {
+      System.out.println(scores[i]);
+    }
   }
 }
