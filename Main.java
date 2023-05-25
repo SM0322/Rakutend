@@ -444,7 +444,7 @@ public class Main {
     System.out.println("勇者" + op2.orElse("ななし"));
     Optional<String> s = decorate("", '*');
     System.out.println(s.orElse("nullのために処理できません"));
-    StrongBox<String> op3 = new StrongBox<String>();
+    StrongBox<String> op3 = new StrongBox<String>(KeyType.DIAL);
     op3.put("ミナト");
     System.out.println(op3.get());
     
