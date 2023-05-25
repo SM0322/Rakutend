@@ -534,11 +534,16 @@ public class Main {
     System.out.println(scores.length);
     System.out.println(scores[0]);
     int sum = 0;
+    int count = 0;
     for (int i =0; i < scores.length; i++) {
       System.out.println(scores[i]);
       
       sum += scores[i];
       System.out.println(sum);
+      if (scores[i] >= 50) {
+        count++;
+      }
+      System.out.println(count);
     }
   }
 }
