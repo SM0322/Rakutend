@@ -462,11 +462,22 @@ public class Main {
     System.out.println(func4.apply("java.version", "不明"));
     Function<String, Integer> func5 = 
     (String s2) -> { return s2.length(); };
-    s3 -> s3.length();
+    // s2 -> s2.length();
     // 上の行を省略しようとするとここまで省略可能
     int n = func5.apply("Java");
     System.out.println("文字列JAヴぁは" + n + "文字です");
-  }
+    List<Hero> heros = new ArrayList<>();
+    Collections.sort(list, (x,y) -> (x.zandaka - y.zandaka));
+    boolean anyoneKnockedOut = false;
+    for (Hero h : heros) {
+      if (h.hp == 0) {
+        anyoneKnockedOut = true;
+        break;
+      }
+    }
+    boolean anyoneKnockedOut1 = 
+      heros.stream().anyMatch(h -> h.hp ==0);
+ }
   public static Optional<String> decorate(String s, char c) {
     String r;
     if (s == null || s.length() == 0) {
