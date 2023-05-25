@@ -580,5 +580,15 @@ public class Main {
     for (int value : moneyLists) {
       System.out.println(value);
     }
+    int[] numbers = {3, 4, 9};
+    System.out.println("画面に数字を入力してください");
+    int input = new java.util.Scanner(System.in).nextInt();
+    for (int i = 0; i < numbers.length; i++) {
+      if (numbers[i] == input) {
+        System.out.println("アタリ" + numbers[i]);
+      } else {
+        System.out.println("ハズレ" + numbers[i]);
+      }
+    }
   }
 }
