@@ -417,7 +417,7 @@ public class Main {
     // // p.put("1192");
     // // String s1 = p.get();
     // // System.out.println(s1);
-    Account a = new Account("1234567", 1);
+    Account a = new Account("1234567", "FUTSU");
     System.out.println(a.getaccountNo());
     System.out.println(a.getaccountType());
   }

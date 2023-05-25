@@ -14,8 +14,8 @@
 public class Account {
   private String accountNo;
   private int zandaka;
-  private int accountType;
-  public Account(String aNo, int aType) {
+  private AccountType accountType;
+  public Account(String aNo, AccountType aType) {
     this.accountNo = aNo;
     this.accountType = aType;
   }
@@ -31,7 +31,7 @@ public class Account {
   public int getaccountType() {
     return this.accountType;
   }
-  public void setaccountType(int accountType) {
+  public void setaccountType(AccountType accountType) {
     this.accountType = accountType;
   }
 }
