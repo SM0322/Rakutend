@@ -327,6 +327,7 @@ import java.awt.FlowLayout;
 import javax.swing.*;
 import java.util.*;
 import java.util.Arrays;
+import java.util.function.*;
 import static java.lang.System.*;
 public class Main {
   
@@ -448,6 +449,11 @@ public class Main {
     op3.put("ミナト");
     System.out.println(op3.get());
     System.out.println(twice(4));
+    Function<String, Integer> func = Main::len;
+    // /functionにlenという関数を代入
+    int a2 = func.apply("Java");
+    // Javaという引数でfuncを起動
+    System.out.println("文字列[Java]は" + a2 + "文字です");
   }
   public static Optional<String> decorate(String s, char c) {
     String r;
@@ -460,5 +466,8 @@ public class Main {
   }
   public static int twice(int x) {
     return x *2;
+  }
+  public static Integer len(String s) {
+    return s.length();
   }
 }
