@@ -565,5 +565,8 @@ public class Main {
           break;
       }
     }
+    for (int value : scores) {
+      System.out.println(value);
+    }
   }
 }
