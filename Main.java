@@ -442,5 +442,16 @@ public class Main {
     // System.out.println("勇者" + op2.get());
     System.out.println("勇者" + op1.orElse("ななし"));
     System.out.println("勇者" + op2.orElse("ななし"));
+    Optional<String> s = decorate("", '*');
+    System.out.println(s.orElse("nullのために処理できません"));
+  }
+  public static Optional<String> decorate(String s, char c) {
+    String r;
+    if (s == null || s.length() == 0) {
+      r = null;
+    } else {
+      r = c + s + c;
+    }
+    return Optional.ofNullable(r);
   }
 }
