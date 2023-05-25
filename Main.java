@@ -433,6 +433,10 @@ public class Main {
       }
     });
     Optional<String> op1 = Optional.ofNullable("ミナト");
+    Optional<String> op2 = Optional.ofNullable(null);
     System.out.println(op1);
+    System.out.println(op2);
+    System.out.println(op1.isPresent());
+    System.out.println(op2.isPresent());
   }
 }
