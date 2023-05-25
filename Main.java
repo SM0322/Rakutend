@@ -438,5 +438,9 @@ public class Main {
     System.out.println(op2);
     System.out.println(op1.isPresent());
     System.out.println(op2.isPresent());
+    System.out.println("勇者" + op1.get());
+    // System.out.println("勇者" + op2.get());
+    System.out.println("勇者" + op1.orElse("ななし"));
+    System.out.println("勇者" + op2.orElse("ななし"));
   }
 }
