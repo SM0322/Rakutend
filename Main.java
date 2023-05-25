@@ -576,5 +576,9 @@ public class Main {
     double[] weights = new double[5];
     boolean[] answer = new boolean[3];
     String[] names = new String[3];
+    int[] moneyLists = {121902, 8302, 55100};
+    for (int value : moneyLists) {
+      System.out.println(value);
+    }
   }
 }
