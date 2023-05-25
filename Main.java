@@ -491,9 +491,15 @@ public class Main {
     //   System.out.println("最大Hpの勇者は" + hopt.get().name);
     // }
     // // maxで代償を比べて一番大きいものの名前を習得
-    FuncList funclist = new FuncList();
-    Func1 f1 = FuncList::isOdd;
-    Func2 f2 = funclist::passCheck;
+    // FuncList funclist = new FuncList();
+    // Func1 f1 = FuncList::isOdd;
+    // Func2 f2 = funclist::passCheck;
+    // System.out.println(f1.call(15));
+    // System.out.println(f2.call(66, "Smith"));
+    Func1 f1 = x -> x % 2 == 1;
+    Func2 f2 = (point, name) -> {
+      return name + "さんは" + ( point >65 ? "合格" : "不合格");
+    };
     System.out.println(f1.call(15));
     System.out.println(f2.call(66, "Smith"));
   }
