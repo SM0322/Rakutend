@@ -413,9 +413,9 @@ public class Main {
     s = new Hero();
     Object n = 1;
     prints(s, n);
-    Pocket<String> p = new Pocket<>();
-    p.put("1192");
-    String s1 = p.get();
-    System.out.println(s1);
+    Pocket<Hero> p = new Pocket<>();
+    // p.put("1192");
+    // String s1 = p.get();
+    // System.out.println(s1);
   }
 }

@@ -1,6 +1,6 @@
 import java.util.Objects;
-// public class Hero extends Character implements Cloneable
-public class Hero implements Cloneable {
+public class Hero extends Character implements Cloneable {
+// public class Hero implements Cloneable {
   public String name;
   private int hp;
   Sword sword;
