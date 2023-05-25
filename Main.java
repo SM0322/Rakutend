@@ -477,7 +477,21 @@ public class Main {
     }
     boolean anyoneKnockedOut1 = 
       heros.stream().anyMatch(h -> h.hp ==0);
- }
+    heros.stream().forEach(h -> {
+      System.out.println("勇者" + h.name);
+      });
+      // 勇者のなめ￥前をそれぞれ表示
+    Optional<Hero> hopt = heros.stream().findFirst();
+    if (hopt.isPresent()) {
+      System.out.println("戦闘は" + hopt.get().name);
+    }
+    // findFirstで最初の要素を返す。からの場合も考えられるのでOptionalとifで対策
+    Optional<Hero> hopt = heros.stream().max((x,y) -> x.hp - y.hp);
+    if (hopt.isPresent()) {
+      System.out.println("最大Hpの勇者は" + hopt.get().name);
+    }
+    // maxで代償を比べて一番大きいものの名前を習得
+  }
   public static Optional<String> decorate(String s, char c) {
     String r;
     if (s == null || s.length() == 0) {
