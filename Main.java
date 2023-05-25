@@ -409,13 +409,16 @@ public class Main {
     }
   }
   public static void main(String[] args) {
-    Object s = "こんにちは";
-    s = new Hero();
-    Object n = 1;
-    prints(s, n);
-    Pocket<Hero> p = new Pocket<>();
-    // p.put("1192");
-    // String s1 = p.get();
-    // System.out.println(s1);
+    // Object s = "こんにちは";
+    // s = new Hero();
+    // Object n = 1;
+    // prints(s, n);
+    // Pocket<Hero> p = new Pocket<>();
+    // // p.put("1192");
+    // // String s1 = p.get();
+    // // System.out.println(s1);
+    Account a = new Account("1234567", 1);
+    System.out.println(a.getaccountNo());
+    System.out.println(a.getaccountType());
   }
 }
