@@ -419,78 +419,83 @@ public class Main {
     // // p.put("1192");
     // // String s1 = p.get();
     // // System.out.println(s1);
-    Account a = new Account("1234567", AccountType.FUTSU);
-    out.println(a.getaccountNo());
-    out.println(a.getaccountType());
-    // Outer.Inner ic = new Outer.Inner();
-    Outer o = new Outer();
-    // Outer.Inner oi = o.new Inner();
-    o.OuterMethod();
-    Pocket<Object> pocket = new Pocket<>();
-    System.out.println("使い捨てのインスタンスを作りPocketに格納");
-    pocket.put(new Object() {
-      String innerField;
-      void innerMethod(){
-      }
-    });
-    Optional<String> op1 = Optional.ofNullable("ミナト");
-    Optional<String> op2 = Optional.ofNullable(null);
-    System.out.println(op1);
-    System.out.println(op2);
-    System.out.println(op1.isPresent());
-    System.out.println(op2.isPresent());
-    System.out.println("勇者" + op1.get());
-    // System.out.println("勇者" + op2.get());
-    System.out.println("勇者" + op1.orElse("ななし"));
-    System.out.println("勇者" + op2.orElse("ななし"));
-    Optional<String> s = decorate("", '*');
-    System.out.println(s.orElse("nullのために処理できません"));
-    StrongBox<String> op3 = new StrongBox<String>(KeyType.DIAL);
-    op3.put("ミナト");
-    System.out.println(op3.get());
-    System.out.println(twice(4));
-    Function<String, Integer> func = Main::len;
-    // /functionにlenという関数を代入
-    int a2 = func.apply("Java");
-    // Javaという引数でfuncを起動
-    System.out.println("文字列[Java]は" + a2 + "文字です");
-    Consumer<String> func2 = System.out::println;
-    func2.accept("Hello, World");
-    Supplier<String> func3 = System::lineSeparator;
-    System.out.println("開業します" + func3.get());
-    BiFunction<String, String, String> func4 = System::getProperty;
-    System.out.println(func4.apply("java.version", "不明"));
-    Function<String, Integer> func5 = 
-    (String s2) -> { return s2.length(); };
-    // s2 -> s2.length();
-    // 上の行を省略しようとするとここまで省略可能
-    int n = func5.apply("Java");
-    System.out.println("文字列JAヴぁは" + n + "文字です");
-    List<Hero> heros = new ArrayList<>();
-    Collections.sort(list, (x,y) -> (x.zandaka - y.zandaka));
-    boolean anyoneKnockedOut = false;
-    for (Hero h : heros) {
-      if (h.hp == 0) {
-        anyoneKnockedOut = true;
-        break;
-      }
-    }
-    boolean anyoneKnockedOut1 = 
-      heros.stream().anyMatch(h -> h.hp ==0);
-    heros.stream().forEach(h -> {
-      System.out.println("勇者" + h.name);
-      });
-      // 勇者のなめ￥前をそれぞれ表示
-    Optional<Hero> hopt = heros.stream().findFirst();
-    if (hopt.isPresent()) {
-      System.out.println("戦闘は" + hopt.get().name);
-    }
-    // findFirstで最初の要素を返す。からの場合も考えられるのでOptionalとifで対策
-    Optional<Hero> hopt = heros.stream().max((x,y) -> x.hp - y.hp);
-    if (hopt.isPresent()) {
-      System.out.println("最大Hpの勇者は" + hopt.get().name);
-    }
-    // maxで代償を比べて一番大きいものの名前を習得
+    // Account a = new Account("1234567", AccountType.FUTSU);
+    // out.println(a.getaccountNo());
+    // out.println(a.getaccountType());
+    // // Outer.Inner ic = new Outer.Inner();
+    // Outer o = new Outer();
+    // // Outer.Inner oi = o.new Inner();
+    // o.OuterMethod();
+    // Pocket<Object> pocket = new Pocket<>();
+    // System.out.println("使い捨てのインスタンスを作りPocketに格納");
+    // pocket.put(new Object() {
+    //   String innerField;
+    //   void innerMethod(){
+    //   }
+    // });
+    // Optional<String> op1 = Optional.ofNullable("ミナト");
+    // Optional<String> op2 = Optional.ofNullable(null);
+    // System.out.println(op1);
+    // System.out.println(op2);
+    // System.out.println(op1.isPresent());
+    // System.out.println(op2.isPresent());
+    // System.out.println("勇者" + op1.get());
+    // // System.out.println("勇者" + op2.get());
+    // System.out.println("勇者" + op1.orElse("ななし"));
+    // System.out.println("勇者" + op2.orElse("ななし"));
+    // Optional<String> s = decorate("", '*');
+    // System.out.println(s.orElse("nullのために処理できません"));
+    // StrongBox<String> op3 = new StrongBox<String>(KeyType.DIAL);
+    // op3.put("ミナト");
+    // System.out.println(op3.get());
+    // System.out.println(twice(4));
+    // Function<String, Integer> func = Main::len;
+    // // /functionにlenという関数を代入
+    // int a2 = func.apply("Java");
+    // // Javaという引数でfuncを起動
+    // System.out.println("文字列[Java]は" + a2 + "文字です");
+    // Consumer<String> func2 = System.out::println;
+    // func2.accept("Hello, World");
+    // Supplier<String> func3 = System::lineSeparator;
+    // System.out.println("開業します" + func3.get());
+    // BiFunction<String, String, String> func4 = System::getProperty;
+    // System.out.println(func4.apply("java.version", "不明"));
+    // Function<String, Integer> func5 = 
+    // (String s2) -> { return s2.length(); };
+    // // s2 -> s2.length();
+    // // 上の行を省略しようとするとここまで省略可能
+    // int n = func5.apply("Java");
+    // System.out.println("文字列JAヴぁは" + n + "文字です");
+    // List<Hero> heros = new ArrayList<>();
+    // Collections.sort(list, (x,y) -> (x.zandaka - y.zandaka));
+    // boolean anyoneKnockedOut = false;
+    // for (Hero h : heros) {
+    //   if (h.hp == 0) {
+    //     anyoneKnockedOut = true;
+    //     break;
+    //   }
+    // }
+    // boolean anyoneKnockedOut1 = 
+    //   heros.stream().anyMatch(h -> h.hp ==0);
+    // heros.stream().forEach(h -> {
+    //   System.out.println("勇者" + h.name);
+    //   });
+    //   // 勇者のなめ￥前をそれぞれ表示
+    // Optional<Hero> hopt = heros.stream().findFirst();
+    // if (hopt.isPresent()) {
+    //   System.out.println("戦闘は" + hopt.get().name);
+    // }
+    // // findFirstで最初の要素を返す。からの場合も考えられるのでOptionalとifで対策
+    // Optional<Hero> hopt = heros.stream().max((x,y) -> x.hp - y.hp);
+    // if (hopt.isPresent()) {
+    //   System.out.println("最大Hpの勇者は" + hopt.get().name);
+    // }
+    // // maxで代償を比べて一番大きいものの名前を習得
+    FuncList funclist = new FuncList();
+    Func1 f1 = FuncList::isOdd;
+    Func2 f2 = funclist::passCheck;
+    System.out.println(f1.call(15));
+    System.out.println(f2.call(66, "Smith"));
   }
   public static Optional<String> decorate(String s, char c) {
     String r;
