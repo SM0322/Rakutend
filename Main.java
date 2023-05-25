@@ -444,6 +444,10 @@ public class Main {
     System.out.println("勇者" + op2.orElse("ななし"));
     Optional<String> s = decorate("", '*');
     System.out.println(s.orElse("nullのために処理できません"));
+    StrongBox<String> op3 = new StrongBox<String>();
+    op3.put("ミナト");
+    System.out.println(op3.get());
+    
   }
   public static Optional<String> decorate(String s, char c) {
     String r;
