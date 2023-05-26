@@ -573,11 +573,11 @@ public class Main {
     // }
     // System.out.println("全て読み込みました");
     // fr.close();
-    FileOutputStream fos = new FileOutputStream("Test8.txt");
-    CipherOutputStream cos = new ChipherOutputStream(fos, algo);
-    cos.write(65);
-    cos.flush();
-    cos.close();
+    // FileOutputStream fos = new FileOutputStream("Test8.txt");
+    // CipherOutputStream cos = new ChipherOutputStream(fos, algo);
+    // cos.write(65);
+    // cos.flush();
+    // cos.close();
     // FileWriter fw = null;
     // try {
     //   fw = new FileWriter("Test6.txt");
@@ -603,6 +603,16 @@ public class Main {
     // for (byte b : data) {
     //   System.out.println(b);
     // }
+    FileReader fr = new FileReader("Test1.txt");
+    System.out.println("全ての情報を読み込みます");
+    BufferedReader br =  new BufferedReader(fr);
+    String line = null;
+    while ((line = br.readLine()) != null) {
+      int i = fr.read();
+      System.out.println(i + "。全て読み込みました");
+    }
+    
+    fr.close();
   }
 }
   
