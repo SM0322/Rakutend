@@ -528,170 +528,197 @@
 //     return s.length();
 //   }
 // }
-import org.apache.logging.log4j;
+// import org.apache.logging.log4j;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+ 
 public class Main {
-  // public static void hello(Hero h) {
-  //     System.out.println(h.getName() + "さん、こんにちは");
-  //   }
-  // public static void methodA() {
-  //   System.out.println("methodA");
-  //   Hero h = new Hero("ミナト");
-  //   hello(h);
-  // }
-  // public static void helloName(String name) {
-  //     System.out.println(name + "さん、こんにちは");
-  // }
-  // // public static void circleCalcAns(int r) {
-  // //   double area = r * r * 3.14;
-  // //   System.out.println("半径" + r + "の円の面積は" + area + "です");
-  // // }
-  // public static double triangleCalcArea(int x, int y) {
-  //   double area = x * y / 2;
-  //   return area;
-  // }
-  // public static double circleCalcAns(int r) {
-  //   double area = r * r * 3.14;
-  //   return area;
-  // }
-  // public static int add(int x, int y) {
-  //   return x + y;
-  // }
-  // public static int add(int x, int y, int z) {
-  //   return x + y + z;
-  // }
-  // public static double add(double x, double y) {
-  //   return x + y;
-  // }
-  // public static String add(String x, String y) {
-  //   return x + y;
-  // }
-  // public static void printArray(int[] array) {
-  //   // for (int value : array) {
-  //   //   System.out.println(value);
-  //   // }
-  //   for (int i = 0; i < array.length; i++) {
-  //     array[i]++;
-  //   }
-  // }
-  // public static int[] makeArray(int size) {
-  //   int[] newArray = new int[size];
-  //   for (int i = 0; i < newArray.length; i++) {
-  //     newArray[i] = i;
-  //   }
-  //   return newArray;
-  // }
-  // public static void introduceOneself() {
-  //   String name = "みなと";
-  //   int age = 20;
-  //   double toll = 179.9;
-  //   char eto = '牛';
-  //   System.out.println("私の名前は" + name + "です。" + "年齢は" + age + "で、身長は" + toll + "です。干支は" + eto + "です。");
-  // }
-  // public static void email(String title, String address, String text) {
-  //   System.out.println(address + "に以下のメールを送信しました");
-  //   System.out.println("件名:" + title);
-  //   System.out.println("本文:" + text);
-  // }
-  // public static void email(String address, String text) {
-  //   System.out.println(address + "に以下のメールを送信しました");
-  //   System.out.println("件名:無題");
-  //   System.out.println("本文:" + text);
-  // }
-  // public static void main(String[] args) {
-  //   // Hero h = new Hero("ミナト");
-  //   // // hello(h);
-  //   // methodA();
-  //   // helloName("mianto");
-  //   // circleCalcAns(10);
-  //   // System.out.println(triangleCalcArea(10, 20));
-  //   // System.out.println(add(10,20));
-  //   // System.out.println(add(10,20,30));
-  //   // System.out.println(add(10.0,20.0));
-  //   // System.out.println(add("10","20"));
-  //   // int[] scores = {10, 20, 30, 40, 50};
-  //   // for (int value : scores) {
-  //   //   System.out.println(value);
-  //   // }
-  //   // printArray(scores);
-  //   // for (int value : scores) {
-  //   //   System.out.println(value);
-  //   // }
-  //   // for (int value1 : makeArray(5)) {
-  //   //   System.out.println(value1);
-  //   // }
-  //   introduceOneself();
-  //   email("a", "b", "c");
-  //   email("a", "b");
-  //   System.out.println(triangleCalcArea(10, 20));
-  //   System.out.println(circleCalcAns(10));
-  // }
-  //   int[] scores = {20, 30, 40, 50, 60};
-  //   System.out.println(scores.length);
-  //   System.out.println(scores[0]);
-  //   int sum = 0;
-  //   int count = 0;
-  //   for (int i =0; i < scores.length; i++) {
-  //     System.out.println(scores[i]);
-      
-  //     sum += scores[i];
-  //     System.out.println(sum);
-  //     if (scores[i] >= 50) {
-  //       count++;
-  //     }
-  //     System.out.println(count);
-  //   }
-  //   int[] seq = new int[10];
-  //   for (int i = 0; i < seq.length; i++) {
-  //     seq[i] = new java.util.Random().nextInt(4);
-  //   }
-  //   for (int i = 0; i < seq.length; i++) {
-  //     switch (seq[i]) {
-  //       case 0:
-  //         System.out.println("A");
-  //         break;
-  //       case 1:
-  //         System.out.println("T");
-  //         break;
-  //       case 2:
-  //         System.out.println("C");
-  //         break;
-  //       case 3:
-  //         System.out.println("G");
-  //         break;
-  //     }
-  //   }
-  //   for (int value : scores) {
-  //     System.out.println(value);
-  //   }
-  //   // int[] [] scores2 = {{20,30,40}, {100,120,200}};
-  //   // for (int value : scores2) {
-  //   //   System.out.println(value);
-  //   // }
-  //   int[] points = new int[4];
-  //   double[] weights = new double[5];
-  //   boolean[] answer = new boolean[3];
-  //   String[] names = new String[3];
-  //   int[] moneyLists = {121902, 8302, 55100};
-  //   for (int value : moneyLists) {
-  //     System.out.println(value);
-  //   }
-  //   int[] numbers = {3, 4, 9};
-  //   System.out.println("画面に数字を入力してください");
-  //   int input = new java.util.Scanner(System.in).nextInt();
-  //   for (int i = 0; i < numbers.length; i++) {
-  //     if (numbers[i] == input) {
-  //       System.out.println("アタリ" + numbers[i]);
-  //     } else {
-  //       System.out.println("ハズレ" + numbers[i]);
-  //     }
-  //   hello();
-  //   }
-    
-  // }
-  public static void main(String[] args){
-    Logger logger = LogManager.getLogger(Main.class);
-    if (args.length != 2) {
-      logger.error("起動引数の数が異常:" + args.length);
+    public static void main(String[] args) throws Exception {
+        
+        try {
+            File file = new File("c:\\Sample\\Test.txt");
+            FileWriter filewriter = new FileWriter(file);
+         
+            filewriter.write("abc");
+            filewriter.close();
+         
+            System.out.println("テキストファイルの作成に成功しました");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
-  }
 }
+
+
+
+// public class Main {
+//   // public static void hello(Hero h) {
+//   //     System.out.println(h.getName() + "さん、こんにちは");
+//   //   }
+//   // public static void methodA() {
+//   //   System.out.println("methodA");
+//   //   Hero h = new Hero("ミナト");
+//   //   hello(h);
+//   // }
+//   // public static void helloName(String name) {
+//   //     System.out.println(name + "さん、こんにちは");
+//   // }
+//   // // public static void circleCalcAns(int r) {
+//   // //   double area = r * r * 3.14;
+//   // //   System.out.println("半径" + r + "の円の面積は" + area + "です");
+//   // // }
+//   // public static double triangleCalcArea(int x, int y) {
+//   //   double area = x * y / 2;
+//   //   return area;
+//   // }
+//   // public static double circleCalcAns(int r) {
+//   //   double area = r * r * 3.14;
+//   //   return area;
+//   // }
+//   // public static int add(int x, int y) {
+//   //   return x + y;
+//   // }
+//   // public static int add(int x, int y, int z) {
+//   //   return x + y + z;
+//   // }
+//   // public static double add(double x, double y) {
+//   //   return x + y;
+//   // }
+//   // public static String add(String x, String y) {
+//   //   return x + y;
+//   // }
+//   // public static void printArray(int[] array) {
+//   //   // for (int value : array) {
+//   //   //   System.out.println(value);
+//   //   // }
+//   //   for (int i = 0; i < array.length; i++) {
+//   //     array[i]++;
+//   //   }
+//   // }
+//   // public static int[] makeArray(int size) {
+//   //   int[] newArray = new int[size];
+//   //   for (int i = 0; i < newArray.length; i++) {
+//   //     newArray[i] = i;
+//   //   }
+//   //   return newArray;
+//   // }
+//   // public static void introduceOneself() {
+//   //   String name = "みなと";
+//   //   int age = 20;
+//   //   double toll = 179.9;
+//   //   char eto = '牛';
+//   //   System.out.println("私の名前は" + name + "です。" + "年齢は" + age + "で、身長は" + toll + "です。干支は" + eto + "です。");
+//   // }
+//   // public static void email(String title, String address, String text) {
+//   //   System.out.println(address + "に以下のメールを送信しました");
+//   //   System.out.println("件名:" + title);
+//   //   System.out.println("本文:" + text);
+//   // }
+//   // public static void email(String address, String text) {
+//   //   System.out.println(address + "に以下のメールを送信しました");
+//   //   System.out.println("件名:無題");
+//   //   System.out.println("本文:" + text);
+//   // }
+//   // public static void main(String[] args) {
+//   //   // Hero h = new Hero("ミナト");
+//   //   // // hello(h);
+//   //   // methodA();
+//   //   // helloName("mianto");
+//   //   // circleCalcAns(10);
+//   //   // System.out.println(triangleCalcArea(10, 20));
+//   //   // System.out.println(add(10,20));
+//   //   // System.out.println(add(10,20,30));
+//   //   // System.out.println(add(10.0,20.0));
+//   //   // System.out.println(add("10","20"));
+//   //   // int[] scores = {10, 20, 30, 40, 50};
+//   //   // for (int value : scores) {
+//   //   //   System.out.println(value);
+//   //   // }
+//   //   // printArray(scores);
+//   //   // for (int value : scores) {
+//   //   //   System.out.println(value);
+//   //   // }
+//   //   // for (int value1 : makeArray(5)) {
+//   //   //   System.out.println(value1);
+//   //   // }
+//   //   introduceOneself();
+//   //   email("a", "b", "c");
+//   //   email("a", "b");
+//   //   System.out.println(triangleCalcArea(10, 20));
+//   //   System.out.println(circleCalcAns(10));
+//   // }
+//   //   int[] scores = {20, 30, 40, 50, 60};
+//   //   System.out.println(scores.length);
+//   //   System.out.println(scores[0]);
+//   //   int sum = 0;
+//   //   int count = 0;
+//   //   for (int i =0; i < scores.length; i++) {
+//   //     System.out.println(scores[i]);
+      
+//   //     sum += scores[i];
+//   //     System.out.println(sum);
+//   //     if (scores[i] >= 50) {
+//   //       count++;
+//   //     }
+//   //     System.out.println(count);
+//   //   }
+//   //   int[] seq = new int[10];
+//   //   for (int i = 0; i < seq.length; i++) {
+//   //     seq[i] = new java.util.Random().nextInt(4);
+//   //   }
+//   //   for (int i = 0; i < seq.length; i++) {
+//   //     switch (seq[i]) {
+//   //       case 0:
+//   //         System.out.println("A");
+//   //         break;
+//   //       case 1:
+//   //         System.out.println("T");
+//   //         break;
+//   //       case 2:
+//   //         System.out.println("C");
+//   //         break;
+//   //       case 3:
+//   //         System.out.println("G");
+//   //         break;
+//   //     }
+//   //   }
+//   //   for (int value : scores) {
+//   //     System.out.println(value);
+//   //   }
+//   //   // int[] [] scores2 = {{20,30,40}, {100,120,200}};
+//   //   // for (int value : scores2) {
+//   //   //   System.out.println(value);
+//   //   // }
+//   //   int[] points = new int[4];
+//   //   double[] weights = new double[5];
+//   //   boolean[] answer = new boolean[3];
+//   //   String[] names = new String[3];
+//   //   int[] moneyLists = {121902, 8302, 55100};
+//   //   for (int value : moneyLists) {
+//   //     System.out.println(value);
+//   //   }
+//   //   int[] numbers = {3, 4, 9};
+//   //   System.out.println("画面に数字を入力してください");
+//   //   int input = new java.util.Scanner(System.in).nextInt();
+//   //   for (int i = 0; i < numbers.length; i++) {
+//   //     if (numbers[i] == input) {
+//   //       System.out.println("アタリ" + numbers[i]);
+//   //     } else {
+//   //       System.out.println("ハズレ" + numbers[i]);
+//   //     }
+//   //   hello();
+//   //   }
+    
+//   // }
+//   // Logger logger = LogManager.getLogger(Main.class);
+//     // if (args.length != 2) {
+//     //   logger.error("起動引数の数が異常:" + args.length);
+//     // }
+//   public static void main(String[] args) throws IOException {
+//     FileWriter fw = new FileWriter("c:￥￥rpgsave.dat", true);
+//     fw.write('A');
+//     fw.flush();
+//     fw.close();
+//   }
+// }
