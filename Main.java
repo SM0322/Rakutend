@@ -533,28 +533,39 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
  
-public class Main {
-    public static void main(String[] args) throws Exception {
+// public class Main {
+//     public static void main(String[] args) throws Exception {
         
-        try {
-            File file = new File("c:\\Sample\\Test.txt");
-            // 書き込み用の新しいファイルの作成
-            FileWriter filewriter = new FileWriter(file);
-            // FileWrterをインスタンス化
+//         try {
+//             File file = new File("c:\\Sample\\Test.txt");
+//             // 書き込み用の新しいファイルの作成
+//             FileWriter filewriter = new FileWriter(file);
+//             // FileWrterをインスタンス化
          
-            filewriter.write("abc");
-            // 作成したファイルに書き込み
-            filewriter.close();
-            // ファイルを閉じる(一連の動作で必ず必要)
+//             filewriter.write("abc");
+//             // 作成したファイルに書き込み
+//             filewriter.close();
+//             // ファイルを閉じる(一連の動作で必ず必要)
          
-            System.out.println("テキストファイルの作成に成功しました");
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
+//             System.out.println("テキストファイルの作成に成功しました");
+//         } catch (IOException e) {
+//             e.printStackTrace();
+//         }
+//     }
+// }
+
+
+import java.io.*;
+public class Main {
+  public static void main(String[] args) throws IOException {
+    File file = new File("c:\\Sample\\Test1.txt");
+    FileWriter fw = new FileWriter(file);
+    fw.write('A');
+    fw.flush();
+    fw.close();
+  }
 }
-
-
+  
 
 // public class Main {
 //   // public static void hello(Hero h) {
@@ -719,10 +730,5 @@ public class Main {
 //     // if (args.length != 2) {
 //     //   logger.error("起動引数の数が異常:" + args.length);
 //     // }
-//   public static void main(String[] args) throws IOException {
-//     FileWriter fw = new FileWriter("c:￥￥rpgsave.dat", true);
-//     fw.write('A');
-//     fw.flush();
-//     fw.close();
-//   }
+  
 // }
