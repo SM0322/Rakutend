@@ -595,6 +595,13 @@ public class Main {
     Reader sr = new StringReader(msg);
     System.out.println((char)sr.read());
     System.out.println((char)sr.read());
+    ByteArrayOutputStream baos = new ByteArrayOutputStream();
+    baos.write(65);
+    baos.write(66);
+    byte[] data = baos.toByteArray();
+    for (byte b : data) {
+      System.out.println(b);
+    }
   }
 }
   
