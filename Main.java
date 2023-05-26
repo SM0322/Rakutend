@@ -557,7 +557,7 @@ import java.io.IOException;
 
 import java.io.*;
 public class Main {
-  public static void main(String[] args) throws IOException {
+  // public static void main(String[] args) throws IOException {
     // File file = new File("Test1.txt");
     // FileWriter fw = new FileWriter(file);
     // fw.write('A');
@@ -603,16 +603,29 @@ public class Main {
     // for (byte b : data) {
     //   System.out.println(b);
     // }
-    FileReader fr = new FileReader("Test1.txt");
-    System.out.println("全ての情報を読み込みます");
-    BufferedReader br =  new BufferedReader(fr);
-    String line = null;
-    while ((line = br.readLine()) != null) {
-      int i = fr.read();
-      System.out.println(i + "。全て読み込みました");
-    }
+    // FileReader fr = new FileReader("Test1.txt");
+    // System.out.println("全ての情報を読み込みます");
+    // BufferedReader br =  new BufferedReader(fr);
+    // String line = null;
+    // while ((line = br.readLine()) != null) {
+    //   int i = fr.read();
+    //   System.out.println(i + "。全て読み込みました");
+    // }
     
-    fr.close();
+    // fr.close();
+    public static void main(String[] args) throws Exception {
+    String inFile = args[0];
+    String outFile = args[1];
+    FileInputStream fis = new FileInputStream(inFile);
+    FileOutputStream fos = new FileOutputStream(outFile);
+    int i = fis.read();
+    while (i != -1) {
+      fos.write(i);
+      i = fis.read();
+    }
+    fos.flush();
+    fos.close();
+    fis.close();
   }
 }
   
