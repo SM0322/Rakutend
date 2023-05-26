@@ -582,6 +582,11 @@ public class Main {
     char eto = '牛';
     System.out.println("私の名前は" + name + "です。" + "年齢は" + age + "で、身長は" + toll + "です。干支は" + eto + "です。");
   }
+  public static void email(String title, String address, String text) {
+    System.out.println(address + "に以下のメールを送信しました");
+    System.out.println("件名:" + title);
+    System.out.println("本文:" + text);
+  }
   public static void main(String[] args) {
     // Hero h = new Hero("ミナト");
     // // hello(h);
@@ -605,6 +610,7 @@ public class Main {
     //   System.out.println(value1);
     // }
     introduceOneself();
+    email("a", "b", "c");
   }
   //   int[] scores = {20, 30, 40, 50, 60};
   //   System.out.println(scores.length);
