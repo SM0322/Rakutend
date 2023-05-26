@@ -529,71 +529,74 @@
 //   }
 // }
 public class Main {
-  public static void hello() {
-      System.out.println("こんにちは");
+  public static void hello(Hero h) {
+      System.out.println(h.getName() + "さん、こんにちは");
     }
   public static void main(String[] args) {
-    int[] scores = {20, 30, 40, 50, 60};
-    System.out.println(scores.length);
-    System.out.println(scores[0]);
-    int sum = 0;
-    int count = 0;
-    for (int i =0; i < scores.length; i++) {
-      System.out.println(scores[i]);
-      
-      sum += scores[i];
-      System.out.println(sum);
-      if (scores[i] >= 50) {
-        count++;
-      }
-      System.out.println(count);
-    }
-    int[] seq = new int[10];
-    for (int i = 0; i < seq.length; i++) {
-      seq[i] = new java.util.Random().nextInt(4);
-    }
-    for (int i = 0; i < seq.length; i++) {
-      switch (seq[i]) {
-        case 0:
-          System.out.println("A");
-          break;
-        case 1:
-          System.out.println("T");
-          break;
-        case 2:
-          System.out.println("C");
-          break;
-        case 3:
-          System.out.println("G");
-          break;
-      }
-    }
-    for (int value : scores) {
-      System.out.println(value);
-    }
-    // int[] [] scores2 = {{20,30,40}, {100,120,200}};
-    // for (int value : scores2) {
-    //   System.out.println(value);
-    // }
-    int[] points = new int[4];
-    double[] weights = new double[5];
-    boolean[] answer = new boolean[3];
-    String[] names = new String[3];
-    int[] moneyLists = {121902, 8302, 55100};
-    for (int value : moneyLists) {
-      System.out.println(value);
-    }
-    int[] numbers = {3, 4, 9};
-    System.out.println("画面に数字を入力してください");
-    int input = new java.util.Scanner(System.in).nextInt();
-    for (int i = 0; i < numbers.length; i++) {
-      if (numbers[i] == input) {
-        System.out.println("アタリ" + numbers[i]);
-      } else {
-        System.out.println("ハズレ" + numbers[i]);
-      }
-    hello();
-    }
-    
+    Hero h = new Hero("ミナト");
+    hello(h);
   }
+  //   int[] scores = {20, 30, 40, 50, 60};
+  //   System.out.println(scores.length);
+  //   System.out.println(scores[0]);
+  //   int sum = 0;
+  //   int count = 0;
+  //   for (int i =0; i < scores.length; i++) {
+  //     System.out.println(scores[i]);
+      
+  //     sum += scores[i];
+  //     System.out.println(sum);
+  //     if (scores[i] >= 50) {
+  //       count++;
+  //     }
+  //     System.out.println(count);
+  //   }
+  //   int[] seq = new int[10];
+  //   for (int i = 0; i < seq.length; i++) {
+  //     seq[i] = new java.util.Random().nextInt(4);
+  //   }
+  //   for (int i = 0; i < seq.length; i++) {
+  //     switch (seq[i]) {
+  //       case 0:
+  //         System.out.println("A");
+  //         break;
+  //       case 1:
+  //         System.out.println("T");
+  //         break;
+  //       case 2:
+  //         System.out.println("C");
+  //         break;
+  //       case 3:
+  //         System.out.println("G");
+  //         break;
+  //     }
+  //   }
+  //   for (int value : scores) {
+  //     System.out.println(value);
+  //   }
+  //   // int[] [] scores2 = {{20,30,40}, {100,120,200}};
+  //   // for (int value : scores2) {
+  //   //   System.out.println(value);
+  //   // }
+  //   int[] points = new int[4];
+  //   double[] weights = new double[5];
+  //   boolean[] answer = new boolean[3];
+  //   String[] names = new String[3];
+  //   int[] moneyLists = {121902, 8302, 55100};
+  //   for (int value : moneyLists) {
+  //     System.out.println(value);
+  //   }
+  //   int[] numbers = {3, 4, 9};
+  //   System.out.println("画面に数字を入力してください");
+  //   int input = new java.util.Scanner(System.in).nextInt();
+  //   for (int i = 0; i < numbers.length; i++) {
+  //     if (numbers[i] == input) {
+  //       System.out.println("アタリ" + numbers[i]);
+  //     } else {
+  //       System.out.println("ハズレ" + numbers[i]);
+  //     }
+  //   hello();
+  //   }
+    
+  // }
 }
