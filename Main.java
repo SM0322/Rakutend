@@ -540,11 +540,16 @@ public class Main {
   public static void helloName(String name) {
       System.out.println(name + "さん、こんにちは");
   }
+  public static void circleCalcAns(int r) {
+    double area = r * r * 3.14;
+    System.out.println("半径" + r + "の円の面積は" + area + "です");
+  }
   public static void main(String[] args) {
     Hero h = new Hero("ミナト");
     // hello(h);
     methodA();
     helloName("mianto");
+    circleCalcAns(10);
   }
   //   int[] scores = {20, 30, 40, 50, 60};
   //   System.out.println(scores.length);
