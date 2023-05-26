@@ -558,21 +558,25 @@ import java.io.IOException;
 import java.io.*;
 public class Main {
   public static void main(String[] args) throws IOException {
-    File file = new File("Test1.txt");
-    FileWriter fw = new FileWriter(file);
-    fw.write('A');
-    fw.flush();
-    fw.close();
-    FileReader fr = new FileReader("Test1.txt");
-    System.out.println("全ての情報を読み込みます");
-    int i = fr.read();
-    while (i != -1) {
-      char c = (char)i;
-      System.out.println(c);
-      i = fr.read();
-    }
-    System.out.println("全て読み込みました");
-    fr.close();
+    // File file = new File("Test1.txt");
+    // FileWriter fw = new FileWriter(file);
+    // fw.write('A');
+    // fw.flush();
+    // fw.close();
+    // FileReader fr = new FileReader("Test1.txt");
+    // System.out.println("全ての情報を読み込みます");
+    // int i = fr.read();
+    // while (i != -1) {
+    //   char c = (char)i;
+    //   System.out.println(c);
+    //   i = fr.read();
+    // }
+    // System.out.println("全て読み込みました");
+    // fr.close();
+    FileOutputStream fos = new FileOutputStream("Test4.txt");
+    fos.write(1);
+    fos.flush();
+    fos.close();
   }
 }
   
