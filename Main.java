@@ -575,6 +575,13 @@ public class Main {
     }
     return newArray;
   }
+  public static void introduceOneself() {
+    String name = "みなと";
+    int age = 20;
+    double toll = 179.9;
+    char eto = '牛';
+    System.out.println("私の名前は" + name + "です。" + "年齢は" + age + "で、身長は" + toll + "です。干支は" + eto + "です。");
+  }
   public static void main(String[] args) {
     // Hero h = new Hero("ミナト");
     // // hello(h);
@@ -586,17 +593,18 @@ public class Main {
     // System.out.println(add(10,20,30));
     // System.out.println(add(10.0,20.0));
     // System.out.println(add("10","20"));
-    int[] scores = {10, 20, 30, 40, 50};
-    for (int value : scores) {
-      System.out.println(value);
-    }
-    printArray(scores);
-    for (int value : scores) {
-      System.out.println(value);
-    }
-    for (int value1 : makeArray(5)) {
-      System.out.println(value1);
-    }
+    // int[] scores = {10, 20, 30, 40, 50};
+    // for (int value : scores) {
+    //   System.out.println(value);
+    // }
+    // printArray(scores);
+    // for (int value : scores) {
+    //   System.out.println(value);
+    // }
+    // for (int value1 : makeArray(5)) {
+    //   System.out.println(value1);
+    // }
+    introduceOneself();
   }
   //   int[] scores = {20, 30, 40, 50, 60};
   //   System.out.println(scores.length);
