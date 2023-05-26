@@ -532,15 +532,19 @@ public class Main {
   public static void hello(Hero h) {
       System.out.println(h.getName() + "さん、こんにちは");
     }
-public static void methodA() {
-  System.out.println("methodA");
-  Hero h = new Hero("ミナト");
-  hello(h);
-}
+  public static void methodA() {
+    System.out.println("methodA");
+    Hero h = new Hero("ミナト");
+    hello(h);
+  }
+  public static void helloName(String name) {
+      System.out.println(name + "さん、こんにちは");
+  }
   public static void main(String[] args) {
     Hero h = new Hero("ミナト");
     // hello(h);
     methodA();
+    helloName("mianto");
   }
   //   int[] scores = {20, 30, 40, 50, 60};
   //   System.out.println(scores.length);
