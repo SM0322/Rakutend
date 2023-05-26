@@ -561,23 +561,32 @@ public class Main {
     return x + y;
   }
   public static void printArray(int[] array) {
-    for (int value : array) {
-      System.out.println(value);
+    // for (int value : array) {
+    //   System.out.println(value);
+    // }
+    for (int i = 0; i < array.length; i++) {
+      array[i]++;
     }
   }
   public static void main(String[] args) {
-    Hero h = new Hero("ミナト");
-    // hello(h);
-    methodA();
-    helloName("mianto");
-    circleCalcAns(10);
-    System.out.println(triangleCalcArea(10, 20));
-    System.out.println(add(10,20));
-    System.out.println(add(10,20,30));
-    System.out.println(add(10.0,20.0));
-    System.out.println(add("10","20"));
+    // Hero h = new Hero("ミナト");
+    // // hello(h);
+    // methodA();
+    // helloName("mianto");
+    // circleCalcAns(10);
+    // System.out.println(triangleCalcArea(10, 20));
+    // System.out.println(add(10,20));
+    // System.out.println(add(10,20,30));
+    // System.out.println(add(10.0,20.0));
+    // System.out.println(add("10","20"));
     int[] scores = {10, 20, 30, 40, 50};
+    for (int value : scores) {
+      System.out.println(value);
+    }
     printArray(scores);
+    for (int value : scores) {
+      System.out.println(value);
+    }
   }
   //   int[] scores = {20, 30, 40, 50, 60};
   //   System.out.println(scores.length);
