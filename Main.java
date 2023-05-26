@@ -577,20 +577,24 @@ public class Main {
     // fos.write(1);
     // fos.flush();
     // fos.close();
-    FileWriter fw = null;
-    try {
-      fw = new FileWriter("Test6.txt");
-      fw.write('A');
-      fw.flush();
-    } catch (IOException e) {
-      System.out.println("書き込みエラーです");
-    } finally {
-      if (fw != null) {
-        try {
-          fw.close();
-        } catch (IOException e2) {}
-      }
-    }
+    // FileWriter fw = null;
+    // try {
+    //   fw = new FileWriter("Test6.txt");
+    //   fw.write('A');
+    //   fw.flush();
+    // } catch (IOException e) {
+    //   System.out.println("書き込みエラーです");
+    // } finally {
+    //   if (fw != null) {
+    //     try {
+    //       fw.close();
+    //     } catch (IOException e2) {}
+    //   }
+    // }
+    String msg = "第一土曜日は資源ごみの回収日です";
+    Reader sr = new StringReader(msg);
+    System.out.println((char)sr.read());
+    System.out.println((char)sr.read());
   }
 }
   
