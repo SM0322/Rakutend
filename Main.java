@@ -548,6 +548,15 @@ public class Main {
     double area = x * y / 2;
     return area;
   }
+  public static int add(int x, int y) {
+    return x + y;
+  }
+  public static double add(double x, double y) {
+    return x + y;
+  }
+  public static String add(String x, String y) {
+    return x + y;
+  }
   public static void main(String[] args) {
     Hero h = new Hero("ミナト");
     // hello(h);
@@ -555,6 +564,9 @@ public class Main {
     helloName("mianto");
     circleCalcAns(10);
     System.out.println(triangleCalcArea(10, 20));
+    System.out.println(add(10,20));
+    System.out.println(add(10.0,20.0));
+    System.out.println(add("10","20"));
   }
   //   int[] scores = {20, 30, 40, 50, 60};
   //   System.out.println(scores.length);
