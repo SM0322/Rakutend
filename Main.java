@@ -529,101 +529,101 @@
 //   }
 // }
 public class Main {
-  public static void hello(Hero h) {
-      System.out.println(h.getName() + "さん、こんにちは");
-    }
-  public static void methodA() {
-    System.out.println("methodA");
-    Hero h = new Hero("ミナト");
-    hello(h);
-  }
-  public static void helloName(String name) {
-      System.out.println(name + "さん、こんにちは");
-  }
-  // public static void circleCalcAns(int r) {
-  //   double area = r * r * 3.14;
-  //   System.out.println("半径" + r + "の円の面積は" + area + "です");
+  // public static void hello(Hero h) {
+  //     System.out.println(h.getName() + "さん、こんにちは");
+  //   }
+  // public static void methodA() {
+  //   System.out.println("methodA");
+  //   Hero h = new Hero("ミナト");
+  //   hello(h);
   // }
-  public static double triangleCalcArea(int x, int y) {
-    double area = x * y / 2;
-    return area;
-  }
-  public static double circleCalcAns(int r) {
-    double area = r * r * 3.14;
-    return area;
-  }
-  public static int add(int x, int y) {
-    return x + y;
-  }
-  public static int add(int x, int y, int z) {
-    return x + y + z;
-  }
-  public static double add(double x, double y) {
-    return x + y;
-  }
-  public static String add(String x, String y) {
-    return x + y;
-  }
-  public static void printArray(int[] array) {
-    // for (int value : array) {
-    //   System.out.println(value);
-    // }
-    for (int i = 0; i < array.length; i++) {
-      array[i]++;
-    }
-  }
-  public static int[] makeArray(int size) {
-    int[] newArray = new int[size];
-    for (int i = 0; i < newArray.length; i++) {
-      newArray[i] = i;
-    }
-    return newArray;
-  }
-  public static void introduceOneself() {
-    String name = "みなと";
-    int age = 20;
-    double toll = 179.9;
-    char eto = '牛';
-    System.out.println("私の名前は" + name + "です。" + "年齢は" + age + "で、身長は" + toll + "です。干支は" + eto + "です。");
-  }
-  public static void email(String title, String address, String text) {
-    System.out.println(address + "に以下のメールを送信しました");
-    System.out.println("件名:" + title);
-    System.out.println("本文:" + text);
-  }
-  public static void email(String address, String text) {
-    System.out.println(address + "に以下のメールを送信しました");
-    System.out.println("件名:無題");
-    System.out.println("本文:" + text);
-  }
-  public static void main(String[] args) {
-    // Hero h = new Hero("ミナト");
-    // // hello(h);
-    // methodA();
-    // helloName("mianto");
-    // circleCalcAns(10);
-    // System.out.println(triangleCalcArea(10, 20));
-    // System.out.println(add(10,20));
-    // System.out.println(add(10,20,30));
-    // System.out.println(add(10.0,20.0));
-    // System.out.println(add("10","20"));
-    // int[] scores = {10, 20, 30, 40, 50};
-    // for (int value : scores) {
-    //   System.out.println(value);
-    // }
-    // printArray(scores);
-    // for (int value : scores) {
-    //   System.out.println(value);
-    // }
-    // for (int value1 : makeArray(5)) {
-    //   System.out.println(value1);
-    // }
-    introduceOneself();
-    email("a", "b", "c");
-    email("a", "b");
-    System.out.println(triangleCalcArea(10, 20));
-    System.out.println(circleCalcAns(10));
-  }
+  // public static void helloName(String name) {
+  //     System.out.println(name + "さん、こんにちは");
+  // }
+  // // public static void circleCalcAns(int r) {
+  // //   double area = r * r * 3.14;
+  // //   System.out.println("半径" + r + "の円の面積は" + area + "です");
+  // // }
+  // public static double triangleCalcArea(int x, int y) {
+  //   double area = x * y / 2;
+  //   return area;
+  // }
+  // public static double circleCalcAns(int r) {
+  //   double area = r * r * 3.14;
+  //   return area;
+  // }
+  // public static int add(int x, int y) {
+  //   return x + y;
+  // }
+  // public static int add(int x, int y, int z) {
+  //   return x + y + z;
+  // }
+  // public static double add(double x, double y) {
+  //   return x + y;
+  // }
+  // public static String add(String x, String y) {
+  //   return x + y;
+  // }
+  // public static void printArray(int[] array) {
+  //   // for (int value : array) {
+  //   //   System.out.println(value);
+  //   // }
+  //   for (int i = 0; i < array.length; i++) {
+  //     array[i]++;
+  //   }
+  // }
+  // public static int[] makeArray(int size) {
+  //   int[] newArray = new int[size];
+  //   for (int i = 0; i < newArray.length; i++) {
+  //     newArray[i] = i;
+  //   }
+  //   return newArray;
+  // }
+  // public static void introduceOneself() {
+  //   String name = "みなと";
+  //   int age = 20;
+  //   double toll = 179.9;
+  //   char eto = '牛';
+  //   System.out.println("私の名前は" + name + "です。" + "年齢は" + age + "で、身長は" + toll + "です。干支は" + eto + "です。");
+  // }
+  // public static void email(String title, String address, String text) {
+  //   System.out.println(address + "に以下のメールを送信しました");
+  //   System.out.println("件名:" + title);
+  //   System.out.println("本文:" + text);
+  // }
+  // public static void email(String address, String text) {
+  //   System.out.println(address + "に以下のメールを送信しました");
+  //   System.out.println("件名:無題");
+  //   System.out.println("本文:" + text);
+  // }
+  // public static void main(String[] args) {
+  //   // Hero h = new Hero("ミナト");
+  //   // // hello(h);
+  //   // methodA();
+  //   // helloName("mianto");
+  //   // circleCalcAns(10);
+  //   // System.out.println(triangleCalcArea(10, 20));
+  //   // System.out.println(add(10,20));
+  //   // System.out.println(add(10,20,30));
+  //   // System.out.println(add(10.0,20.0));
+  //   // System.out.println(add("10","20"));
+  //   // int[] scores = {10, 20, 30, 40, 50};
+  //   // for (int value : scores) {
+  //   //   System.out.println(value);
+  //   // }
+  //   // printArray(scores);
+  //   // for (int value : scores) {
+  //   //   System.out.println(value);
+  //   // }
+  //   // for (int value1 : makeArray(5)) {
+  //   //   System.out.println(value1);
+  //   // }
+  //   introduceOneself();
+  //   email("a", "b", "c");
+  //   email("a", "b");
+  //   System.out.println(triangleCalcArea(10, 20));
+  //   System.out.println(circleCalcAns(10));
+  // }
   //   int[] scores = {20, 30, 40, 50, 60};
   //   System.out.println(scores.length);
   //   System.out.println(scores[0]);
@@ -687,4 +687,7 @@ public class Main {
   //   }
     
   // }
+  public static void main(String[] args){
+    
+  }
 }
