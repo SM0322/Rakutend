@@ -560,6 +560,11 @@ public class Main {
   public static String add(String x, String y) {
     return x + y;
   }
+  public static void printArray(int[] array) {
+    for (int value : array) {
+      System.out.println(value);
+    }
+  }
   public static void main(String[] args) {
     Hero h = new Hero("ミナト");
     // hello(h);
@@ -571,6 +576,8 @@ public class Main {
     System.out.println(add(10,20,30));
     System.out.println(add(10.0,20.0));
     System.out.println(add("10","20"));
+    int[] scores = {10, 20, 30, 40, 50};
+    printArray(scores);
   }
   //   int[] scores = {20, 30, 40, 50, 60};
   //   System.out.println(scores.length);
