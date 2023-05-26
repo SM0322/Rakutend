@@ -573,10 +573,24 @@ public class Main {
     // }
     // System.out.println("全て読み込みました");
     // fr.close();
-    FileOutputStream fos = new FileOutputStream("Test4.txt");
-    fos.write(1);
-    fos.flush();
-    fos.close();
+    // FileOutputStream fos = new FileOutputStream("Test4.txt");
+    // fos.write(1);
+    // fos.flush();
+    // fos.close();
+    FileWriter fw = null;
+    try {
+      fw = new FileWriter("Test6.txt");
+      fw.write('A');
+      fw.flush();
+    } catch (IOException e) {
+      System.out.println("書き込みエラーです");
+    } finally {
+      if (fw != null) {
+        try {
+          fw.close();
+        } catch (IOException e2) {}
+      }
+    }
   }
 }
   
