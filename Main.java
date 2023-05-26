@@ -538,10 +538,14 @@ public class Main {
         
         try {
             File file = new File("c:\\Sample\\Test.txt");
+            // 書き込み用の新しいファイルの作成
             FileWriter filewriter = new FileWriter(file);
+            // FileWrterをインスタンス化
          
             filewriter.write("abc");
+            // 作成したファイルに書き込み
             filewriter.close();
+            // ファイルを閉じる(一連の動作で必ず必要)
          
             System.out.println("テキストファイルの作成に成功しました");
         } catch (IOException e) {
