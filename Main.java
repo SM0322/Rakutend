@@ -573,10 +573,11 @@ public class Main {
     // }
     // System.out.println("全て読み込みました");
     // fr.close();
-    // FileOutputStream fos = new FileOutputStream("Test4.txt");
-    // fos.write(1);
-    // fos.flush();
-    // fos.close();
+    FileOutputStream fos = new FileOutputStream("Test8.txt");
+    CipherOutputStream cos = new ChipherOutputStream(fos, algo);
+    cos.write(65);
+    cos.flush();
+    cos.close();
     // FileWriter fw = null;
     // try {
     //   fw = new FileWriter("Test6.txt");
@@ -591,17 +592,17 @@ public class Main {
     //     } catch (IOException e2) {}
     //   }
     // }
-    String msg = "第一土曜日は資源ごみの回収日です";
-    Reader sr = new StringReader(msg);
-    System.out.println((char)sr.read());
-    System.out.println((char)sr.read());
-    ByteArrayOutputStream baos = new ByteArrayOutputStream();
-    baos.write(65);
-    baos.write(66);
-    byte[] data = baos.toByteArray();
-    for (byte b : data) {
-      System.out.println(b);
-    }
+    // String msg = "第一土曜日は資源ごみの回収日です";
+    // Reader sr = new StringReader(msg);
+    // System.out.println((char)sr.read());
+    // System.out.println((char)sr.read());
+    // ByteArrayOutputStream baos = new ByteArrayOutputStream();
+    // baos.write(65);
+    // baos.write(66);
+    // byte[] data = baos.toByteArray();
+    // for (byte b : data) {
+    //   System.out.println(b);
+    // }
   }
 }
   
