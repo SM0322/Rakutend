@@ -587,6 +587,11 @@ public class Main {
     System.out.println("件名:" + title);
     System.out.println("本文:" + text);
   }
+  public static void email(String address, String text) {
+    System.out.println(address + "に以下のメールを送信しました");
+    System.out.println("件名:無題");
+    System.out.println("本文:" + text);
+  }
   public static void main(String[] args) {
     // Hero h = new Hero("ミナト");
     // // hello(h);
@@ -611,6 +616,7 @@ public class Main {
     // }
     introduceOneself();
     email("a", "b", "c");
+    email("a", "b");
   }
   //   int[] scores = {20, 30, 40, 50, 60};
   //   System.out.println(scores.length);
