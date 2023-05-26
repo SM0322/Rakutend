@@ -540,12 +540,16 @@ public class Main {
   public static void helloName(String name) {
       System.out.println(name + "さん、こんにちは");
   }
-  public static void circleCalcAns(int r) {
-    double area = r * r * 3.14;
-    System.out.println("半径" + r + "の円の面積は" + area + "です");
-  }
+  // public static void circleCalcAns(int r) {
+  //   double area = r * r * 3.14;
+  //   System.out.println("半径" + r + "の円の面積は" + area + "です");
+  // }
   public static double triangleCalcArea(int x, int y) {
     double area = x * y / 2;
+    return area;
+  }
+  public static double circleCalcAns(int r) {
+    double area = r * r * 3.14;
     return area;
   }
   public static int add(int x, int y) {
@@ -617,6 +621,8 @@ public class Main {
     introduceOneself();
     email("a", "b", "c");
     email("a", "b");
+    System.out.println(triangleCalcArea(10, 20));
+    System.out.println(circleCalcAns(10));
   }
   //   int[] scores = {20, 30, 40, 50, 60};
   //   System.out.println(scores.length);
