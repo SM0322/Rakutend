@@ -32,4 +32,13 @@ public class Book {
     this.publishDate = publishDate;
     this.comment = comment;
   }
+  public int hashCode() {
+    return HashCodeBuilder.reflectionHashCode(this);
+  }
+  public boolean equals(Object o) {
+    return EqualsBuilder.reflectionEquals(this, o);
+  }
+  public int compareTo(Book o) {
+    return CompareToBuilder.reflectionCompare(this, o, "comment", "title");
+  }
 }
