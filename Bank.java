@@ -22,6 +22,7 @@
 //     this("ダミー", 0);
 //   }
 // }
+import org.apache.commons.lang3.builder.*;
 public class Bank {
   String name;
   String address;
@@ -38,4 +39,7 @@ public class Bank {
     return EqualsBuilder.reflectionEquals(this, o);
     // EqualsBuilderはこのクラスの持つすべてのフィールドが等価か調べる便利な非公式API
   }
+  public int hashCode() {
+      return HashCodeBuilder.reflectionHashCode(this);
+    }
 }
