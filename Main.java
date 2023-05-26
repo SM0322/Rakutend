@@ -568,6 +568,13 @@ public class Main {
       array[i]++;
     }
   }
+  public static int[] makeArray(int size) {
+    int[] newArray = new int[size];
+    for (int i = 0; i < newArray.length; i++) {
+      newArray[i] = i;
+    }
+    return newArray;
+  }
   public static void main(String[] args) {
     // Hero h = new Hero("ミナト");
     // // hello(h);
@@ -586,6 +593,9 @@ public class Main {
     printArray(scores);
     for (int value : scores) {
       System.out.println(value);
+    }
+    for (int value1 : makeArray(5)) {
+      System.out.println(value1);
     }
   }
   //   int[] scores = {20, 30, 40, 50, 60};
