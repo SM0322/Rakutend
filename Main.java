@@ -627,7 +627,7 @@ public class Main {
   //   fos.close();
   //   fis.close();
   // }
-  public void saveToHeroFile(Hero h) throws IOException {
+  public static void saveToHeroFile(Hero h) throws IOException {
     Writer w = new BufferedWriter(new FileWriter("rpgsave.dat"));
     w.write(h.name + "￥n");
     w.write(h.getHp() + "￥n");
@@ -636,7 +636,8 @@ public class Main {
     w.close();
   }
   public static void main(String[] args) {
-    
+    Hero h = new Hero("ミナト");
+    saveToHeroFile(h);
   }
 }
   
