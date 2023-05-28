@@ -627,6 +627,14 @@ public class Main {
   //   fos.close();
   //   fis.close();
   // }
+  public void saveToHeroFile(Hero h) throws IOException {
+    Writer w = new BufferedWriter(new FileWriter("rpgsave.dat"));
+    w.write(h.name + "￥n");
+    w.write(h.getHp() + "￥n");
+    // w.write(h.mp + "￥n");
+    w.flush();
+    w.close();
+  }
   public static void main(String[] args) {
     
   }
