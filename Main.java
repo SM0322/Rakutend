@@ -670,7 +670,7 @@ public class Main {
     p.setProperty("heroMP", "45");
     p.store(fw, "勇者の情報");
     fw.close();
-    ResourceBundle rb = ResourceBundle.getBundle("rpgdata.properties");
+    ResourceBundle rb = ResourceBundle.getBundle("rpgdata");
     String heroName = rb.getString("heroName");
     System.out.println("勇者の名前:" + heroName);
   }
