@@ -978,5 +978,16 @@ public class Main {
     // sock.getOutputStream().write("WELCOME".getBytes());
     // sock.getOutputStream().flush();
     // sock.close();
+    URL url = new URL("https://dokojava.jp/favicon.ico");
+    InputStream is = url.openStream();
+    OutputStream os = new FileOutputStream("dj.ico");
+    int i = is.read();
+    while (i != -1) {
+      os.write((byte)i);
+      i = is.read();
+    }
+    is.close();
+    os.flush();
+    os.close();
   }
 }
