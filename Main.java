@@ -551,24 +551,24 @@
 //     }
 // }
 
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
+// import java.io.File;
+// import java.io.FileWriter;
+// import java.io.IOException;
 
-import java.util.*;
-import java.text.*;
-import javax.xml.parsers.*;
-import org.w3c.dom.*;
-// import com.fasterxml.jackson.databind.*;
-// import com.fasterxml.jackson.databind.ObjectMapper;
-import java.io.*;
-// import org.apache.commons.*;
-// import org.apache.poi.ss.usermodel.*;
-// import org.apache.poi.xssf.usermodel.*;
-import java.util.zip.*;
-import javax.sound.midi.*;
-import javax.sound.sampled.*;
-public class Main {
+// import java.util.*;
+// import java.text.*;
+// import javax.xml.parsers.*;
+// import org.w3c.dom.*;
+// // import com.fasterxml.jackson.databind.*;
+// // import com.fasterxml.jackson.databind.ObjectMapper;
+// import java.io.*;
+// // import org.apache.commons.*;
+// // import org.apache.poi.ss.usermodel.*;
+// // import org.apache.poi.xssf.usermodel.*;
+// import java.util.zip.*;
+// import javax.sound.midi.*;
+// import javax.sound.sampled.*;
+// public class Main {
   // public static void main(String[] args) throws IOException {
     // File file = new File("Test1.txt");
     // FileWriter fw = new FileWriter(file);
@@ -639,15 +639,15 @@ public class Main {
   //   fos.close();
   //   fis.close();
   // }
-  public static void saveToHeroFile(Hero h) throws IOException {
-    Writer w = new BufferedWriter(new FileWriter("rpgsave.dat"));
-    w.write(h.name + "￥n");
-    w.write(h.getHp() + "￥n");
-    // w.write(h.mp + "￥n");
-    w.flush();
-    w.close();
-  }
-  public static void main(String[] args) throws Exception {
+  // public static void saveToHeroFile(Hero h) throws IOException {
+  //   Writer w = new BufferedWriter(new FileWriter("rpgsave.dat"));
+  //   w.write(h.name + "￥n");
+  //   w.write(h.getHp() + "￥n");
+  //   // w.write(h.mp + "￥n");
+  //   w.flush();
+  //   w.close();
+  // }
+  // public static void main(String[] args) throws Exception {
     // Hero h = new Hero("ミナト");
     // // saveToHeroFile(h);
     // String s = "みなと,あすか,すがわら";
@@ -745,38 +745,38 @@ public class Main {
     // ais.close();
     // seq.stop();
     // seq.close();
-    Reader fr = new FileReader("pref.properties");
-    Properties p = new Properties();
-    p.load(fr);
-    System.out.println(p.getProperty("aichi.capital") + ":" + p.getProperty("aichi.food"));
-    fr.close();
-    ResourceBundle rb = ResourceBundle.getBundle("pref");
-    System.out.println(rb.getString("aichi.capital") + ":" + rb.getString("aichi.food"));
-    Employee tanaka = new Employee();
-    tanaka.name = "田中一郎";
-    tanaka.age = 41;
-    Department soumubu = new Department();
-    soumubu.name = "総務部";
-    soumubu.leader = tanaka;
-    FileOutputStream fos = new FileOutputStream("company.dat");
-    ObjectOutputStream oos = new ObjectOutputStream(fos);
-    oos.writeObject(soumubu);
-    oos.flush();
-    oos.close();
-  }
-  // static Element findChildByTag(Element self, String name) throws Exception {
-  //   NodeList children = self.getChildNodes();
-  //   for (int i = 0; i < children.getLength(); i++) {
-  //     if (children.item(i) instanceof Element) {
-  //       Element e = (Element)children.item(i);
-  //       if (e.getTagName().equals(name)) {
-  //         return e;
-  //       }
-  //     }
-  //   }
-  //   return null;
-  // }
-}
+//     Reader fr = new FileReader("pref.properties");
+//     Properties p = new Properties();
+//     p.load(fr);
+//     System.out.println(p.getProperty("aichi.capital") + ":" + p.getProperty("aichi.food"));
+//     fr.close();
+//     ResourceBundle rb = ResourceBundle.getBundle("pref");
+//     System.out.println(rb.getString("aichi.capital") + ":" + rb.getString("aichi.food"));
+//     Employee tanaka = new Employee();
+//     tanaka.name = "田中一郎";
+//     tanaka.age = 41;
+//     Department soumubu = new Department();
+//     soumubu.name = "総務部";
+//     soumubu.leader = tanaka;
+//     FileOutputStream fos = new FileOutputStream("company.dat");
+//     ObjectOutputStream oos = new ObjectOutputStream(fos);
+//     oos.writeObject(soumubu);
+//     oos.flush();
+//     oos.close();
+//   }
+//   // static Element findChildByTag(Element self, String name) throws Exception {
+//   //   NodeList children = self.getChildNodes();
+//   //   for (int i = 0; i < children.getLength(); i++) {
+//   //     if (children.item(i) instanceof Element) {
+//   //       Element e = (Element)children.item(i);
+//   //       if (e.getTagName().equals(name)) {
+//   //         return e;
+//   //       }
+//   //     }
+//   //   }
+//   //   return null;
+//   // }
+// }
   
 
 // public class Main {
@@ -944,3 +944,19 @@ public class Main {
 //     // }
   
 // }
+import java.io.*;
+import java.net.*;
+
+public class Main {
+  public static void main(String[] args) throws IOException {
+    URL url = new URL("https://outlook.office365.com/mail/");
+    InputStream is = url.openStream();
+    InputStreamReader isr = new InputStreamReader(is);
+    int i = isr.read();
+    while (i != -1) {
+      System.out.println((char)i);
+      i = isr.read();
+    }
+    isr.close();
+  }
+}
