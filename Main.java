@@ -559,6 +559,7 @@ import java.util.*;
 import java.text.*;
 import javax.xml.parsers.*;
 import org.w3c.dom.*;
+import com.fasterxml.jackson.databind.*;
 import java.io.*;
 // import org.apache.commons.*;
 public class Main {
@@ -682,12 +683,18 @@ public class Main {
     // String now = (new SimpleDateFormat()).format(new Date());
     // ResourceBundle rb1 = ResourceBundle.getBundle("messages");
     // System.out.println(rb1.getString("CURRENT_TIME_IS") + now);
-    InputStream is = new FileInputStream("rpgsave.xml");
-    Document doc = DocumentBuilderFactory.newInstance().newDocumentBuilder().parse(is);
-    Element hero = doc.getDocumentElement();
-    Element weapon = findChildByTag(hero, "weapon");
-    Element power = findChildByTag(weapon, "power");
-    String value = power.getTextContent();
+    // InputStream is = new FileInputStream("rpgsave.xml");
+    // Document doc = DocumentBuilderFactory.newInstance().newDocumentBuilder().parse(is);
+    // Element hero = doc.getDocumentElement();
+    // Element weapon = findChildByTag(hero, "weapon");
+    // Element power = findChildByTag(weapon, "power");
+    // String value = power.getTextContent();
+    ObjectMapper mapper = new ObjectMapper();
+    JsonNode root = mapper.readTree(new File("hero.json"));
+    JsonNode hero = root.get("hero");
+    JsonNode weapon = hero.get("weapon");
+    System.out.println("名前:" + hero.get("name").textValue());
+    System.out.println("武器:" + weapon.get("name").textValue());
   }
   static Element findChildByTag(Element self, String name) throws Exception {
     NodeList children = self.getChildNodes();
