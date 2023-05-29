@@ -566,6 +566,8 @@ import java.io.*;
 // import org.apache.poi.ss.usermodel.*;
 // import org.apache.poi.xssf.usermodel.*;
 import java.util.zip.*;
+import javax.sound.midi.*;
+import javax.sound.sampled.*;
 public class Main {
   // public static void main(String[] args) throws IOException {
     // File file = new File("Test1.txt");
@@ -645,7 +647,7 @@ public class Main {
     w.flush();
     w.close();
   }
-  public static void main(String[] args) throws IOException {
+  public static void main(String[] args) throws Exception {
     // Hero h = new Hero("ミナト");
     // // saveToHeroFile(h);
     // String s = "みなと,あすか,すがわら";
@@ -719,11 +721,35 @@ public class Main {
     // try (OutputStream file = new FileOutputStream("workbook.xlsx")) {
     //   book.write(file);
     // }
-    try (ZipFile file = new ZipFile("rpgsave.jar")) {
-      for (ZipEntry e : Collections.list(file.entries())) {
-        System.out.println(e.getName() + "size=" + e.getCompressedSize());
-      }
-    }
+    // try (ZipFile file = new ZipFile("rpgsave.jar")) {
+    //   for (ZipEntry e : Collections.list(file.entries())) {
+    //     System.out.println(e.getName() + "size=" + e.getCompressedSize());
+    //   }
+    // }
+    // Sequencer seq = MidiSystem.getSequencer();
+    // seq.open();
+    // seq.setSequence(MidiSystem.getSequence(new File("xmas-bgm.mid")));
+    // seq.setLoopCount(-1);
+    // seq.start();
+    // AudioInputStream ais = AudioSystem.getAudioInputStream(new File("xmas-bell.wav"));
+    // Clip clip = AudioSystem.getClip();
+    // clip.open(ais);
+    // System.out.println("メリークリスマス!");
+    // System.out.println("何か入力すると3回だけベルが鳴るよ");
+    // for (int i = 0; i < 4; i++) {
+    //   new Scanner(System.in).nextLine();
+    //   clip.start();
+    //   clip.setFramePosition(0);
+    // }
+    // clip.stop();
+    // ais.close();
+    // seq.stop();
+    // seq.close();
+    Reader fr = new FileReader("pref.properties");
+    Properties p = new Properties();
+    p.load(fr);
+    System.out.println(p.getProperty("aichi.capital") + ":" + p.getProperty("aichi.food"));
+    fr.close();
   }
   // static Element findChildByTag(Element self, String name) throws Exception {
   //   NodeList children = self.getChildNodes();
