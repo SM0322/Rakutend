@@ -563,8 +563,9 @@ import org.w3c.dom.*;
 // import com.fasterxml.jackson.databind.ObjectMapper;
 import java.io.*;
 // import org.apache.commons.*;
-import org.apache.poi.ss.usermodel.*;
-import org.apache.poi.xssf.usermodel.*;
+// import org.apache.poi.ss.usermodel.*;
+// import org.apache.poi.xssf.usermodel.*;
+import java.util.zip.*;
 public class Main {
   // public static void main(String[] args) throws IOException {
     // File file = new File("Test1.txt");
@@ -644,7 +645,7 @@ public class Main {
     w.flush();
     w.close();
   }
-  public static void main(String[] args) throws Exception {
+  public static void main(String[] args) throws IOException {
     // Hero h = new Hero("ミナト");
     // // saveToHeroFile(h);
     // String s = "みなと,あすか,すがわら";
@@ -708,15 +709,20 @@ public class Main {
     // ObjectInputStream ois = new ObjectInputStream(fis);
     // Hero h2 = (Hero)ois.readObject();
     // ois.close();
-    Workbook book = new XSSFWorkbook();
-    Sheet sheet = book.createSheet("カート");
-    Row row = sheet.createRow(0);
-    row.createCell(0).setCellValue("ヒノキの棒");
-    row.createCell(1).setCellValue(5);
-    row.createCell(2).setCellValue(22);
-    row.createCell(3).setCellFormula("=B1*C1");
-    try (OutputStream file = new FileOutputStream("workbook.xlsx")) {
-      book.write(file);
+    // Workbook book = new XSSFWorkbook();
+    // Sheet sheet = book.createSheet("カート");
+    // Row row = sheet.createRow(0);
+    // row.createCell(0).setCellValue("ヒノキの棒");
+    // row.createCell(1).setCellValue(5);
+    // row.createCell(2).setCellValue(22);
+    // row.createCell(3).setCellFormula("=B1*C1");
+    // try (OutputStream file = new FileOutputStream("workbook.xlsx")) {
+    //   book.write(file);
+    // }
+    try (ZipFile file = new ZipFile("rpgsave.jar")) {
+      for (ZipEntry e : Collections.list(file.entries())) {
+        System.out.println(e.getName() + "size=" + e.getCompressedSize());
+      }
     }
   }
   // static Element findChildByTag(Element self, String name) throws Exception {
