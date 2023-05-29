@@ -554,9 +554,12 @@
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.io.*;
+
 import java.util.*;
 import java.text.*;
+import javax.xml.parsers.*;
+import org.w3c.dom.*;
+import java.io.*;
 // import org.apache.commons.*;
 public class Main {
   // public static void main(String[] args) throws IOException {
@@ -638,14 +641,14 @@ public class Main {
     w.close();
   }
   public static void main(String[] args) throws Exception {
-    Hero h = new Hero("ミナト");
-    // saveToHeroFile(h);
-    String s = "みなと,あすか,すがわら";
-    String[] st = s.split(",");
-    // split(",")で文字列に分割されそれを配列に格納する
-    for (String t : st) {
-      System.out.println(t);
-    }
+    // Hero h = new Hero("ミナト");
+    // // saveToHeroFile(h);
+    // String s = "みなと,あすか,すがわら";
+    // String[] st = s.split(",");
+    // // split(",")で文字列に分割されそれを配列に格納する
+    // for (String t : st) {
+    //   System.out.println(t);
+    // }
     // FileReader fr = new FileReader("rpgdata.csv");
     // Iterable<CSVRecord> records = CSVFormat.DEFAULT.parse(fr);
     // for (CSVRecord r : records) {
@@ -664,21 +667,39 @@ public class Main {
     // System.out.println("勇者の名前:" + name);
     // System.out.println("勇者のHP:" + hp);
     // fr.close();
-    Writer fw = new FileWriter("rpgdata.properties");
-    Properties p = new Properties();
-    p.setProperty("heroName", "浅香");
-    p.setProperty("heroHp", "62");
-    p.setProperty("heroMP", "45");
-    p.store(fw, "勇者の情報");
-    fw.close();
-    ResourceBundle rb = ResourceBundle.getBundle("rpgdata");
-    String heroName = rb.getString("heroName");
-    System.out.println("勇者の名前:" + heroName);
-    Locale loc = Locale.getDefault();
-    System.out.println(loc.getCountry() + "-" + loc.getLanguage());
-    String now = (new SimpleDateFormat()).format(new Date());
-    ResourceBundle rb1 = ResourceBundle.getBundle("messages");
-    System.out.println(rb1.getString("CURRENT_TIME_IS") + now);
+    // Writer fw = new FileWriter("rpgdata.properties");
+    // Properties p = new Properties();
+    // p.setProperty("heroName", "浅香");
+    // p.setProperty("heroHp", "62");
+    // p.setProperty("heroMP", "45");
+    // p.store(fw, "勇者の情報");
+    // fw.close();
+    // ResourceBundle rb = ResourceBundle.getBundle("rpgdata");
+    // String heroName = rb.getString("heroName");
+    // System.out.println("勇者の名前:" + heroName);
+    // Locale loc = Locale.getDefault();
+    // System.out.println(loc.getCountry() + "-" + loc.getLanguage());
+    // String now = (new SimpleDateFormat()).format(new Date());
+    // ResourceBundle rb1 = ResourceBundle.getBundle("messages");
+    // System.out.println(rb1.getString("CURRENT_TIME_IS") + now);
+    InputStream is = new FileInputStream("rpgsave.xml");
+    Document doc = DocumentBuilderFactory.newInstance().newDocumentBuilder().parse(is);
+    Element hero = doc.getDocumentElement();
+    Element weapon = findChildByTag(hero, "weapon");
+    Element power = findChildByTag(weapon, "power");
+    String value = power.getTextContent();
+  }
+  static Element findChildByTag(Element self, String name) throws Exception {
+    NodeList children = self.getChildNodes();
+    for (int i = 0; i < children.getLength(); i++) {
+      if (children.item(i) instanceof Element) {
+        Element e = (Element)children.item(i);
+        if (e.getTagName().equals(name)) {
+          return e;
+        }
+      }
+    }
+    return null;
   }
 }
   
