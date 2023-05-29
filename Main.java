@@ -654,15 +654,22 @@ public class Main {
     //   System.out.println(name + "/" + hp + "/" + mp);
     // }
     // fr.close();
-    Reader fr = new FileReader("rpgdata.properties");
+    // Reader fr = new FileReader("rpgdata.properties");
+    // Properties p = new Properties();
+    // p.load(fr);
+    // String name = p.getProperty("heroName");
+    // String strHp = p.getProperty("HeroHp");
+    // int hp = Integer.parseInt(strHp);
+    // System.out.println("勇者の名前:" + name);
+    // System.out.println("勇者のHP:" + hp);
+    // fr.close();
+    Writer fw = new FileWriter("rpgdata.properties");
     Properties p = new Properties();
-    p.load(fr);
-    String name = p.getProperty("heroName");
-    String strHp = p.getProperty("HeroHp");
-    int hp = Integer.parseInt(strHp);
-    System.out.println("勇者の名前:" + name);
-    System.out.println("勇者のHP:" + hp);
-    fr.close();
+    p.setProperty("heroName", "浅香");
+    p.setProperty("heroHp", "62");
+    p.setProperty("heroMP", "45");
+    p.store(fw, "勇者の情報");
+    fw.close();
   }
 }
   
