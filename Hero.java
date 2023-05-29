@@ -1,5 +1,7 @@
 import java.util.Objects;
-public class Hero extends Character implements Cloneable {
+import java.io.*;
+// public class Hero extends Character implements Cloneable {
+public class Hero implements Serializable {
 // public class Hero implements Cloneable {
   public String name;
   private int hp;

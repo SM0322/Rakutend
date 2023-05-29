@@ -559,7 +559,8 @@ import java.util.*;
 import java.text.*;
 import javax.xml.parsers.*;
 import org.w3c.dom.*;
-import com.fasterxml.jackson.databind.*;
+// import com.fasterxml.jackson.databind.*;
+// import com.fasterxml.jackson.databind.ObjectMapper;
 import java.io.*;
 // import org.apache.commons.*;
 public class Main {
@@ -689,25 +690,35 @@ public class Main {
     // Element weapon = findChildByTag(hero, "weapon");
     // Element power = findChildByTag(weapon, "power");
     // String value = power.getTextContent();
-    ObjectMapper mapper = new ObjectMapper();
-    JsonNode root = mapper.readTree(new File("hero.json"));
-    JsonNode hero = root.get("hero");
-    JsonNode weapon = hero.get("weapon");
-    System.out.println("名前:" + hero.get("name").textValue());
-    System.out.println("武器:" + weapon.get("name").textValue());
+    // ObjectMapper mapper = new ObjectMapper();
+    // JsonNode root = mapper.readTree(new File("hero.json"));
+    // JsonNode hero = root.get("hero");
+    // JsonNode weapon = hero.get("weapon");
+    // System.out.println("名前:" + hero.get("name").textValue());
+    // System.out.println("武器:" + weapon.get("name").textValue());
+    Hero h1 = new Hero("ミナト");
+    FileOutputStream fos = new FileOutputStream("rpgsave.dat");
+    ObjectOutputStream oos = new ObjectOutputStream(fos);
+    oos.writeObject(h1);
+    oos.flush();
+    oos.close();
+    FileInputStream fis = new FileInputStream("rpgsave.dat");
+    ObjectInputStream ois = new ObjectInputStream(fis);
+    Hero h2 = (Hero)ois.readObject();
+    ois.close();
   }
-  static Element findChildByTag(Element self, String name) throws Exception {
-    NodeList children = self.getChildNodes();
-    for (int i = 0; i < children.getLength(); i++) {
-      if (children.item(i) instanceof Element) {
-        Element e = (Element)children.item(i);
-        if (e.getTagName().equals(name)) {
-          return e;
-        }
-      }
-    }
-    return null;
-  }
+  // static Element findChildByTag(Element self, String name) throws Exception {
+  //   NodeList children = self.getChildNodes();
+  //   for (int i = 0; i < children.getLength(); i++) {
+  //     if (children.item(i) instanceof Element) {
+  //       Element e = (Element)children.item(i);
+  //       if (e.getTagName().equals(name)) {
+  //         return e;
+  //       }
+  //     }
+  //   }
+  //   return null;
+  // }
 }
   
 
