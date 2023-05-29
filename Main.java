@@ -750,6 +750,8 @@ public class Main {
     p.load(fr);
     System.out.println(p.getProperty("aichi.capital") + ":" + p.getProperty("aichi.food"));
     fr.close();
+    ResourceBundle rb = ResourceBundle.getBundle("pref");
+    System.out.println(rb.getString("aichi.capital") + ":" + rb.getString("aichi.food"));
   }
   // static Element findChildByTag(Element self, String name) throws Exception {
   //   NodeList children = self.getChildNodes();
