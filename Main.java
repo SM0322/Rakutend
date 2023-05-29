@@ -556,6 +556,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.*;
 import java.util.*;
+import org.apache.commons.*;
 public class Main {
   // public static void main(String[] args) throws IOException {
     // File file = new File("Test1.txt");
@@ -644,6 +645,15 @@ public class Main {
     for (String t : st) {
       System.out.println(t);
     }
+    FileReader fr = new FileReader("rpgdata.csv");
+    Iterable<CSVRecord> records = CSVFormat.DEFAULT.parse(fr);
+    for (CSVRecord r : records) {
+      String name = r.get(0);
+      String hp = r.get(1);
+      String mp = r.get(2);
+      System.out.println(name + "/" + hp + "/" + mp);
+    }
+    fr.close();
   }
 }
   
