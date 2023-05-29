@@ -563,6 +563,8 @@ import org.w3c.dom.*;
 // import com.fasterxml.jackson.databind.ObjectMapper;
 import java.io.*;
 // import org.apache.commons.*;
+import org.apache.poi.ss.usermodel.*;
+import org.apache.poi.xssf.usermodel.*;
 public class Main {
   // public static void main(String[] args) throws IOException {
     // File file = new File("Test1.txt");
@@ -696,16 +698,26 @@ public class Main {
     // JsonNode weapon = hero.get("weapon");
     // System.out.println("名前:" + hero.get("name").textValue());
     // System.out.println("武器:" + weapon.get("name").textValue());
-    Hero h1 = new Hero("ミナト");
-    FileOutputStream fos = new FileOutputStream("rpgsave.dat");
-    ObjectOutputStream oos = new ObjectOutputStream(fos);
-    oos.writeObject(h1);
-    oos.flush();
-    oos.close();
-    FileInputStream fis = new FileInputStream("rpgsave.dat");
-    ObjectInputStream ois = new ObjectInputStream(fis);
-    Hero h2 = (Hero)ois.readObject();
-    ois.close();
+    // Hero h1 = new Hero("ミナト");
+    // FileOutputStream fos = new FileOutputStream("rpgsave.dat");
+    // ObjectOutputStream oos = new ObjectOutputStream(fos);
+    // oos.writeObject(h1);
+    // oos.flush();
+    // oos.close();
+    // FileInputStream fis = new FileInputStream("rpgsave.dat");
+    // ObjectInputStream ois = new ObjectInputStream(fis);
+    // Hero h2 = (Hero)ois.readObject();
+    // ois.close();
+    Workbook book = new XSSFWorkbook();
+    Sheet sheet = book.createSheet("カート");
+    Row row = sheet.createRow(0);
+    row.createCell(0).setCellValue("ヒノキの棒");
+    row.createCell(1).setCellValue(5);
+    row.createCell(2).setCellValue(22);
+    row.createCell(3).setCellFormula("=B1*C1");
+    try (OutputStream file = new FileOutputStream("workbook.xlsx")) {
+      book.write(file);
+    }
   }
   // static Element findChildByTag(Element self, String name) throws Exception {
   //   NodeList children = self.getChildNodes();
