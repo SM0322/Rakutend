@@ -556,6 +556,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.*;
 import java.util.*;
+import java.text.*;
 // import org.apache.commons.*;
 public class Main {
   // public static void main(String[] args) throws IOException {
@@ -673,6 +674,11 @@ public class Main {
     ResourceBundle rb = ResourceBundle.getBundle("rpgdata");
     String heroName = rb.getString("heroName");
     System.out.println("勇者の名前:" + heroName);
+    Locale loc = Locale.getDefault();
+    System.out.println(loc.getCountry() + "-" + loc.getLanguage());
+    String now = (new SimpleDateFormat()).format(new Date());
+    ResourceBundle rb1 = ResourceBundle.getBundle("messages");
+    System.out.println(rb1.getString("CURRENT_TIME_IS") + now);
   }
 }
   
