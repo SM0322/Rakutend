@@ -637,10 +637,13 @@ public class Main {
   }
   public static void main(String[] args) {
     Hero h = new Hero("ミナト");
-    saveToHeroFile(h);
-    String s = "みなと、あすか、すがわら";
+    // saveToHeroFile(h);
+    String s = "みなと,あすか,すがわら";
     String[] st = s.split(",");
     // split(",")で文字列に分割されそれを配列に格納する
+    for (String t : st) {
+      System.out.println(t);
+    }
   }
 }
   
