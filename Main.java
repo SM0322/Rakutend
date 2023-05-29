@@ -529,9 +529,6 @@
 //   }
 // }
 // import org.apache.logging.log4j;
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
  
 // public class Main {
 //     public static void main(String[] args) throws Exception {
@@ -554,8 +551,11 @@ import java.io.IOException;
 //     }
 // }
 
-
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.io.*;
+import java.util.*;
 public class Main {
   // public static void main(String[] args) throws IOException {
     // File file = new File("Test1.txt");
@@ -638,6 +638,9 @@ public class Main {
   public static void main(String[] args) {
     Hero h = new Hero("ミナト");
     saveToHeroFile(h);
+    String s = "みなと、あすか、すがわら";
+    String[] st = s.split(",");
+    // split(",")で文字列に分割されそれを配列に格納する
   }
 }
   
