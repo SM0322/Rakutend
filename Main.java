@@ -1138,5 +1138,7 @@ public class Main {
     // jar -cvf ファイル名でアーカイブ作成
     // jar -xvf ファイル名
     // jar -tvf ファイル名
+    // jarファイルのルール　マニフェストファイル: META-INFフォルダにMANIFIEST.MFという名前で格納されており、アーカイブ内の他のファイルに関する情報を入れる
+    
   }
 }
