@@ -1019,5 +1019,8 @@ public class Main {
     // } else {
     //   System.out.println("ERROR" + status);
     // }
+    検索用SQL構文
+    SELECT*FROM データベース名 WHERE 条件(id = 1やhp >= 30など)
+    
   }
 }
