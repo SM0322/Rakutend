@@ -1054,5 +1054,18 @@ public class Main {
          }
        }
      }
+     PreparedStatement pstmt = con.prepareStatement("DELETE FROM MONSTERS WHERE HP <= ? OR NAME = ?");
+     pstmt.setInt(1, 10);
+    // 1番目の?に10を流し込む
+     pstmt.setString(2, "ゾンビ");
+    // 2列目の?にゾンビを入れる
+    int r = pstmt.executeUpdate();
+    // 組み立て終えたSQL文をDBMSに送信する
+    if (r != 0) {
+      System.out.println(r + "県のモンスターを削除しました");
+    } else {
+      System.out.println("該当するモンスターはありませんでした");
+    }
+    pstmt.close();
   }
 }
