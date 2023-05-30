@@ -1069,5 +1069,13 @@ public class Main {
     pstmt.close();
     // pstmtの?の部分に値や条件を入れてSQL文を構築している
     // executeUpdateで完成したSQL文を送信
+    
+    PreparedStatement pstmt = con.prepareStatement("SELECT * FROM MONSTERS WHERE HP >= ?");
+    ひな形に値を流し込みSQL文を組み立てる
+    pstmt.setInt(1,10);
+    ResultSet rs = pstmt.executeQuery();
+    // ResultSetにより結果をテーブルから取り出すことができる
+    rs.close();
+    pstmt.close();
   }
 }
