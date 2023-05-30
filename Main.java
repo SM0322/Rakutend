@@ -1088,5 +1088,11 @@ public class Main {
       System.out.println("ゴブリンはありませんでした");
     }
     // 名前がゴブリンである１行のみを取り出すときSELECT * FROM MONSTERS WHERE NAME = "'ゴブリン"で呼び出す
+    con.setAutoCommit(false);
+    // でデータベースに接続した後自動コミットを解除する
+    con.commit();
+    // 必要なSQL構文をお香った後コミットする
+    con.rollback();
+    // もし複数のSQL文を送って処理に異変があったとき処理をキャンセルするためのコマンド
   }
 }
