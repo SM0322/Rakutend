@@ -1094,5 +1094,41 @@ public class Main {
     // 必要なSQL構文をお香った後コミットする
     con.rollback();
     // もし複数のSQL文を送って処理に異変があったとき処理をキャンセルするためのコマンド
+    
+    
+    try {
+      Class.forName("org.h2.Driver");
+      // Java DataBase Connection(JDBC)の有効かコマンド
+    } catch (ClassNotFoundException e) {
+      throw new IllegalStateException("ドライバーのロードに失敗しました");
+    } 
+    :
+    // catch以下はJDBCドライバが見つからない場合の処理
+    Connection con = null;
+    try {
+      con = DriverManager.getConnection("jdbc:h2:~/rpgdb");
+      con.setAutoCommit(false);
+      con.commit();
+    }
+    // conはデータベースへの接続を示す、()の中はJDBCのURLを示す
+     catch (SQLException e) {
+      try {
+        con.rollback();
+      } catch (SQLException e2) {
+        e2.printStackTrace();  
+      }
+      // 接続やSQL処理を失敗したときの処理法
+     } finally {
+       if (con != null) {
+         try {
+           con.close();
+          // データベースとの接続解除、ファイルの書き込み後に閉じるときと同じで必要な処理
+         } catch (SQLException e3) {
+           e3.printStackTrace();  
+      // 接続やSQL処理を失敗したときの処理法
+         }
+       }
+     }
+    
   }
 }
