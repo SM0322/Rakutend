@@ -39,6 +39,8 @@
 /**
  * 口座クラス
  * このクラスは一つの銀行口座を示す
+ * @author 南
+ * @deprecated 代わりにNewAccountクラスを使え
  */
 public class Account {
   /**残高*/
