@@ -1068,5 +1068,6 @@ public class Main {
     }
     pstmt.close();
     // pstmtの?の部分に値や条件を入れてSQL文を構築している
+    // executeUpdateで完成したSQL文を送信
   }
 }
