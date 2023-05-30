@@ -1020,8 +1020,10 @@ public class Main {
     //   System.out.println("ERROR" + status);
     // }
     検索用SQL構文
-    SELECT*FROM データベース名 WHERE 条件(id = 1やhp >= 30など)
+    SELECT*FROM データベース名 WHERE 条件(id = 1やhp >= 30など);
     データ挿入用SQL構文
-    INSERT*INTO データベース名 VALUES (値, 値...) 
+    INSERT*INTO データベース名 VALUES (値, 値...);
+    情報更新用SQL構文
+    UPDATE データベース名 SET 列名 = 値 WHERE 条件式(id = 1やhp >= 30など);
   }
 }
