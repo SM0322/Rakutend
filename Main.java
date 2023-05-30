@@ -1139,6 +1139,9 @@ public class Main {
     // jar -xvf ファイル名
     // jar -tvf ファイル名
     // jarファイルのルール　マニフェストファイル: META-INFフォルダにMANIFIEST.MFという名前で格納されており、アーカイブ内の他のファイルに関する情報を入れる
-    
+    java -cp パス指定
+    java -jar ファイル名
+    java -verbose:gc ガベージコレクションが発生するたびに情報が表示
+    java -Xmx1G -Xms512M
   }
 }
