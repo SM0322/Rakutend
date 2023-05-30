@@ -1030,6 +1030,7 @@ public class Main {
     // DELETE*FROM データベース名 WHERE 条件式(id = 1やhp >= 30など);
     try {
       Class.forName("org.h2.Driver");
+      // Java DataBase Connection(JDBC)の有効かコマンド
     } catch (ClassNotFoundException e) {
       throw new IllegalStateException("ドライバーのロードに失敗しました");
     } 
@@ -1047,7 +1048,10 @@ public class Main {
          try {
            con.close();
           // データベースとの接続解除、ファイルの書き込み後に閉じるときと同じで必要な処理
-         } 
+         } catch (SQLException e) {
+           e.printStackTrace();  
+      // 接続やSQL処理を失敗したときの処理法
+         }
        }
      }
   }
