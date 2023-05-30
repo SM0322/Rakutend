@@ -950,6 +950,7 @@ import java.net.URL;
 import java.net.http.*;
 import java.net.http.HttpClient.*;
 import com.fasterxml.jackson.databind.*;
+import java.sql.*;
 public class Main {
   public static void main(String[] args) throws IOException {
     // URL url = new URL("https://outlook.office365.com/mail/");
@@ -1019,14 +1020,35 @@ public class Main {
     // } else {
     //   System.out.println("ERROR" + status);
     // }
-    検索用SQL構文
-    SELECT*FROM データベース名 WHERE 条件(id = 1やhp >= 30など);
-    データ挿入用SQL構文
-    INSERT*INTO データベース名 VALUES (値, 値...);
-    情報更新用SQL構文
-    UPDATE データベース名 SET 列名 = 値 WHERE 条件式(id = 1やhp >= 30など);
-    削除用SQL構文
-    DELETE*FROM データベース名 WHERE 条件式(id = 1やhp >= 30など);
-    
+    // 検索用SQL構文
+    // SELECT*FROM データベース名 WHERE 条件(id = 1やhp >= 30など);
+    // データ挿入用SQL構文
+    // INSERT*INTO データベース名 VALUES (値, 値...);
+    // 情報更新用SQL構文
+    // UPDATE データベース名 SET 列名 = 値 WHERE 条件式(id = 1やhp >= 30など);
+    // 削除用SQL構文
+    // DELETE*FROM データベース名 WHERE 条件式(id = 1やhp >= 30など);
+    try {
+      Class.forName("org.h2.Driver");
+    } catch (ClassNotFoundException e) {
+      throw new IllegalStateException("ドライバーのロードに失敗しました");
+    } 
+    // catch以下はJDBCドライバが見つからない場合の処理
+    Connection con = null;
+    try {
+      con = DriverManager.getConnection("jdbc:h2:~/rpgdb");
+    }
+    // conはデータベースへの接続を示す、()の中はJDBCのURLを示す
+     catch (SQLException e) {
+      e.printStackTrace();  
+      // 接続やSQL処理を失敗したときの処理法
+     } finally {
+       if (con != null) {
+         try {
+           con.close();
+          // データベースとの接続解除、ファイルの書き込み後に閉じるときと同じで必要な処理
+         } 
+       }
+     }
   }
 }
