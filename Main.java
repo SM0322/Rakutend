@@ -1129,6 +1129,6 @@ public class Main {
          }
        }
      }
-    
+    // JDK Java Development kit 開発者向けのJavaツール。こういったものを使うときはライセンスをよく確認しトラブルを避けること
   }
 }
