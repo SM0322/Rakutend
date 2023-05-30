@@ -1132,5 +1132,9 @@ public class Main {
     // JDK Java Development kit 開発者向けのJavaツール。こういったものを使うときはライセンスをよく確認しトラブルを避けること
     // javadocコマンド: 完成されたソースコードからプログラミングの仕様書を作成することが可能、HTML形式なのでネット上でも確認可能
     // -d フォルダ名でプログラム仕様書の出力先を指定できる
+    // -locale ja: 日本語指定
+    // -docencoding: htmlの文字コード
+    // -charaset: 明示的な文字コード宣言
+    
   }
 }
