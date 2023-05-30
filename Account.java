@@ -43,6 +43,7 @@
  * @author 南
  * @deprecated 代わりにNewAccountクラスを使え
  */
+@SupperessWarning("serial")
 public class Account {
   /**残高*/
   private int zandaka;
@@ -51,6 +52,7 @@ public class Account {
   /**
     * 送金を行うメソッド、このメソッドを動かすと他の口座に送金する
   */
+  @Override
   public void transfer() {
     System.out.println("A");
   }
