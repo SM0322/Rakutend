@@ -1021,6 +1021,7 @@ public class Main {
     // }
     検索用SQL構文
     SELECT*FROM データベース名 WHERE 条件(id = 1やhp >= 30など)
-    
+    データ挿入用SQL構文
+    INSERT*INTO データベース名 VALUES (値, 値...) 
   }
 }
