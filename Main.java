@@ -1082,5 +1082,11 @@ public class Main {
       System.out.println(rs.getString("NAME"));
     }
     // while文で次に進めなくなるまでNAMEを表示
+    if (rs.next()) {
+      System.out.println("ゴブリンのHPは" + rs.getInt("HP"));
+    } else {
+      System.out.println("ゴブリンはありませんでした");
+    }
+    // 名前がゴブリンである１行のみを取り出すときSELECT * FROM MONSTERS WHERE NAME = "'ゴブリン"で呼び出す
   }
 }
