@@ -1078,5 +1078,9 @@ public class Main {
     rs.close();
     pstmt.close();
     // ResultSet()では特定の行のデータを取り出すことはできない。そういう時は.next()などを利用していちいち呼び出す必要がある
+    while (rs.next()) {
+      System.out.println(rs.getString("NAME"));
+    }
+    // while文で次に進めなくなるまでNAMEを表示
   }
 }
