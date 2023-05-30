@@ -1067,5 +1067,6 @@ public class Main {
       System.out.println("該当するモンスターはありませんでした");
     }
     pstmt.close();
+    // pstmtの?の部分に値や条件を入れてSQL文を構築している
   }
 }
