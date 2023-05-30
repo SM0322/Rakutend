@@ -1143,5 +1143,6 @@ public class Main {
     java -jar ファイル名
     java -verbose:gc ガベージコレクションが発生するたびに情報が表示
     java -Xmx1G -Xms512M
+    -Xmsは個人で作るようなプログラムでは不要だがだいっきぼなプログラムだと容量が足りなくなるのでそれ対策用
   }
 }
