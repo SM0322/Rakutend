@@ -11,27 +11,44 @@
 //     return 0;
 //   }
 // }
+// public class Account {
+//   private String accountNo;
+//   private int zandaka;
+//   private AccountType accountType;
+//   public Account(String aNo, AccountType aType) {
+//     this.accountNo = aNo;
+//     this.accountType = aType;
+//   }
+//   public static final int FUTSU = 1;
+//   public static final int TOUZA = 2;
+//   public static final int TEIKI = 3;
+//   public String getaccountNo() {
+//     return this.accountNo;
+//   }
+//   public void setaccountNo(String accountNo) {
+//     this.accountNo = accountNo;
+//   }
+//   public AccountType getaccountType() {
+//     return this.accountType;
+//   }
+//   public void setaccountType(AccountType accountType) {
+//     this.accountType = accountType;
+//   }
+// }
+
+/**
+ * 口座クラス
+ * このクラスは一つの銀行口座を示す
+ */
 public class Account {
-  private String accountNo;
+  /**残高*/
   private int zandaka;
-  private AccountType accountType;
-  public Account(String aNo, AccountType aType) {
-    this.accountNo = aNo;
-    this.accountType = aType;
-  }
-  public static final int FUTSU = 1;
-  public static final int TOUZA = 2;
-  public static final int TEIKI = 3;
-  public String getaccountNo() {
-    return this.accountNo;
-  }
-  public void setaccountNo(String accountNo) {
-    this.accountNo = accountNo;
-  }
-  public AccountType getaccountType() {
-    return this.accountType;
-  }
-  public void setaccountType(AccountType accountType) {
-    this.accountType = accountType;
+  /**口座名義人*/
+  private String owner;
+  /**
+    * 送金を行うメソッド、このメソッドを動かすと他の口座に送金する
+  */
+  public void transfer() {
+    System.out.println("A");
   }
 }
