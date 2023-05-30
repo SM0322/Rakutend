@@ -9,3 +9,5 @@
     </fileset></javadoc>
   </target>
 </project>
+
+<!--ant full_buildで起動可能-->
