@@ -1025,5 +1025,8 @@ public class Main {
     INSERT*INTO データベース名 VALUES (値, 値...);
     情報更新用SQL構文
     UPDATE データベース名 SET 列名 = 値 WHERE 条件式(id = 1やhp >= 30など);
+    削除用SQL構文
+    DELETE*FROM データベース名 WHERE 条件式(id = 1やhp >= 30など);
+    
   }
 }
