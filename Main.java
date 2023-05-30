@@ -1077,5 +1077,6 @@ public class Main {
     // ResultSetにより結果をテーブルから取り出すことができる
     rs.close();
     pstmt.close();
+    // ResultSet()では特定の行のデータを取り出すことはできない。そういう時は.next()などを利用していちいち呼び出す必要がある
   }
 }
