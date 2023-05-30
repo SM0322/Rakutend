@@ -1136,5 +1136,7 @@ public class Main {
     // -docencoding: htmlの文字コード
     // -charaset: 明示的な文字コード宣言
     // jar -cvf ファイル名でアーカイブ作成
+    // jar -xvf ファイル名
+    // jar -tvf ファイル名
   }
 }
