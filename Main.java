@@ -1164,3 +1164,5 @@ public class Main {
     System.out.println("正常終了");
   }
 }
+
+// デフォではasseertは無効なのでjava -ea プログラム名で動かす
