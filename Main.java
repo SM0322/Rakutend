@@ -1150,5 +1150,9 @@ public class Main {
    cloud9 ideのide = Integrated Development Environmentで統合開発環境という
     Mavenより高度な自動化ツール
     Mavenの定めるフォルダにソースファイルを配置することでMavenの標準コマンドで推測され動作する
+    UI unit test 単体テスト　それぞれのクラスについて単体でテストすること
+    IT integrationtest 結合テスト 単体テストの完了したものをつないでテストすること
+    ST System test 総合テスト　そのシステムを構成するクラスをすべてつなぎ実際の動きに問題ないかを確認するテスト
+    
   }
 }
