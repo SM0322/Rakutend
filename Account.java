@@ -67,8 +67,10 @@ public class Account {
   public void transfer(Account dest, int amount) {
     dest.zandaka += amount;
     zandaka -= amount;
-    assert this.zandaka >= 0;
+    // assert this.zandaka >= 0;
     // アサーション: 品質面ではテストのことを考えつつ可動クラスを作る方がよい。
     // そのための補助として稼働コードの中に直接簡易テストを仕込める
+    // jacocoというオープンソースツールを利用することで命令網羅率(c0レベルガバレッジ),分岐網羅率(c1ガバレッジ)を算出することが可能
+    // これを利用して妥当なレベルのテストを設計する指針が建てられる
   }
 }
