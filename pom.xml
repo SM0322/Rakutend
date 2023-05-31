@@ -2,6 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   
   <groupId>jp.miyabilink.sukkiri</groupId>
+  <!--mavenではプロジェクトをグループに属するものとしidを要する-->
   <artifactId>sukkiri-guest</artifactId>
   <version>1.0.0</version>
   
