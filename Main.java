@@ -1148,6 +1148,7 @@ public class Main {
     コンパイル言語であるjavaはコードを１行ずつ入力し結果を見るということはできなかったがjshellというreplのおかげでそれを行えるようになった
    AWSも開発環境であるがオフラインで利用可能なeclipseとIntellij IDEAなどがある。
    cloud9 ideのide = Integrated Development Environmentで統合開発環境という
-    
+    Mavenより高度な自動化ツール
+    Mavenの定めるフォルダにソースファイルを配置することでMavenの標準コマンドで推測され動作する
   }
 }
