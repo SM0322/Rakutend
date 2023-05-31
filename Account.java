@@ -43,17 +43,29 @@
  * @author 南
  * @deprecated 代わりにNewAccountクラスを使え
  */
-@SupperessWarning("serial")
+// @SupperessWarning("serial")
+// public class Account {
+//   /**残高*/
+//   private int zandaka;
+//   /**口座名義人*/
+//   private String owner;
+//   /**
+//     * 送金を行うメソッド、このメソッドを動かすと他の口座に送金する
+//   */
+//   @Override
+//   public void transfer() {
+//     System.out.println("A");
+//   }
+// }
 public class Account {
-  /**残高*/
-  private int zandaka;
-  /**口座名義人*/
-  private String owner;
-  /**
-    * 送金を行うメソッド、このメソッドを動かすと他の口座に送金する
-  */
-  @Override
-  public void transfer() {
-    System.out.println("A");
+  String owner;
+  int zandaka;
+  public void Account(String owner, int zandaka) {
+    owner = owner;
+    zandaka = zandaka;
+  }
+  public void transfer(Account dest, int amount) {
+    dest.zandaka += amount;
+    zandaka -= amount;
   }
 }
