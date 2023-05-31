@@ -35,3 +35,4 @@ public class AccountTest {
     assertEquals(30000, a.zandaka);
   }
 }
+
