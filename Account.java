@@ -67,5 +67,8 @@ public class Account {
   public void transfer(Account dest, int amount) {
     dest.zandaka += amount;
     zandaka -= amount;
+    assert this.zandaka >= 0;
+    // アサーション: 品質面ではテストのことを考えつつ可動クラスを作る方がよい。
+    // そのための補助として稼働コードの中に直接簡易テストを仕込める
   }
 }
