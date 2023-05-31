@@ -4,6 +4,7 @@
   <groupId>jp.miyabilink.sukkiri</groupId>
   <!--mavenではプロジェクトをグループに属するものとしidを要する-->
   <artifactId>sukkiri-guest</artifactId>
+  <!--ぜんかくもじはNG  -->
   <version>1.0.0</version>
   
   <properties>
@@ -11,3 +12,5 @@
     <maven.compiler.source>11</maven.compiler.spurce>
   </properties>
 </project>
+pom.xmlと同じ階層のsrcファイル下の中にソースファイルを入れていく
+この配置の仕方でmavenが必要なアクションを推測する
