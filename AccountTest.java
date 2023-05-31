@@ -1,7 +1,7 @@
 public class AccountTest {
     public static void main(String[] args) {
         testInstantiate();
-        // testTransfer();
+        testTransfer();
     }
     private static void testInstantiate() {
         System.out.println("Accountがnewできるかテスト");
@@ -14,4 +14,13 @@ public class AccountTest {
         }
         System.out.println("test終了");
     }
+    private static void testTransfer() {
+      Account a1 = new Account("ミナト", 30000);
+      transfer(a1, 10000);
+      if (20000 != a1.zandaka) {
+        System.out.println("失敗：残高がおかしい");
+      }
+      System.out.println("test終了");
+    }
+    
 }
